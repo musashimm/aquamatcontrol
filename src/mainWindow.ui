@@ -1,0 +1,1345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>810</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>810</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/aquamatcontrol.qrc">
+    <normaloff>:/resources/app_icon.ico</normaloff>:/resources/app_icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>6</number>
+        </property>
+        <widget class="QWidget" name="status">
+         <attribute name="title">
+          <string>Status</string>
+         </attribute>
+         <widget class="QWidget" name="gridLayoutWidget_3">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>100</y>
+            <width>541</width>
+            <height>261</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="outLayout"/>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>370</y>
+            <width>781</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="tempLayout"/>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_alarms">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>6</y>
+            <width>225</width>
+            <height>245</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Alarmy</string>
+          </property>
+          <widget class="QWidget" name="verticalLayoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>6</x>
+             <y>12</y>
+             <width>213</width>
+             <height>225</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="alarmLayout"/>
+          </widget>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>416</x>
+            <y>12</y>
+            <width>365</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../resources/aquamatcontrol.qrc">:/resources/logocontrol2.png</pixmap>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="geometry">
+           <rect>
+            <x>242</x>
+            <y>6</y>
+            <width>163</width>
+            <height>83</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Czas</string>
+          </property>
+          <widget class="QWidget" name="verticalLayoutWidget_7">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>16</y>
+             <width>145</width>
+             <height>65</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLabel" name="l_dateTime">
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+                <underline>false</underline>
+               </font>
+              </property>
+              <property name="text">
+               <string>2009-01-01</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="l_dateTimeHour">
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>10:10 Wt</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>256</y>
+            <width>225</width>
+            <height>105</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Automatyczna dolewka</string>
+          </property>
+          <widget class="QWidget" name="verticalLayoutWidget_6">
+           <property name="geometry">
+            <rect>
+             <x>6</x>
+             <y>16</y>
+             <width>213</width>
+             <height>81</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="adStatusLayout"/>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_5">
+         <attribute name="title">
+          <string>Podstawowe / AD</string>
+         </attribute>
+         <widget class="QGroupBox" name="topOffGroupBox">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>152</y>
+            <width>769</width>
+            <height>333</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Automatyczna dolewka</string>
+          </property>
+          <widget class="QLabel" name="label_14">
+           <property name="geometry">
+            <rect>
+             <x>164</x>
+             <y>12</y>
+             <width>421</width>
+             <height>269</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../resources/aquamatcontrol.qrc">:/resources/top_off.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QWidget" name="horizontalLayoutWidget_4">
+           <property name="geometry">
+            <rect>
+             <x>62</x>
+             <y>284</y>
+             <width>687</width>
+             <height>37</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="topOffLayout">
+            <item>
+             <widget class="QLabel" name="label_17">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Wyjście</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_15">
+              <property name="text">
+               <string> Maks. czas pracy AD</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="topOff_max_run">
+              <property name="frame">
+               <bool>true</bool>
+              </property>
+              <property name="minimum">
+               <number>2</number>
+              </property>
+              <property name="maximum">
+               <number>255</number>
+              </property>
+              <property name="singleStep">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_16">
+              <property name="text">
+               <string>sek.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QCheckBox" name="topOff_block_min_ro">
+           <property name="geometry">
+            <rect>
+             <x>610</x>
+             <y>180</y>
+             <width>129</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Blokada czujnika</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QWidget" name="verticalLayoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>588</x>
+             <y>16</y>
+             <width>169</width>
+             <height>131</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="topOffButtons">
+            <item>
+             <widget class="QPushButton" name="b_getTopOff">
+              <property name="text">
+               <string>Pobierz ustawienia</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="b_setTopOff">
+              <property name="text">
+               <string>Wyślij ustawienia</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="b_clearTopOff">
+              <property name="text">
+               <string>Wyczyść alarmy i blokady </string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="horizontalLayoutWidget_10">
+           <property name="geometry">
+            <rect>
+             <x>12</x>
+             <y>24</y>
+             <width>307</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="topOffIndicatorsLayout">
+            <item>
+             <widget class="QCheckBox" name="topOff_block">
+              <property name="text">
+               <string>Blokada pracy</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>8</y>
+            <width>193</width>
+            <height>141</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Alarmy</string>
+          </property>
+          <widget class="QWidget" name="verticalLayoutWidget_5">
+           <property name="geometry">
+            <rect>
+             <x>14</x>
+             <y>22</y>
+             <width>163</width>
+             <height>109</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QPushButton" name="b_getAlarm">
+              <property name="text">
+               <string>Pobierz stan</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="b_clearAlarm">
+              <property name="text">
+               <string>Wyczyść alarmy</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="b_blockAlarm">
+              <property name="text">
+               <string>Zablokuj powiadomienia</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="geometry">
+           <rect>
+            <x>214</x>
+            <y>8</y>
+            <width>563</width>
+            <height>140</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Czas</string>
+          </property>
+          <widget class="QWidget" name="gridLayoutWidget_8">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>22</y>
+             <width>545</width>
+             <height>109</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QDateTimeEdit" name="e_dateTime">
+              <property name="currentSection">
+               <enum>QDateTimeEdit::YearSection</enum>
+              </property>
+              <property name="displayFormat">
+               <string>yy-MM-dd HH:mm</string>
+              </property>
+              <property name="calendarPopup">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="b_getDateTime">
+              <property name="text">
+               <string>Pobierz</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QPushButton" name="b_setDateTime">
+              <property name="text">
+               <string>Ustaw</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>Od</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTimeEdit" name="e_timeDayFrom"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>Do</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTimeEdit" name="e_timeDayTo"/>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="b_getTimeDay">
+              <property name="text">
+               <string>Pobierz porę dnia</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QPushButton" name="b_setTimeDay">
+              <property name="text">
+               <string>Ustaw porę dnia</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="temperature">
+         <attribute name="title">
+          <string>Temperatura</string>
+         </attribute>
+         <widget class="QWidget" name="horizontalLayoutWidget_6">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>4</y>
+            <width>621</width>
+            <height>445</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="tempSettingsLayout"/>
+         </widget>
+         <widget class="QLabel" name="label_12">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>62</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Numer seryjny</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_20">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>30</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Status</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_21">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>370</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Wyjście podgrzewające</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_22">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>342</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Wyjście chłodzące</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_23">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>202</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Temp. docelowa</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_24">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>230</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Temp. docelowa nocna</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_25">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>172</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Temperatura aktualna</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_26">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>98</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Flagi / Błędne odczyty</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_27">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>258</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Temp. minimalna</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_28">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>286</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Temp. maksymalna</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_29">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>316</y>
+            <width>145</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Histereza</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_30">
+          <property name="geometry">
+           <rect>
+            <x>92</x>
+            <y>134</y>
+            <width>57</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Alarmy</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_8">
+          <property name="geometry">
+           <rect>
+            <x>4</x>
+            <y>456</y>
+            <width>362</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QPushButton" name="b_tempGetSettings">
+             <property name="text">
+              <string>Pobierz ustawienia</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="b_tempSetSettings">
+             <property name="text">
+              <string>Wyślij ustawienia </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="b_discoverSensors">
+             <property name="text">
+              <string>Wykryj czujniki</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Wyjścia</string>
+         </attribute>
+         <widget class="QWidget" name="gridLayoutWidget_4">
+          <property name="geometry">
+           <rect>
+            <x>4</x>
+            <y>4</y>
+            <width>777</width>
+            <height>452</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="outSettingsLayout"/>
+         </widget>
+         <widget class="QPushButton" name="b_getOutSettings">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>461</y>
+            <width>147</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Pobierz ustawienia</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="b_outAllActive">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>461</y>
+            <width>147</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Wszystkie włącz</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="b_outAllInactive">
+          <property name="geometry">
+           <rect>
+            <x>319</x>
+            <y>461</y>
+            <width>147</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Wszystkie wyłącz</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="b_outAllBlock">
+          <property name="geometry">
+           <rect>
+            <x>476</x>
+            <y>461</y>
+            <width>147</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Wszystkie zablokuj</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="b_outAllUnblock">
+          <property name="geometry">
+           <rect>
+            <x>633</x>
+            <y>461</y>
+            <width>147</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Wszystkie odblokuj</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>Timery</string>
+         </attribute>
+         <widget class="QWidget" name="gridLayoutWidget_5">
+          <property name="geometry">
+           <rect>
+            <x>4</x>
+            <y>4</y>
+            <width>777</width>
+            <height>485</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="timersLayout">
+           <item row="0" column="0">
+            <widget class="QTabWidget" name="tabWidget_2">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="tab_6">
+              <attribute name="title">
+               <string>Godzinowe</string>
+              </attribute>
+              <widget class="QWidget" name="gridLayoutWidget_7">
+               <property name="geometry">
+                <rect>
+                 <x>2</x>
+                 <y>2</y>
+                 <width>767</width>
+                 <height>418</height>
+                </rect>
+               </property>
+               <layout class="QGridLayout" name="timersSettingsLayout"/>
+              </widget>
+              <widget class="QWidget" name="horizontalLayoutWidget_7">
+               <property name="geometry">
+                <rect>
+                 <x>2</x>
+                 <y>424</y>
+                 <width>252</width>
+                 <height>29</height>
+                </rect>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QPushButton" name="b_timersGetSettings">
+                  <property name="text">
+                   <string>Pobierz ustawienia</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="b_timersSetSettings">
+                  <property name="text">
+                   <string>Wyślij ustawienia</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="tab_7">
+              <attribute name="title">
+               <string>Interwałowe</string>
+              </attribute>
+              <widget class="QWidget" name="gridLayoutWidget_6">
+               <property name="geometry">
+                <rect>
+                 <x>2</x>
+                 <y>2</y>
+                 <width>767</width>
+                 <height>418</height>
+                </rect>
+               </property>
+               <layout class="QGridLayout" name="timersvSettingsLayout"/>
+              </widget>
+              <widget class="QWidget" name="horizontalLayoutWidget_5">
+               <property name="geometry">
+                <rect>
+                 <x>2</x>
+                 <y>424</y>
+                 <width>252</width>
+                 <height>29</height>
+                </rect>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <item>
+                 <widget class="QPushButton" name="b_timersvGetSettings">
+                  <property name="text">
+                   <string>Pobierz ustawienia</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="b_timersvSetSettings">
+                  <property name="text">
+                   <string>Wyślij ustawienia</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Historia zdarzeń</string>
+         </attribute>
+         <widget class="QListWidget" name="eventViewer">
+          <property name="geometry">
+           <rect>
+            <x>4</x>
+            <y>4</y>
+            <width>777</width>
+            <height>451</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_9">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>460</y>
+            <width>561</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QPushButton" name="b_getEvents">
+             <property name="text">
+              <string>Pobierz historię zdarzeń</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="b_clearEvents">
+             <property name="text">
+              <string>Wyszczyść historię zdarzeń</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="b_saveEvents">
+             <property name="text">
+              <string>Zapisz historię do pliku</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="settings">
+         <attribute name="title">
+          <string>Komunikacja i aktualizacja</string>
+         </attribute>
+         <widget class="QListWidget" name="logViewer">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>206</y>
+            <width>771</width>
+            <height>297</height>
+           </rect>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="geometry">
+           <rect>
+            <x>4</x>
+            <y>124</y>
+            <width>775</width>
+            <height>75</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Aktualizacja oprogramowania</string>
+          </property>
+          <widget class="QPushButton" name="b_codeUpdate">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>630</x>
+             <y>16</y>
+             <width>137</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Programuj</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="b_chooseUpdateFile">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>18</y>
+             <width>153</width>
+             <height>49</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Wybierz plik</string>
+           </property>
+          </widget>
+          <widget class="QWidget" name="verticalLayoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>168</x>
+             <y>18</y>
+             <width>455</width>
+             <height>49</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="l_updateFileName">
+              <property name="text">
+               <string>Nie wybranu żadnego pliku</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="l_updateFileInfo">
+              <property name="text">
+               <string>Brak informacji o pliku źródłowym</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="geometry">
+           <rect>
+            <x>4</x>
+            <y>2</y>
+            <width>775</width>
+            <height>115</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Komunikacja</string>
+          </property>
+          <widget class="QWidget" name="formLayoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>18</y>
+             <width>273</width>
+             <height>73</height>
+            </rect>
+           </property>
+           <layout class="QFormLayout" name="formLayout">
+            <property name="labelAlignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Port szeregowy</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Szybkość transmisji</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Status portu</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLabel" name="l_serialStatus">
+              <property name="text">
+               <string>Zamknięty</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="cb_serial_port"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="cb_port_speed"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="horizontalLayoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>292</x>
+             <y>18</y>
+             <width>338</width>
+             <height>55</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="check_periodicStatus">
+              <property name="text">
+               <string>Wysyłanie zapytania o status co</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="spin_periodicStatusInterval">
+              <property name="minimum">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>sekund</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="spin_periodicReadInterval">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_11">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>sekund</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="check_periodicRead">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Odczyt z portu szeregowego co</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="horizontalLayoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>292</x>
+             <y>80</y>
+             <width>475</width>
+             <height>27</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="b_openPort">
+              <property name="text">
+               <string>Otwórz port</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="b_closePort">
+              <property name="text">
+               <string>Zamknij port</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="b_clearLog">
+              <property name="text">
+               <string>Wyczyść log</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="b_refreshStatus">
+        <property name="text">
+         <string>Zauktualizuj status</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressStatus">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="b_getAllConfiguration">
+        <property name="text">
+         <string>Pobierz konfigurację</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="b_setAllConfiguration">
+        <property name="text">
+         <string>Wyślij konfigurację</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>810</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPlik">
+    <property name="title">
+     <string>Plik</string>
+    </property>
+    <addaction name="m_loadSettings"/>
+    <addaction name="m_loadSettingsFromFile"/>
+    <addaction name="separator"/>
+    <addaction name="m_saveSettings"/>
+    <addaction name="m_saveSettingsToFile"/>
+    <addaction name="separator"/>
+    <addaction name="m_quit"/>
+   </widget>
+   <widget class="QMenu" name="menuInfo">
+    <property name="title">
+     <string>Info</string>
+    </property>
+    <addaction name="m_about"/>
+   </widget>
+   <addaction name="menuPlik"/>
+   <addaction name="menuInfo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="m_loadSettings">
+   <property name="text">
+    <string>Ładuj konfigurację</string>
+   </property>
+  </action>
+  <action name="m_saveSettings">
+   <property name="text">
+    <string>Zapisz konfigurację</string>
+   </property>
+  </action>
+  <action name="m_quit">
+   <property name="text">
+    <string>Wyjście</string>
+   </property>
+  </action>
+  <action name="m_about">
+   <property name="text">
+    <string>O programie...</string>
+   </property>
+  </action>
+  <action name="m_loadSettingsFromFile">
+   <property name="text">
+    <string>Ładuj konfigurację z pliku</string>
+   </property>
+  </action>
+  <action name="m_saveSettingsToFile">
+   <property name="text">
+    <string>Zapisz konfigurację do pliku</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resources/aquamatcontrol.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>m_quit</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

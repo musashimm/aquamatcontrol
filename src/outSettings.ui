@@ -1,0 +1,109 @@
+<ui version="4.0" >
+ <class>OutSettings</class>
+ <widget class="QWidget" name="OutSettings" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>179</width>
+    <height>105</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox" >
+   <property name="geometry" >
+    <rect>
+     <x>2</x>
+     <y>0</y>
+     <width>173</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>GroupBox</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget" >
+    <property name="geometry" >
+     <rect>
+      <x>6</x>
+      <y>14</y>
+      <width>161</width>
+      <height>86</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="outSettingsLayout" >
+     <property name="sizeConstraint" >
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" >
+       <item>
+        <widget class="QCheckBox" name="checkBox_active" >
+         <property name="text" >
+          <string>Aktywne</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_block" >
+         <property name="text" >
+          <string>Blokada</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2" >
+       <item>
+        <widget class="QLabel" name="label" >
+         <property name="text" >
+          <string>Nazwa</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_label" >
+         <property name="text" >
+          <string>ABCDE</string>
+         </property>
+         <property name="maxLength" >
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="buttonsLayout" >
+       <item>
+        <widget class="QLabel" name="label_2" >
+         <property name="text" >
+          <string>QB</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_set" >
+         <property name="maximumSize" >
+          <size>
+           <width>100000</width>
+           <height>21</height>
+          </size>
+         </property>
+         <property name="text" >
+          <string>Ustaw</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,161 @@
+<ui version="4.0" >
+ <class>TempSettings</class>
+ <widget class="QWidget" name="TempSettings" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>150</width>
+    <height>397</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox" >
+   <property name="geometry" >
+    <rect>
+     <x>2</x>
+     <y>4</y>
+     <width>144</width>
+     <height>389</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>GroupBox</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget" >
+    <property name="geometry" >
+     <rect>
+      <x>4</x>
+      <y>21</y>
+      <width>135</width>
+      <height>359</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="layout" >
+     <item>
+      <widget class="QCheckBox" name="check_tempActive" >
+       <property name="text" >
+        <string>Aktywny</string>
+       </property>
+       <property name="checkable" >
+        <bool>true</bool>
+       </property>
+       <property name="checked" >
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="l_romSerial" >
+       <property name="text" >
+        <string>0011223344556677</string>
+       </property>
+       <property name="alignment" >
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="l_flags" >
+       <property name="text" >
+        <string>00H / 0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="l_tempAlarms" >
+       <property name="text" >
+        <string>Brak</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="l_currentTemp" >
+       <property name="text" >
+        <string>20.0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="spin_targetTemp" >
+       <property name="decimals" >
+        <number>1</number>
+       </property>
+       <property name="singleStep" >
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value" >
+        <double>20.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="spin_targetNightTemp" >
+       <property name="decimals" >
+        <number>1</number>
+       </property>
+       <property name="singleStep" >
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value" >
+        <double>20.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="spin_minTemp" >
+       <property name="decimals" >
+        <number>1</number>
+       </property>
+       <property name="maximum" >
+        <double>100.000000000000000</double>
+       </property>
+       <property name="singleStep" >
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value" >
+        <double>10.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="spin_maxTemp" >
+       <property name="decimals" >
+        <number>1</number>
+       </property>
+       <property name="singleStep" >
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value" >
+        <double>30.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="spin_histeresis" >
+       <property name="decimals" >
+        <number>1</number>
+       </property>
+       <property name="minimum" >
+        <double>0.100000000000000</double>
+       </property>
+       <property name="maximum" >
+        <double>1.000000000000000</double>
+       </property>
+       <property name="singleStep" >
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value" >
+        <double>0.500000000000000</double>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
