@@ -1,0 +1,77 @@
+AquamatControl - Gui for monitoring and configuration
+                   of aquarium controller 'Aquamat'
+
+                 Author - Wojciech Todryk (wojciech@todryk.pl)
+
+General description
+-------------------
+
+Current version is 1.3.0
+
+Project is under GPLv2 license. You can find full text of license in COPYING file.
+
+Project is developed in two platforms: Linux and Windows.
+
+In project I used source code from others projects:
+    * Qt - A cross-platform application and UI framework - (http://qt.nokia.com/) - version 4.6
+    * Fancy Widgets - my own little QT components library - (http://todryk.pl/fancy-widgets) - version 1.1.0
+    * QExtSerialPort - Cross-platofrm Qt interface class for old fashioned serial ports - (http://code.google.com/p/qextserialport) - version 1.2.0
+
+Building and installation
+-------------------------
+    qmake;
+    make;
+
+Executing
+---------
+
+For execution of binary file under Win32 you need following files:
+    * aquamatcontrol.exe
+    * fancywidgets1.dll
+    * libgcc_s_dw2-1.dll
+    * mingwm10.dll
+    * qextserialport1.dll
+    * QtCore4.dll
+    * QtGui4.dll
+Under Linux equivalent librares must be installed in the system.
+
+Directories and files
+---------------------
+
+    * dist - directory for binary files distribution
+    * docs - documentation
+    * files - other files concernig project
+    * src - source code
+    * templates - templates
+    * aquamatcontrol.pro - qmake building file
+    * COPYING - full text of license GPLv2
+    * Makefile - all know...
+    * README.PL - readme file in polish
+    * README.EN - readme file in english
+
+Changes history
+---------------
+
+1.3.0
+    * upgrading firmware using bootloader
+
+1.2.6
+    * fixes in serial communication configuration
+
+1.2.5
+    * indication of hardware blocking of topoff mechanism
+    * fixed displaying hardware address of temperature sensors
+    * fixed displaying evenets history
+    * fixes in handling QExtSerialPort
+
+1.2.0
+    * QExtSerialPort library was used
+    * saving and loading all configuration parameters of controller (default place for storing
+        parameters depends on platform, you can also save parameters to any file
+    * saving of controller history to file
+
+1.1.0
+    * separation of Fancy Widget library from main project
+
+1.0.0
+    * initial release

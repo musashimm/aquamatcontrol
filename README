@@ -1,0 +1,76 @@
+AquamatControl - Interfejs graficzny do monitorowania pracy
+                 i konfiguracji sterownika akwarystyczngo 'Aquamat'
+
+                 Autor - Wojciech Todryk (wojciech@todryk.pl)
+
+Opis ogólny
+-----------
+
+Projekt jest objety licencją GPLv2. Pełny tekst licencji znajduje się w pliku COPYING.
+
+Projekt rozwijany jest dla dwóch platform: na Linuksa i Windows.
+
+W projekcie zostały wykorzystane zewnętrzne kody źródłowe:
+    * Qt - biblioteka graficzna - (http://qt.nokia.com/) - wersja 4.6
+    * Fancy Widgets - moja własna niewielka biblioteka komponentów QT - (http://todryk.pl/fancy-widgets) - wersja 1.1.0
+    * QExtSerialPort - biblioteka interfejsu szeregowego - (http://code.google.com/p/qextserialport) wersja 1.2.0
+
+Instalacja
+----------
+
+    qmake;
+    make;
+
+Uruchamianie
+------------
+
+Żeby program zadziałał pod Win32 niezbędne są następujące pliki:
+    * aquamatcontrol.exe
+    * fancywidgets1.dll
+    * libgcc_s_dw2-1.dll
+    * mingwm10.dll
+    * qextserialport1.dll
+    * QtCore4.dll
+    * QtGui4.dll
+Pod Linuksem odpowiedniki powyższych bibliotek muszą być zainstalowane w systemie.
+
+Struktura katalogów i plików projektu
+-------------------------------------
+
+    * dist - miejse na wersję binarną projektu
+    * docs - katalog dokumentacji
+    * files - pliki związane z projektem
+    * src - źródła projektu
+    * templates - wzorce plików
+    * aquamatcontrol.pro - plik z opisem projektu dla qmake'a
+    * COPYING - pełny tekst licencji GPLv2
+    * Makefile - wiadomo
+    * README - ten plik
+    * README.EN - README in english
+
+Historia zmian
+--------------
+
+1.3.0
+    * aktualizacja oprogramowania poprzez bootloader
+
+1.2.6
+    * poprawki w konfiguracji transmisji
+
+1.2.5
+    * sygnalizacja sprzętowej blokady automatycznej dolewki
+    * poprawa wyświetlania adresu czujników temperatury
+    * poprawka wyświetlania historii
+    * poprawki w obsłudze QExtSerialPort
+
+1.2.0
+    * wykorzystanie biblioteki QExtSerialPort
+    * zapis i odczyt parametrów konfiguracyjnych pracy sterownika (domyślne miejsce zapisu zależy od platformy,
+        można też wskazać dowolny plik
+    * zapis do pliku historii zdarzeń pracy sterownika
+
+1.1.0
+    * rozdzielenie biblioteki komponentów Fancy Widgets od głównego projektu
+
+1.0.0
+    pierwsza wersja
