@@ -106,5 +106,5 @@ OTHER_FILES += Makefile \
     Makefile.Release \
     README \
     files/Doxyfile \
-    README.PL \
+    README \
     README.EN
