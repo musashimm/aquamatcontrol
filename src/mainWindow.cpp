@@ -26,6 +26,7 @@ $Id$
 #include "mainWindow.h"
 #include "processingTemp.cpp"
 #include "processingTime.cpp"
+#include "processingPwm.cpp"
 #include "processingAlarm.cpp"
 #include "processingOut.cpp"
 #include "processingTopOff.cpp"
@@ -53,6 +54,7 @@ MainWindow::MainWindow(QWidget *parent)
     cp.setParent(this);
 
 	outInit();
+	pwmInit();
 	tempInit();
 	timersInit();
 	timersvInit();

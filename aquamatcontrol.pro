@@ -21,7 +21,7 @@ win32 {
 }
 unix {
     QMAKE_EXTRA_TARGETS += docs
-    docs.commands = doxygen files/Doxyfile
+    docs.commands = doxygen Doxyfile
     docs.path = docs
     docs.depends = FORCE
     LIBS += -lfancywidgets \
@@ -56,22 +56,16 @@ HEADERS += src/aboutDialog.h \
     src/tempSettings.h \
     src/timersSettings.h \
     src/timersvSettings.h \
-    src/processingTemp.cpp \
-    src/processingTime.cpp \
-    src/processingAlarm.cpp \
-    src/processingOut.cpp \
-    src/processingTopOff.cpp \
-    src/processingTimers.cpp \
-    src/processingTimersv.cpp \
-    src/processingEvents.cpp \
-    src/comboBoxQButtons.h
+    src/comboBoxQButtons.h \
+    src/pwmSettings.h
 FORMS += src/aboutDialog.ui \
     src/mainWindow.ui \
     src/outSettings.ui \
     src/tempSettings.ui \
     src/timersSettings.ui \
     src/timersvSettings.ui \
-    src/codeUpdateDialog.ui
+    src/codeUpdateDialog.ui \
+    src/pwmSettings.ui
 SOURCES += src/aboutDialog.cpp \
     src/codeUpdateThread.cpp \
     src/CodeUpdateDialog.cpp \
@@ -85,10 +79,12 @@ SOURCES += src/aboutDialog.cpp \
     src/mainWindowAbout.cpp \
     src/mainWindowUpdate.cpp \
     src/outDisplay.cpp \
+    src/pwmSettings.cpp \
     src/outSettings.cpp \
     src/processingAlarm.cpp \
     src/processingEvents.cpp \
     src/processingOut.cpp \
+    src/processingPwm.cpp \
     src/processingTemp.cpp \
     src/processingTime.cpp \
     src/processingTimers.cpp \

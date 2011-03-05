@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainWindow.ui'
 **
-** Created: Tue Mar 1 18:55:25 2011
+** Created: Sat Mar 5 22:45:07 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -29,6 +29,7 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QProgressBar>
 #include <QtGui/QPushButton>
+#include <QtGui/QSpacerItem>
 #include <QtGui/QSpinBox>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
@@ -126,13 +127,25 @@ public:
     QPushButton *b_tempSetSettings;
     QPushButton *b_discoverSensors;
     QWidget *tab_2;
+    QTabWidget *tabWidget_3;
+    QWidget *tab_4;
     QWidget *gridLayoutWidget_4;
     QGridLayout *outSettingsLayout;
+    QWidget *horizontalLayoutWidget_11;
+    QHBoxLayout *horizontalLayout_8;
     QPushButton *b_getOutSettings;
     QPushButton *b_outAllActive;
     QPushButton *b_outAllInactive;
     QPushButton *b_outAllBlock;
     QPushButton *b_outAllUnblock;
+    QWidget *tab_8;
+    QWidget *gridLayoutWidget;
+    QGridLayout *pwmSettingsLayout;
+    QWidget *horizontalLayoutWidget_12;
+    QHBoxLayout *horizontalLayout_9;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
+    QSpacerItem *horizontalSpacer;
     QWidget *tab_3;
     QWidget *gridLayoutWidget_5;
     QGridLayout *timersLayout;
@@ -144,13 +157,14 @@ public:
     QHBoxLayout *horizontalLayout_5;
     QPushButton *b_timersGetSettings;
     QPushButton *b_timersSetSettings;
-    QWidget *tab_7;
+    QWidget *tab_9;
     QWidget *gridLayoutWidget_6;
     QGridLayout *timersvSettingsLayout;
     QWidget *horizontalLayoutWidget_5;
     QHBoxLayout *horizontalLayout_4;
     QPushButton *b_timersvGetSettings;
     QPushButton *b_timersvSetSettings;
+    QWidget *tab_11;
     QWidget *tab;
     QListWidget *eventViewer;
     QWidget *horizontalLayoutWidget_9;
@@ -549,27 +563,79 @@ public:
         tabWidget->addTab(temperature, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
-        gridLayoutWidget_4 = new QWidget(tab_2);
+        tabWidget_3 = new QTabWidget(tab_2);
+        tabWidget_3->setObjectName(QString::fromUtf8("tabWidget_3"));
+        tabWidget_3->setGeometry(QRect(4, 4, 777, 487));
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QString::fromUtf8("tab_4"));
+        gridLayoutWidget_4 = new QWidget(tab_4);
         gridLayoutWidget_4->setObjectName(QString::fromUtf8("gridLayoutWidget_4"));
-        gridLayoutWidget_4->setGeometry(QRect(4, 4, 777, 452));
+        gridLayoutWidget_4->setGeometry(QRect(4, 2, 765, 423));
         outSettingsLayout = new QGridLayout(gridLayoutWidget_4);
         outSettingsLayout->setObjectName(QString::fromUtf8("outSettingsLayout"));
         outSettingsLayout->setContentsMargins(0, 0, 0, 0);
-        b_getOutSettings = new QPushButton(tab_2);
+        horizontalLayoutWidget_11 = new QWidget(tab_4);
+        horizontalLayoutWidget_11->setObjectName(QString::fromUtf8("horizontalLayoutWidget_11"));
+        horizontalLayoutWidget_11->setGeometry(QRect(2, 430, 767, 28));
+        horizontalLayout_8 = new QHBoxLayout(horizontalLayoutWidget_11);
+        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
+        horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
+        b_getOutSettings = new QPushButton(horizontalLayoutWidget_11);
         b_getOutSettings->setObjectName(QString::fromUtf8("b_getOutSettings"));
-        b_getOutSettings->setGeometry(QRect(5, 461, 147, 27));
-        b_outAllActive = new QPushButton(tab_2);
+
+        horizontalLayout_8->addWidget(b_getOutSettings);
+
+        b_outAllActive = new QPushButton(horizontalLayoutWidget_11);
         b_outAllActive->setObjectName(QString::fromUtf8("b_outAllActive"));
-        b_outAllActive->setGeometry(QRect(162, 461, 147, 27));
-        b_outAllInactive = new QPushButton(tab_2);
+
+        horizontalLayout_8->addWidget(b_outAllActive);
+
+        b_outAllInactive = new QPushButton(horizontalLayoutWidget_11);
         b_outAllInactive->setObjectName(QString::fromUtf8("b_outAllInactive"));
-        b_outAllInactive->setGeometry(QRect(319, 461, 147, 27));
-        b_outAllBlock = new QPushButton(tab_2);
+
+        horizontalLayout_8->addWidget(b_outAllInactive);
+
+        b_outAllBlock = new QPushButton(horizontalLayoutWidget_11);
         b_outAllBlock->setObjectName(QString::fromUtf8("b_outAllBlock"));
-        b_outAllBlock->setGeometry(QRect(476, 461, 147, 27));
-        b_outAllUnblock = new QPushButton(tab_2);
+
+        horizontalLayout_8->addWidget(b_outAllBlock);
+
+        b_outAllUnblock = new QPushButton(horizontalLayoutWidget_11);
         b_outAllUnblock->setObjectName(QString::fromUtf8("b_outAllUnblock"));
-        b_outAllUnblock->setGeometry(QRect(633, 461, 147, 27));
+
+        horizontalLayout_8->addWidget(b_outAllUnblock);
+
+        tabWidget_3->addTab(tab_4, QString());
+        tab_8 = new QWidget();
+        tab_8->setObjectName(QString::fromUtf8("tab_8"));
+        gridLayoutWidget = new QWidget(tab_8);
+        gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
+        gridLayoutWidget->setGeometry(QRect(4, 2, 765, 423));
+        pwmSettingsLayout = new QGridLayout(gridLayoutWidget);
+        pwmSettingsLayout->setObjectName(QString::fromUtf8("pwmSettingsLayout"));
+        pwmSettingsLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
+        pwmSettingsLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalLayoutWidget_12 = new QWidget(tab_8);
+        horizontalLayoutWidget_12->setObjectName(QString::fromUtf8("horizontalLayoutWidget_12"));
+        horizontalLayoutWidget_12->setGeometry(QRect(2, 430, 769, 28));
+        horizontalLayout_9 = new QHBoxLayout(horizontalLayoutWidget_12);
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        horizontalLayout_9->setContentsMargins(0, 0, 0, 0);
+        pushButton = new QPushButton(horizontalLayoutWidget_12);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        horizontalLayout_9->addWidget(pushButton);
+
+        pushButton_2 = new QPushButton(horizontalLayoutWidget_12);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        horizontalLayout_9->addWidget(pushButton_2);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer);
+
+        tabWidget_3->addTab(tab_8, QString());
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName(QString::fromUtf8("tab_3"));
@@ -579,19 +645,20 @@ public:
         timersLayout = new QGridLayout(gridLayoutWidget_5);
         timersLayout->setObjectName(QString::fromUtf8("timersLayout"));
         timersLayout->setContentsMargins(0, 0, 0, 0);
-        tabWidget_2 = new QTabWidget(gridLayoutWidget_5);
+        tabWidget_2 = new QTabWidget(tab_3);
         tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
+        tabWidget_2->setGeometry(QRect(4, 4, 775, 487));
         tab_6 = new QWidget();
         tab_6->setObjectName(QString::fromUtf8("tab_6"));
         gridLayoutWidget_7 = new QWidget(tab_6);
         gridLayoutWidget_7->setObjectName(QString::fromUtf8("gridLayoutWidget_7"));
-        gridLayoutWidget_7->setGeometry(QRect(2, 2, 767, 418));
+        gridLayoutWidget_7->setGeometry(QRect(2, 2, 767, 425));
         timersSettingsLayout = new QGridLayout(gridLayoutWidget_7);
         timersSettingsLayout->setObjectName(QString::fromUtf8("timersSettingsLayout"));
         timersSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_7 = new QWidget(tab_6);
         horizontalLayoutWidget_7->setObjectName(QString::fromUtf8("horizontalLayoutWidget_7"));
-        horizontalLayoutWidget_7->setGeometry(QRect(2, 424, 252, 29));
+        horizontalLayoutWidget_7->setGeometry(QRect(2, 430, 252, 29));
         horizontalLayout_5 = new QHBoxLayout(horizontalLayoutWidget_7);
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -606,15 +673,15 @@ public:
         horizontalLayout_5->addWidget(b_timersSetSettings);
 
         tabWidget_2->addTab(tab_6, QString());
-        tab_7 = new QWidget();
-        tab_7->setObjectName(QString::fromUtf8("tab_7"));
-        gridLayoutWidget_6 = new QWidget(tab_7);
+        tab_9 = new QWidget();
+        tab_9->setObjectName(QString::fromUtf8("tab_9"));
+        gridLayoutWidget_6 = new QWidget(tab_9);
         gridLayoutWidget_6->setObjectName(QString::fromUtf8("gridLayoutWidget_6"));
         gridLayoutWidget_6->setGeometry(QRect(2, 2, 767, 418));
         timersvSettingsLayout = new QGridLayout(gridLayoutWidget_6);
         timersvSettingsLayout->setObjectName(QString::fromUtf8("timersvSettingsLayout"));
         timersvSettingsLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalLayoutWidget_5 = new QWidget(tab_7);
+        horizontalLayoutWidget_5 = new QWidget(tab_9);
         horizontalLayoutWidget_5->setObjectName(QString::fromUtf8("horizontalLayoutWidget_5"));
         horizontalLayoutWidget_5->setGeometry(QRect(2, 424, 252, 29));
         horizontalLayout_4 = new QHBoxLayout(horizontalLayoutWidget_5);
@@ -630,10 +697,10 @@ public:
 
         horizontalLayout_4->addWidget(b_timersvSetSettings);
 
-        tabWidget_2->addTab(tab_7, QString());
-
-        timersLayout->addWidget(tabWidget_2, 0, 0, 1, 1);
-
+        tabWidget_2->addTab(tab_9, QString());
+        tab_11 = new QWidget();
+        tab_11->setObjectName(QString::fromUtf8("tab_11"));
+        tabWidget_2->addTab(tab_11, QString());
         tabWidget->addTab(tab_3, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
@@ -699,7 +766,7 @@ public:
         groupBox_6->setGeometry(QRect(4, 2, 775, 115));
         formLayoutWidget = new QWidget(groupBox_6);
         formLayoutWidget->setObjectName(QString::fromUtf8("formLayoutWidget"));
-        formLayoutWidget->setGeometry(QRect(8, 18, 273, 73));
+        formLayoutWidget->setGeometry(QRect(8, 18, 273, 79));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setLabelAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
@@ -736,7 +803,7 @@ public:
 
         horizontalLayoutWidget_2 = new QWidget(groupBox_6);
         horizontalLayoutWidget_2->setObjectName(QString::fromUtf8("horizontalLayoutWidget_2"));
-        horizontalLayoutWidget_2->setGeometry(QRect(292, 18, 338, 55));
+        horizontalLayoutWidget_2->setGeometry(QRect(292, 18, 338, 58));
         gridLayout_4 = new QGridLayout(horizontalLayoutWidget_2);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         gridLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -778,7 +845,7 @@ public:
 
         horizontalLayoutWidget = new QWidget(groupBox_6);
         horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(292, 80, 475, 27));
+        horizontalLayoutWidget->setGeometry(QRect(292, 80, 475, 28));
         horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -833,7 +900,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 810, 18));
+        menubar->setGeometry(QRect(0, 0, 810, 23));
         menuPlik = new QMenu(menubar);
         menuPlik->setObjectName(QString::fromUtf8("menuPlik"));
         menuInfo = new QMenu(menubar);
@@ -858,7 +925,8 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(m_quit, SIGNAL(activated()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(6);
+        tabWidget->setCurrentIndex(3);
+        tabWidget_3->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(0);
 
 
@@ -925,13 +993,18 @@ public:
         b_outAllInactive->setText(QApplication::translate("MainWindow", "Wszystkie wy\305\202\304\205cz", 0, QApplication::UnicodeUTF8));
         b_outAllBlock->setText(QApplication::translate("MainWindow", "Wszystkie zablokuj", 0, QApplication::UnicodeUTF8));
         b_outAllUnblock->setText(QApplication::translate("MainWindow", "Wszystkie odblokuj", 0, QApplication::UnicodeUTF8));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_4), QApplication::translate("MainWindow", "Binarne", 0, QApplication::UnicodeUTF8));
+        pushButton->setText(QApplication::translate("MainWindow", "PushButton", 0, QApplication::UnicodeUTF8));
+        pushButton_2->setText(QApplication::translate("MainWindow", "PushButton", 0, QApplication::UnicodeUTF8));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_8), QApplication::translate("MainWindow", "Pwm", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Wyj\305\233cia", 0, QApplication::UnicodeUTF8));
         b_timersGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
         b_timersSetSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_6), QApplication::translate("MainWindow", "Godzinowe", 0, QApplication::UnicodeUTF8));
         b_timersvGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
         b_timersvSetSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_7), QApplication::translate("MainWindow", "Interwa\305\202owe", 0, QApplication::UnicodeUTF8));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_9), QApplication::translate("MainWindow", "Interwa\305\202owe", 0, QApplication::UnicodeUTF8));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_11), QApplication::translate("MainWindow", "Sekundowe", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Timery", 0, QApplication::UnicodeUTF8));
         b_getEvents->setText(QApplication::translate("MainWindow", "Pobierz histori\304\231 zdarze\305\204", 0, QApplication::UnicodeUTF8));
         b_clearEvents->setText(QApplication::translate("MainWindow", "Wyszczy\305\233\304\207 histori\304\231 zdarze\305\204", 0, QApplication::UnicodeUTF8));

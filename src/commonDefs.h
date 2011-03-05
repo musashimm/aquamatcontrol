@@ -141,6 +141,9 @@
 #define TIMERSV_NUM 8
 #define TIMERSV_FLAG_BLOCKED 0
 
+#define PWM_NUM 4
+#define PWM_FLAG_BLOCKED 0
+
 #define TOP_OFF_BLOCK 0
 #define TOP_OFF_BLOCK_BY_PIN 1
 #define TOP_OFF_BLOCK_MIN_RO 2

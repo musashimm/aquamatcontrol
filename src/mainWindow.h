@@ -46,6 +46,7 @@ $Id$
 #include "tempDisplay.h"
 #include "outDisplay.h"
 #include "outSettings.h"
+#include "pwmSettings.h"
 #include "tempSettings.h"
 #include "timersSettings.h"
 #include "timersvSettings.h"
@@ -128,6 +129,8 @@ public slots:
 	TempSettings* getPTemp(int);
 	void discoverTemp();
 
+	void pwmInit();
+
 	void outInit();
 	void getOut();
 	void getOutSettings();
@@ -186,6 +189,7 @@ private:
 	TempDisplay* pTempDisplays[TEMP_SENSORS_NUM];
 	OutDisplay* pOutDisplays[OUTPUTS_DEVICES_NUM*OUTPUTS_NUM_PER_DEVICE];
 	OutSettings* pOutSettings[OUTPUTS_DEVICES_NUM*OUTPUTS_NUM_PER_DEVICE];
+	PwmSettings* pPwmSettings[PWM_NUM];
 	TempSettings* pTempSettings[TEMP_SENSORS_NUM];
 	TimersSettings* pTimersSettings[TIMERS_NUM];
 	TimersvSettings* pTimersvSettings[TIMERSV_NUM];
