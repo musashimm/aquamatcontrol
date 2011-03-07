@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'pwmSettings.ui'
 **
-** Created: Sat Mar 5 22:41:00 2011
+** Created: Mon Mar 7 20:00:16 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -21,7 +21,6 @@
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
@@ -38,23 +37,22 @@ public:
     QHBoxLayout *horizontalLayout;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
-    QLineEdit *lineEdit_name;
+    QLineEdit *edit_name;
     QSpacerItem *horizontalSpacer;
-    QPushButton *pushButton;
-    QLabel *label_2;
-    QDial *dial_pwm;
+    QLabel *dial_label;
+    QDial *dial;
 
     void setupUi(QWidget *PwmSettings)
     {
         if (PwmSettings->objectName().isEmpty())
             PwmSettings->setObjectName(QString::fromUtf8("PwmSettings"));
-        PwmSettings->resize(179, 244);
+        PwmSettings->resize(179, 214);
         groupBox = new QGroupBox(PwmSettings);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(4, 0, 169, 241));
+        groupBox->setGeometry(QRect(4, 0, 169, 209));
         verticalLayoutWidget = new QWidget(groupBox);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(8, 16, 153, 219));
+        verticalLayoutWidget->setGeometry(QRect(8, 16, 153, 185));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -72,12 +70,12 @@ public:
 
         horizontalLayout_2->addWidget(label);
 
-        lineEdit_name = new QLineEdit(verticalLayoutWidget);
-        lineEdit_name->setObjectName(QString::fromUtf8("lineEdit_name"));
-        lineEdit_name->setMaxLength(5);
-        lineEdit_name->setAlignment(Qt::AlignCenter);
+        edit_name = new QLineEdit(verticalLayoutWidget);
+        edit_name->setObjectName(QString::fromUtf8("edit_name"));
+        edit_name->setMaxLength(5);
+        edit_name->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout_2->addWidget(lineEdit_name);
+        horizontalLayout_2->addWidget(edit_name);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -89,28 +87,23 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
-        pushButton = new QPushButton(verticalLayoutWidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        dial_label = new QLabel(verticalLayoutWidget);
+        dial_label->setObjectName(QString::fromUtf8("dial_label"));
+        dial_label->setAlignment(Qt::AlignCenter);
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(dial_label);
 
-        label_2 = new QLabel(verticalLayoutWidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setAlignment(Qt::AlignCenter);
+        dial = new QDial(verticalLayoutWidget);
+        dial->setObjectName(QString::fromUtf8("dial"));
+        dial->setMaximum(100);
+        dial->setValue(0);
+        dial->setInvertedAppearance(false);
+        dial->setInvertedControls(false);
+        dial->setWrapping(false);
+        dial->setNotchTarget(10);
+        dial->setNotchesVisible(true);
 
-        verticalLayout->addWidget(label_2);
-
-        dial_pwm = new QDial(verticalLayoutWidget);
-        dial_pwm->setObjectName(QString::fromUtf8("dial_pwm"));
-        dial_pwm->setMaximum(100);
-        dial_pwm->setValue(0);
-        dial_pwm->setInvertedAppearance(false);
-        dial_pwm->setInvertedControls(false);
-        dial_pwm->setWrapping(false);
-        dial_pwm->setNotchTarget(10);
-        dial_pwm->setNotchesVisible(true);
-
-        verticalLayout->addWidget(dial_pwm);
+        verticalLayout->addWidget(dial);
 
 
         retranslateUi(PwmSettings);
@@ -124,9 +117,8 @@ public:
         groupBox->setTitle(QApplication::translate("PwmSettings", "Pwm1", 0, QApplication::UnicodeUTF8));
         checkBox_blocked->setText(QApplication::translate("PwmSettings", "Zablokowane", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("PwmSettings", "Nazwa", 0, QApplication::UnicodeUTF8));
-        lineEdit_name->setText(QApplication::translate("PwmSettings", "ABCDE", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("PwmSettings", "Ustaw nazw\304\231", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("PwmSettings", "100%", 0, QApplication::UnicodeUTF8));
+        edit_name->setText(QApplication::translate("PwmSettings", "ABCDE", 0, QApplication::UnicodeUTF8));
+        dial_label->setText(QApplication::translate("PwmSettings", "100%", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

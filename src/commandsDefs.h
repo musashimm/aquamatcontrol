@@ -27,15 +27,15 @@ $Id$
 	@subsection statusmgmt Wiadomości statusowe
 	@verbatim
 	1. <GUI_STATUS_COMMAND> <GUI_BUFFER_FULL> <CRC> <CRC> <GUI_END_OF_COMMAND> - przepełniony bufor odbiorczy sterownika
-	
+
 	2. <GUI_STATUS_COMMAND> <GUI_UNKONWN_COMMAND> <CRC> <GUI_END_OF_COMMAND> - nierozpoznana komenda
 
 	3. <GUI_STATUS_COMMAND> <GUI_CLIENT_PRESENT> <MAIN> <MAJOR> <MINOR> <CRC> <GUI_END_OF_COMMAND> - aktywny sterownik z podaniem wersji oprogramowania
-	
+
 	4. <GUI_STATUS_COMMAND> <GUI_COMMAND_CKSUM_ERROR> <CRC> <GUI_END_OF_COMMAND> - błąd sumy kontrolnej komendy
 
 	5. <GUI_STATUS_COMMAND> <GUI_COMMAND_OK> <CRC> <GUI_END_OF_COMMAND> - komenda poprawna
-	
+
 	6. <GUI_STATUS_COMMAND> <GUI_COMMAND_PARAMS_ERROR> <CRC> <GUI_END_OF_COMMAND> - błąd komendy - niepoprawne parametry
 	@endverbatim
 
@@ -43,13 +43,13 @@ $Id$
 	@verbatim
 	1. <GUI_DATETIME_COMMAND> <GUI_SUBCOMMAND_GET_SETTINGS> <CRC> <GUI_END_OF_COMMAND> - pobranie czasu
 		Odp: <GUI_DATETIME_COMMAND> <GUI_SUBCOMMAND_GET_SETTINGS_RESPONSE> <YEAR> <MONTH> <DAY> <HOURS> <MINUTES> <CRC> <GUI_END_OF_COMMAND>
-		
+
 	2. <GUI_DATETIME_COMMAND> <GUI_SUBCOMMAND_SET> <YEAR> <MONTH> <DAY> <WDAY> <HOURS> <MINUTES> <CRC> <GUI_END_OF_COMMAND> - ustawienie czasu
 		Odp: brak
-	
+
 	3. <GUI_DAYTIME_COMMAND> <GUI_SUBCOMMAND_GET_SETTINGS> <CRC> <GUI_END_OF_COMMAND> - pobranie pory dnia
 		Odp: <GUI_DAYTIME_COMMAND> <GUI_SUBCOMMAND_GET_SETTINGS_RESPONSE> <HOUR_FROM> <MINUTES_FORM> <HOUR_TO> <MINUTES_TO> <CRC> <GUI_END_OF_COMMAND>
-	
+
 	4. <GUI_DAYTIME_COMMAND> <GUI_SUBCOMMAND_SET_SETTINGS> <HOUR_FROM> <MINUTES_FORM> <HOUR_TO> <MINUTES_TO> <CRC> <GUI_END_OF_COMMAND> - ustawienie pory dnia
 		Odp: brak
 	@endverbatim
@@ -67,7 +67,7 @@ $Id$
 	@endverbatim
 
 	@subsection outsmgmt Zarządzanie wyjściami
-	@verbatim 
+	@verbatim
 
 	1. <GUI_OUT_COMMAND> <GUI_SUBCOMMAND_GET_STATUS> <CRC> <GUI_END_OF_COMMAND> - pobranie stanu wyjścia (aktywność, blokada)
 		Odp: <GUI_OUT_COMMAND> <GUI_SUBCOMMAND_GET_STATUS_RESPONSE> n x <bajt statusu> <CRC> <GUI_END_OF_COMMAND>
@@ -86,14 +86,14 @@ $Id$
 
 	6. <GUI_OUT_COMMAND><GUI_SUBCOMMAND_SET_STATE_ALL><stan><CRC> <GUI_END_OF_COMMAND> - ustawienie stanu wszystkich wyjść zgodnie z bajtem <stan>
 		Odp: Brak
-	
+
 	7. <GUI_OUT_COMMAND><GUI_SUBCOMMAND_SET_BLOCK_ALL><stan><CRC> <GUI_END_OF_COMMAND> - ustawienie stanu blokad wszystkich wyjść zgodnie z bajtem <stan>
 		Odp: Brak
 
 	@endverbatim
 
 	@subsection topoffmgmt Zarządzanie automatyczną dolewką
-	@verbatim 
+	@verbatim
 
 	1. <GUI_TOP_OFF_COMMAND> <GUI_SUBCOMMAND_GET_STATUS> <CRC> <GUI_END_OF_COMMAND> - pobranie stanu automatycznej dolewki
 		Odp: <GUI_TOP_OFF_COMMAND> <GUI_SUBCOMMAND_GET_STATUS_RESPONSE> <FLAGS> <OUT> <MAX_RUN> <CRC> <GUI_END_OF_COMMAND>
@@ -105,12 +105,12 @@ $Id$
 		Odp: Brak
 	@endverbatim
 
-	
+
 	@subsection tempmgmt Zarządzanie czujnikami temperatury
 	@verbatim
-	
+
 	1. <GUI_TEMP_COMMAND> <GUI_SUBCOMMAND_GET_STATUS> <CRC> <GUI_END_OF_COMMAND> - pobranie stanu czujnikow
-		Odp: <GUI_TEMP_COMMAND> <GUI_SUBCOMMAND_GET_STATUS_RESPONSE> <ID> <TENS> <UNITS> <FLAGS> <BR> <CRC> <GUI_END_OF_COMMAND> 
+		Odp: <GUI_TEMP_COMMAND> <GUI_SUBCOMMAND_GET_STATUS_RESPONSE> <ID> <TENS> <UNITS> <FLAGS> <BR> <CRC> <GUI_END_OF_COMMAND>
 
 	2. <GUI_TEMP_COMMAND> <GUI_SUBCOMMAND_GET_SETTINGS> <CRC> <GUI_END_OF_COMMAND> - pobranie konfiguracji
 		Odp: <GUI_TEMP_COMMAND> <GUI_SUBCOMMAND_GET_SETTINGS_RESPONSE> <ID> <TEMP> <TARGET> <TARGET_NIGHT> <MAX> <MIN> <HISTERESIS> <FLAGS> <BR> <OUT_COOLING> <OUT_HEATING> <CRC> <GUI_END_OF_COMMAND>
@@ -143,8 +143,23 @@ $Id$
 	@verbatim
 	1. <GUI_LOG_COMMAND> <GUI_SUBCOMMAND_GET_STATUS> <CRC> <GUI_END_OF_COMMAND> - żadanie historii zdarzeń
 		Odp: <GUI_EVENT_COMMAND> <GUI_SUBCOMMAND_GET_STATUS_RESPONSE> 8 x <UCHAR> <CRC> <GUI_END_OF_COMMAND> - jeden wpis z historii zdarzeń (8 bajtów).
-	
+
 	2. <GUI_LOG_COMMAND> <GUI_SUBCOMMAND_CLEAR> <CRC> <GUI_END_OF_COMMAND> - wyczyszczenie loga
+		Odp: brak.
+	@endverbatim
+
+	@subsection pwmmgmt Zarządzanie wyjściami PWM.
+	@verbatim
+	1. <GUI_PWM_COMMAND> <GUI_SUBCOMMAND_GET_STATUS> <CRC> <GUI_END_OF_COMMAND> - pobranie stanu wyjść
+		Odp: <GUI_PWM_COMMAND> <GUI_SUBCOMMAND_GET_STATUS_RESPONSE> PWM_NUM x (<PWM><FLAGS>) <CRC> <GUI_END_OF_COMMAND>
+
+	2. <GUI_PWM_COMMAND> <GUI_SUBCOMMAND_GET_SETTINGS> <CRC> <GUI_END_OF_COMMAND> - pobranie calej konfiguracji wyjść
+		Odp: <GUI_PWM_COMMAND> <GUI_SUBCOMMAND_GET_SETTINGS_RESPONSE> PWM_NUM x (<PWM><FLAGS><A><B><C><D><E>) <CRC> <GUI_END_OF_COMMAND>
+
+	3. <GUI_PWM_COMMAND ><GUI_SUBCOMMAND_SET><id> <PWM> <FLAGS> <A> <B> <C> <D> <E> <CRC> <GUI_END_OF_COMMAND> - ustawienie parametrów wyjścia
+		Odp: brak.
+
+	4. <GUI_PWM_COMMAND ><GUI_SUBCOMMAND_SET_STATE><id> <PWM> <FLAGS> <CRC> <GUI_END_OF_COMMAND> - ustawienie stanu wyjścia
 		Odp: brak.
 	@endverbatim
 */
@@ -172,6 +187,7 @@ $Id$
 #define GUI_TOP_OFF_COMMAND 0x89
 #define GUI_LOG_COMMAND 0x90
 #define GUI_DEBUG_COMMAND 0x91
+#define GUI_PWM_COMMAND 0x92
 
 #define GUI_SUBCOMMAND_GET_STATUS 0x81
 #define GUI_SUBCOMMAND_GET_STATUS_RESPONSE 0xA1
@@ -188,3 +204,4 @@ $Id$
 #define GUI_SUBCOMMAND_DISCOVER_RESPONSE 0xAA
 
 #define GUI_END_OF_COMMAND 0xFE
+#define GUI_START_OF_COMMAND 0xFD

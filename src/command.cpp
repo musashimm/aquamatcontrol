@@ -81,6 +81,7 @@ void Command::prepareCommon() {
 	commandsDesc[GUI_TIMERSV_COMMAND]="TimersV";
 	commandsDesc[GUI_TOP_OFF_COMMAND]="TopOff";
 	commandsDesc[GUI_LOG_COMMAND]="Log";
+	commandsDesc[GUI_PWM_COMMAND]="Pwm";
 
 	subcommandsDesc[GUI_SUBCOMMAND_GET_STATUS]="GetStatus";
 	subcommandsDesc[GUI_SUBCOMMAND_GET_STATUS_RESPONSE]="GetStatusRes";

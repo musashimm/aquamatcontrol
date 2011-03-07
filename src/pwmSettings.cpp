@@ -31,116 +31,54 @@ PwmSettings::PwmSettings(int id,QString name, QWidget *parent)
 {
   	ui.setupUi(this);
   	this->id=id;
-	this->name=name;
-	ui.lineEdit_name->setText(name);
-	ui.groupBox->setTitle(QString(tr("Wyj. PWM %1 [%2]")).arg(id+1).arg(name));
+	ui.edit_name->setText(name);
+	ui.groupBox->setTitle(QString(tr("Wyjście PWM %1")).arg(id+1));
+	dialChanged(ui.dial->value());
+	connect(ui.checkBox_blocked, SIGNAL(clicked()), this, SLOT(stateChanged()));
+	connect(ui.dial,SIGNAL(sliderReleased()), this, SLOT(stateChanged()));
+	connect(ui.dial,SIGNAL(sliderMoved(int)), this, SLOT(dialChanged(int)));
 }
-//	connect(ui.checkBox_active, SIGNAL(clicked(bool)), this, SLOT(activatedSlot(bool)));
-//	connect(ui.checkBox_block, SIGNAL(clicked(bool)), this, SLOT(blockedSlot(bool)));
-//	connect(ui.checkBox_active, SIGNAL(stateChanged(int)), this, SLOT(activatedSlot(int)));
-//	connect(ui.checkBox_block, SIGNAL(stateChanged(int)), this, SLOT(blockedSlot(int)));
-//	connect(ui.b_set, SIGNAL(clicked()), this, SLOT(setSlot()));
-//
-//	this->override=false;
-//	this->cancel=false;
-//
-//
-//
-//	qbutton = new ComboBoxQButtons();
-//	ui.buttonsLayout->insertWidget(1,qbutton);
 
-//void OutSettings::active() {
-//	ui.checkBox_active->setCheckState(Qt::Checked);
-//}
-//
-//void OutSettings::inactive() {
-//	ui.checkBox_active->setCheckState(Qt::Unchecked);
-//}
-//
-//void OutSettings::block()  {
-//	ui.checkBox_block->setCheckState(Qt::Checked);
-//}
-//
-//void OutSettings::unblock() {
-//	ui.checkBox_block->setCheckState(Qt::Unchecked);
-//}
-//
-//bool OutSettings::isBlocked() {
-//	if (ui.checkBox_block->isChecked()) {
-//		return true;
-//	} else {
-//		return false;
-//	}
-//}
+void PwmSettings::dialChanged(int value) {
+	ui.dial_label->setText(QString(tr("%1%").arg(value)));
+}
 
-//int OutSettings::getQButton() {
-//	return qbutton->get();
-//}
-//
-//void OutSettings::setQButton(int number) {
-//	qbutton->set(number);
-//}
-//
-//void OutSettings::setLabel(QString newLabel) {
-//	this->label=newLabel;
-//	ui.groupBox->setTitle(QString(tr("Wyj. %1 [%2]")).arg(id+1).arg(newLabel));
-//	ui.lineEdit_label->setText(newLabel);
-//	emit labelChanged(id,ui.lineEdit_label->text());
-//}
-//
-//QString OutSettings::getLabel() {
-// 	return label;
-//}
+void PwmSettings::stateChanged() {
+	int flags = 0;
+	if(ui.checkBox_blocked->isChecked()) {
+		flags = 1;
+	}
+	emit stateChanged(this->id,ui.dial->value(),flags);
+}
 
-//void OutSettings::setState(uchar b) {
-//	if (!(b & _BV(OUTPUT_ACTIVE_FLAG))) {
-//			active();
-//		} else {
-//			inactive();
-//		}
-//	if (b & _BV(OUTPUT_BLOCK_FLAG)) {
-//			block();
-//		} else {
-//			unblock();
-//		}
-//	qbutton->set(b & OUTPUTS_QBUTTONS_MASK);
-//}
-//
-//void OutSettings::activatedSlot(bool checked) {
-//
-//	if (cancel) {
-//		if (override) {
-//			override=false;
-//			unblock();
-//			blockedSlot(0);
-//		}
-//		cancel=false;
-//	} else {
-//		if (!(isBlocked())) {
-//			override=true;
-//			block();
-//			blockedSlot(1);
-//		}
-//		cancel=true;
-//	}
-//
-//	emit activeChanged(id,checked,true);
-//}
-//
-//void OutSettings::activatedSlot(int state) {
-//	emit activeChanged(id,state,false);
-//}
-//
-//void OutSettings::blockedSlot(bool checked) {
-//	emit blockChanged(id,checked,true);
-//}
-//
-//void OutSettings::blockedSlot(int state) {
-//	emit blockChanged(id,state,false);
-//}
-//
-//void OutSettings::setSlot() {
-//	setLabel(ui.lineEdit_label->text());
-//	emit newSettings(id,ui.lineEdit_label->text(),qbutton->get());
-//}
+void PwmSettings::newSettings(int pwm,int flags,QString name) {
+		if (name != NULL) {
+			ui.edit_name->setText(name);
+		}
+		ui.dial->setValue(pwm);
+		dialChanged(pwm);
+		if (flags) {
+			ui.checkBox_blocked->setChecked(true);
+		} else {
+			ui.checkBox_blocked->setChecked(false);
+		}
+}
 
+QByteArray PwmSettings::getSettingsArray() {
+	QByteArray a;
+	int flags = 0;
+	QString s(NAME_LENGTH,' ');
+
+	if(ui.checkBox_blocked->isChecked()) {
+		flags = 1;
+	}
+
+	s.replace(0,ui.edit_name->text().size(),ui.edit_name->text());
+
+	a.append(uchar(id));
+	a.append(uchar(ui.dial->value()));
+	a.append(uchar(flags));
+	a.append(s);
+
+	return a;
+}

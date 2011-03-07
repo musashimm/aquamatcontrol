@@ -842,16 +842,16 @@
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_9">
              <item>
-              <widget class="QPushButton" name="pushButton">
+              <widget class="QPushButton" name="b_pwmGetConfig">
                <property name="text">
-                <string>PushButton</string>
+                <string>Pobierz ustawienia</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_2">
+              <widget class="QPushButton" name="b_pwmSendConfig">
                <property name="text">
-                <string>PushButton</string>
+                <string>Wyślij ustawienia</string>
                </property>
               </widget>
              </item>

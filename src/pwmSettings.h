@@ -28,8 +28,8 @@ $Id$
 
 #include <QLabel>
 #include <QString>
+#include <QByteArray>
 #include "ui_pwmSettings.h"
-#include "comboBoxQButtons.h"
 
 class PwmSettings : public QWidget {
 
@@ -47,24 +47,26 @@ class PwmSettings : public QWidget {
 //		bool isBlocked();
 //		int getQButton();
 //        void setQButton(int number);
+		QByteArray getSettingsArray();
+	public slots:
+		void newSettings(int,int,QString);
 //
-//    signals:
-//		void activeChanged(int,int,int);
+    signals:
+		void stateChanged(int,int,int);
 //		void blockChanged(int,int,int);
 //		void labelChanged(int,QString);
 //		void newSettings(int,QString,int);
 //
-//	private slots:
-//		void setSlot();
-//		void activatedSlot(bool);
-//		void blockedSlot(bool);
+	private slots:
+		void stateChanged();
+		void dialChanged(int);
+		//void nameChanged();
 //		void activatedSlot(int);
 //		void blockedSlot(int);
 //
 	private:
 		Ui::PwmSettings ui;
 		int id;
-		QString name;
 //		bool override;
 //		bool cancel;
 //

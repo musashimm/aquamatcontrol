@@ -130,6 +130,9 @@ public slots:
 	void discoverTemp();
 
 	void pwmInit();
+	void pwmGetSettings();
+	void pwmSendSettings();
+	void pwmStateChanged(int,int,int);
 
 	void outInit();
 	void getOut();

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainWindow.ui'
 **
-** Created: Sat Mar 5 22:45:07 2011
+** Created: Mon Mar 7 20:45:07 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -143,8 +143,8 @@ public:
     QGridLayout *pwmSettingsLayout;
     QWidget *horizontalLayoutWidget_12;
     QHBoxLayout *horizontalLayout_9;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *b_pwmGetConfig;
+    QPushButton *b_pwmSendConfig;
     QSpacerItem *horizontalSpacer;
     QWidget *tab_3;
     QWidget *gridLayoutWidget_5;
@@ -621,15 +621,15 @@ public:
         horizontalLayout_9 = new QHBoxLayout(horizontalLayoutWidget_12);
         horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
         horizontalLayout_9->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(horizontalLayoutWidget_12);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        b_pwmGetConfig = new QPushButton(horizontalLayoutWidget_12);
+        b_pwmGetConfig->setObjectName(QString::fromUtf8("b_pwmGetConfig"));
 
-        horizontalLayout_9->addWidget(pushButton);
+        horizontalLayout_9->addWidget(b_pwmGetConfig);
 
-        pushButton_2 = new QPushButton(horizontalLayoutWidget_12);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        b_pwmSendConfig = new QPushButton(horizontalLayoutWidget_12);
+        b_pwmSendConfig->setObjectName(QString::fromUtf8("b_pwmSendConfig"));
 
-        horizontalLayout_9->addWidget(pushButton_2);
+        horizontalLayout_9->addWidget(b_pwmSendConfig);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -994,8 +994,8 @@ public:
         b_outAllBlock->setText(QApplication::translate("MainWindow", "Wszystkie zablokuj", 0, QApplication::UnicodeUTF8));
         b_outAllUnblock->setText(QApplication::translate("MainWindow", "Wszystkie odblokuj", 0, QApplication::UnicodeUTF8));
         tabWidget_3->setTabText(tabWidget_3->indexOf(tab_4), QApplication::translate("MainWindow", "Binarne", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("MainWindow", "PushButton", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("MainWindow", "PushButton", 0, QApplication::UnicodeUTF8));
+        b_pwmGetConfig->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
+        b_pwmSendConfig->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
         tabWidget_3->setTabText(tabWidget_3->indexOf(tab_8), QApplication::translate("MainWindow", "Pwm", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Wyj\305\233cia", 0, QApplication::UnicodeUTF8));
         b_timersGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));

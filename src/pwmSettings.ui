@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>179</width>
-    <height>244</height>
+    <height>214</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>4</x>
      <y>0</y>
      <width>169</width>
-     <height>241</height>
+     <height>209</height>
     </rect>
    </property>
    <property name="title">
@@ -31,7 +31,7 @@
       <x>8</x>
       <y>16</y>
       <width>153</width>
-      <height>219</height>
+      <height>185</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -54,7 +54,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_name">
+          <widget class="QLineEdit" name="edit_name">
            <property name="text">
             <string>ABCDE</string>
            </property>
@@ -84,14 +84,7 @@
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>Ustaw nazwę</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="dial_label">
        <property name="text">
         <string>100%</string>
        </property>
@@ -101,7 +94,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QDial" name="dial_pwm">
+      <widget class="QDial" name="dial">
        <property name="maximum">
         <number>100</number>
        </property>

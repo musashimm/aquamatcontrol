@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'tempSettings.ui'
 **
-** Created: Sat Mar 5 22:41:00 2011
+** Created: Mon Mar 7 19:21:44 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

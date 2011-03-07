@@ -46,6 +46,7 @@
 */
 #define UINT8_T_DISABLED 0xFF
 
+#define NAME_LENGTH 5
 
 #define OUTPUT_ACTIVE_FLAG 7
 #define OUTPUT_BLOCK_FLAG 3
