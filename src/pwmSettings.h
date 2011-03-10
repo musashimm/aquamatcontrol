@@ -37,40 +37,24 @@ class PwmSettings : public QWidget {
 
 	public:
 		PwmSettings(int,QString,QWidget *parent = 0);
-//		void active();
-//		void inactive();
-//		void block();
-//		void unblock();
-//		void setLabel(QString);
-//		void setState(uchar);
-//		QString getLabel();
-//		bool isBlocked();
-//		int getQButton();
-//        void setQButton(int number);
 		QByteArray getSettingsArray();
+		QString getName();
+		int getPwm();
+		bool isBlocked();
+
 	public slots:
 		void newSettings(int,int,QString);
-//
+
     signals:
 		void stateChanged(int,int,int);
-//		void blockChanged(int,int,int);
-//		void labelChanged(int,QString);
-//		void newSettings(int,QString,int);
-//
+
 	private slots:
 		void stateChanged();
 		void dialChanged(int);
-		//void nameChanged();
-//		void activatedSlot(int);
-//		void blockedSlot(int);
-//
+
 	private:
 		Ui::PwmSettings ui;
 		int id;
-//		bool override;
-//		bool cancel;
-//
-//		ComboBoxQButtons* qbutton;
 };
 
 #endif

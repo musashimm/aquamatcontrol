@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainWindow.ui'
 **
-** Created: Mon Mar 7 20:45:07 2011
+** Created: Thu Mar 10 22:57:02 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -109,18 +109,21 @@ public:
     QWidget *temperature;
     QWidget *horizontalLayoutWidget_6;
     QHBoxLayout *tempSettingsLayout;
-    QLabel *label_12;
+    QGroupBox *groupBox_7;
+    QWidget *verticalLayoutWidget_4;
+    QVBoxLayout *verticalLayout_3;
     QLabel *label_20;
-    QLabel *label_21;
-    QLabel *label_22;
+    QLabel *label_12;
+    QLabel *label_26;
+    QLabel *label_30;
+    QLabel *label_25;
     QLabel *label_23;
     QLabel *label_24;
-    QLabel *label_25;
-    QLabel *label_26;
     QLabel *label_27;
     QLabel *label_28;
     QLabel *label_29;
-    QLabel *label_30;
+    QLabel *label_22;
+    QLabel *label_21;
     QWidget *horizontalLayoutWidget_8;
     QHBoxLayout *horizontalLayout_6;
     QPushButton *b_tempGetSettings;
@@ -165,6 +168,12 @@ public:
     QPushButton *b_timersvGetSettings;
     QPushButton *b_timersvSetSettings;
     QWidget *tab_11;
+    QWidget *gridLayoutWidget_9;
+    QGridLayout *timerssecSettingsLayout;
+    QWidget *horizontalLayoutWidget_13;
+    QHBoxLayout *horizontalLayout_10;
+    QPushButton *b_timerssecGetSettings;
+    QPushButton *b_timerssecSetSettings;
     QWidget *tab;
     QListWidget *eventViewer;
     QWidget *horizontalLayoutWidget_9;
@@ -487,58 +496,141 @@ public:
         temperature->setObjectName(QString::fromUtf8("temperature"));
         horizontalLayoutWidget_6 = new QWidget(temperature);
         horizontalLayoutWidget_6->setObjectName(QString::fromUtf8("horizontalLayoutWidget_6"));
-        horizontalLayoutWidget_6->setGeometry(QRect(160, 4, 621, 445));
+        horizontalLayoutWidget_6->setGeometry(QRect(2, 4, 779, 445));
         tempSettingsLayout = new QHBoxLayout(horizontalLayoutWidget_6);
         tempSettingsLayout->setObjectName(QString::fromUtf8("tempSettingsLayout"));
         tempSettingsLayout->setContentsMargins(0, 0, 0, 0);
-        label_12 = new QLabel(temperature);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(8, 62, 145, 17));
-        label_12->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_20 = new QLabel(temperature);
+        groupBox_7 = new QGroupBox(horizontalLayoutWidget_6);
+        groupBox_7->setObjectName(QString::fromUtf8("groupBox_7"));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(groupBox_7->sizePolicy().hasHeightForWidth());
+        groupBox_7->setSizePolicy(sizePolicy2);
+        groupBox_7->setFlat(false);
+        verticalLayoutWidget_4 = new QWidget(groupBox_7);
+        verticalLayoutWidget_4->setObjectName(QString::fromUtf8("verticalLayoutWidget_4"));
+        verticalLayoutWidget_4->setGeometry(QRect(0, 0, 159, 443));
+        verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget_4);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
+        label_20 = new QLabel(verticalLayoutWidget_4);
         label_20->setObjectName(QString::fromUtf8("label_20"));
-        label_20->setGeometry(QRect(8, 30, 145, 17));
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(label_20->sizePolicy().hasHeightForWidth());
+        label_20->setSizePolicy(sizePolicy3);
+        label_20->setMaximumSize(QSize(16777215, 30));
         label_20->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_21 = new QLabel(temperature);
-        label_21->setObjectName(QString::fromUtf8("label_21"));
-        label_21->setGeometry(QRect(8, 370, 145, 17));
-        label_21->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_22 = new QLabel(temperature);
-        label_22->setObjectName(QString::fromUtf8("label_22"));
-        label_22->setGeometry(QRect(8, 342, 145, 17));
-        label_22->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_23 = new QLabel(temperature);
-        label_23->setObjectName(QString::fromUtf8("label_23"));
-        label_23->setGeometry(QRect(8, 202, 145, 17));
-        label_23->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_24 = new QLabel(temperature);
-        label_24->setObjectName(QString::fromUtf8("label_24"));
-        label_24->setGeometry(QRect(8, 230, 145, 17));
-        label_24->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_25 = new QLabel(temperature);
-        label_25->setObjectName(QString::fromUtf8("label_25"));
-        label_25->setGeometry(QRect(8, 172, 145, 17));
-        label_25->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_26 = new QLabel(temperature);
+
+        verticalLayout_3->addWidget(label_20);
+
+        label_12 = new QLabel(verticalLayoutWidget_4);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        sizePolicy3.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
+        label_12->setSizePolicy(sizePolicy3);
+        label_12->setMaximumSize(QSize(16777215, 30));
+        label_12->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        verticalLayout_3->addWidget(label_12);
+
+        label_26 = new QLabel(verticalLayoutWidget_4);
         label_26->setObjectName(QString::fromUtf8("label_26"));
-        label_26->setGeometry(QRect(8, 98, 145, 17));
+        sizePolicy3.setHeightForWidth(label_26->sizePolicy().hasHeightForWidth());
+        label_26->setSizePolicy(sizePolicy3);
+        label_26->setMaximumSize(QSize(16777215, 30));
         label_26->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_27 = new QLabel(temperature);
-        label_27->setObjectName(QString::fromUtf8("label_27"));
-        label_27->setGeometry(QRect(8, 258, 145, 17));
-        label_27->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_28 = new QLabel(temperature);
-        label_28->setObjectName(QString::fromUtf8("label_28"));
-        label_28->setGeometry(QRect(8, 286, 145, 17));
-        label_28->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_29 = new QLabel(temperature);
-        label_29->setObjectName(QString::fromUtf8("label_29"));
-        label_29->setGeometry(QRect(8, 316, 145, 17));
-        label_29->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        label_30 = new QLabel(temperature);
+
+        verticalLayout_3->addWidget(label_26);
+
+        label_30 = new QLabel(verticalLayoutWidget_4);
         label_30->setObjectName(QString::fromUtf8("label_30"));
-        label_30->setGeometry(QRect(92, 134, 57, 17));
+        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Maximum);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(label_30->sizePolicy().hasHeightForWidth());
+        label_30->setSizePolicy(sizePolicy4);
+        label_30->setMaximumSize(QSize(16777215, 30));
         label_30->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        verticalLayout_3->addWidget(label_30);
+
+        label_25 = new QLabel(verticalLayoutWidget_4);
+        label_25->setObjectName(QString::fromUtf8("label_25"));
+        sizePolicy3.setHeightForWidth(label_25->sizePolicy().hasHeightForWidth());
+        label_25->setSizePolicy(sizePolicy3);
+        label_25->setMaximumSize(QSize(16777215, 30));
+        label_25->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        verticalLayout_3->addWidget(label_25);
+
+        label_23 = new QLabel(verticalLayoutWidget_4);
+        label_23->setObjectName(QString::fromUtf8("label_23"));
+        sizePolicy3.setHeightForWidth(label_23->sizePolicy().hasHeightForWidth());
+        label_23->setSizePolicy(sizePolicy3);
+        label_23->setMaximumSize(QSize(16777215, 30));
+        label_23->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        verticalLayout_3->addWidget(label_23);
+
+        label_24 = new QLabel(verticalLayoutWidget_4);
+        label_24->setObjectName(QString::fromUtf8("label_24"));
+        sizePolicy3.setHeightForWidth(label_24->sizePolicy().hasHeightForWidth());
+        label_24->setSizePolicy(sizePolicy3);
+        label_24->setMaximumSize(QSize(16777215, 30));
+        label_24->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        verticalLayout_3->addWidget(label_24);
+
+        label_27 = new QLabel(verticalLayoutWidget_4);
+        label_27->setObjectName(QString::fromUtf8("label_27"));
+        sizePolicy3.setHeightForWidth(label_27->sizePolicy().hasHeightForWidth());
+        label_27->setSizePolicy(sizePolicy3);
+        label_27->setMaximumSize(QSize(16777215, 30));
+        label_27->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        verticalLayout_3->addWidget(label_27);
+
+        label_28 = new QLabel(verticalLayoutWidget_4);
+        label_28->setObjectName(QString::fromUtf8("label_28"));
+        sizePolicy3.setHeightForWidth(label_28->sizePolicy().hasHeightForWidth());
+        label_28->setSizePolicy(sizePolicy3);
+        label_28->setMaximumSize(QSize(16777215, 30));
+        label_28->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        verticalLayout_3->addWidget(label_28);
+
+        label_29 = new QLabel(verticalLayoutWidget_4);
+        label_29->setObjectName(QString::fromUtf8("label_29"));
+        sizePolicy3.setHeightForWidth(label_29->sizePolicy().hasHeightForWidth());
+        label_29->setSizePolicy(sizePolicy3);
+        label_29->setMaximumSize(QSize(16777215, 30));
+        label_29->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        verticalLayout_3->addWidget(label_29);
+
+        label_22 = new QLabel(verticalLayoutWidget_4);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+        sizePolicy3.setHeightForWidth(label_22->sizePolicy().hasHeightForWidth());
+        label_22->setSizePolicy(sizePolicy3);
+        label_22->setMaximumSize(QSize(16777215, 30));
+        label_22->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        verticalLayout_3->addWidget(label_22);
+
+        label_21 = new QLabel(verticalLayoutWidget_4);
+        label_21->setObjectName(QString::fromUtf8("label_21"));
+        sizePolicy3.setHeightForWidth(label_21->sizePolicy().hasHeightForWidth());
+        label_21->setSizePolicy(sizePolicy3);
+        label_21->setMaximumSize(QSize(16777215, 30));
+        label_21->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        verticalLayout_3->addWidget(label_21);
+
+
+        tempSettingsLayout->addWidget(groupBox_7);
+
         horizontalLayoutWidget_8 = new QWidget(temperature);
         horizontalLayoutWidget_8->setObjectName(QString::fromUtf8("horizontalLayoutWidget_8"));
         horizontalLayoutWidget_8->setGeometry(QRect(4, 456, 362, 29));
@@ -677,13 +769,13 @@ public:
         tab_9->setObjectName(QString::fromUtf8("tab_9"));
         gridLayoutWidget_6 = new QWidget(tab_9);
         gridLayoutWidget_6->setObjectName(QString::fromUtf8("gridLayoutWidget_6"));
-        gridLayoutWidget_6->setGeometry(QRect(2, 2, 767, 418));
+        gridLayoutWidget_6->setGeometry(QRect(2, 2, 767, 425));
         timersvSettingsLayout = new QGridLayout(gridLayoutWidget_6);
         timersvSettingsLayout->setObjectName(QString::fromUtf8("timersvSettingsLayout"));
         timersvSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_5 = new QWidget(tab_9);
         horizontalLayoutWidget_5->setObjectName(QString::fromUtf8("horizontalLayoutWidget_5"));
-        horizontalLayoutWidget_5->setGeometry(QRect(2, 424, 252, 29));
+        horizontalLayoutWidget_5->setGeometry(QRect(2, 430, 252, 29));
         horizontalLayout_4 = new QHBoxLayout(horizontalLayoutWidget_5);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -700,6 +792,28 @@ public:
         tabWidget_2->addTab(tab_9, QString());
         tab_11 = new QWidget();
         tab_11->setObjectName(QString::fromUtf8("tab_11"));
+        gridLayoutWidget_9 = new QWidget(tab_11);
+        gridLayoutWidget_9->setObjectName(QString::fromUtf8("gridLayoutWidget_9"));
+        gridLayoutWidget_9->setGeometry(QRect(2, 2, 767, 425));
+        timerssecSettingsLayout = new QGridLayout(gridLayoutWidget_9);
+        timerssecSettingsLayout->setObjectName(QString::fromUtf8("timerssecSettingsLayout"));
+        timerssecSettingsLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalLayoutWidget_13 = new QWidget(tab_11);
+        horizontalLayoutWidget_13->setObjectName(QString::fromUtf8("horizontalLayoutWidget_13"));
+        horizontalLayoutWidget_13->setGeometry(QRect(2, 430, 252, 29));
+        horizontalLayout_10 = new QHBoxLayout(horizontalLayoutWidget_13);
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
+        horizontalLayout_10->setContentsMargins(0, 0, 0, 0);
+        b_timerssecGetSettings = new QPushButton(horizontalLayoutWidget_13);
+        b_timerssecGetSettings->setObjectName(QString::fromUtf8("b_timerssecGetSettings"));
+
+        horizontalLayout_10->addWidget(b_timerssecGetSettings);
+
+        b_timerssecSetSettings = new QPushButton(horizontalLayoutWidget_13);
+        b_timerssecSetSettings->setObjectName(QString::fromUtf8("b_timerssecSetSettings"));
+
+        horizontalLayout_10->addWidget(b_timerssecSetSettings);
+
         tabWidget_2->addTab(tab_11, QString());
         tabWidget->addTab(tab_3, QString());
         tab = new QWidget();
@@ -925,7 +1039,7 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(m_quit, SIGNAL(activated()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(2);
         tabWidget_3->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(0);
 
@@ -972,18 +1086,19 @@ public:
         b_getTimeDay->setText(QApplication::translate("MainWindow", "Pobierz por\304\231 dnia", 0, QApplication::UnicodeUTF8));
         b_setTimeDay->setText(QApplication::translate("MainWindow", "Ustaw por\304\231 dnia", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_5), QApplication::translate("MainWindow", "Podstawowe / AD", 0, QApplication::UnicodeUTF8));
-        label_12->setText(QApplication::translate("MainWindow", "Numer seryjny", 0, QApplication::UnicodeUTF8));
+        groupBox_7->setTitle(QApplication::translate("MainWindow", "adass", 0, QApplication::UnicodeUTF8));
         label_20->setText(QApplication::translate("MainWindow", "Status", 0, QApplication::UnicodeUTF8));
-        label_21->setText(QApplication::translate("MainWindow", "Wyj\305\233cie podgrzewaj\304\205ce", 0, QApplication::UnicodeUTF8));
-        label_22->setText(QApplication::translate("MainWindow", "Wyj\305\233cie ch\305\202odz\304\205ce", 0, QApplication::UnicodeUTF8));
+        label_12->setText(QApplication::translate("MainWindow", "Numer seryjny", 0, QApplication::UnicodeUTF8));
+        label_26->setText(QApplication::translate("MainWindow", "Flagi / B\305\202\304\231dne odczyty", 0, QApplication::UnicodeUTF8));
+        label_30->setText(QApplication::translate("MainWindow", "Alarmy", 0, QApplication::UnicodeUTF8));
+        label_25->setText(QApplication::translate("MainWindow", "Temperatura aktualna", 0, QApplication::UnicodeUTF8));
         label_23->setText(QApplication::translate("MainWindow", "Temp. docelowa", 0, QApplication::UnicodeUTF8));
         label_24->setText(QApplication::translate("MainWindow", "Temp. docelowa nocna", 0, QApplication::UnicodeUTF8));
-        label_25->setText(QApplication::translate("MainWindow", "Temperatura aktualna", 0, QApplication::UnicodeUTF8));
-        label_26->setText(QApplication::translate("MainWindow", "Flagi / B\305\202\304\231dne odczyty", 0, QApplication::UnicodeUTF8));
         label_27->setText(QApplication::translate("MainWindow", "Temp. minimalna", 0, QApplication::UnicodeUTF8));
         label_28->setText(QApplication::translate("MainWindow", "Temp. maksymalna", 0, QApplication::UnicodeUTF8));
         label_29->setText(QApplication::translate("MainWindow", "Histereza", 0, QApplication::UnicodeUTF8));
-        label_30->setText(QApplication::translate("MainWindow", "Alarmy", 0, QApplication::UnicodeUTF8));
+        label_22->setText(QApplication::translate("MainWindow", "Wyj\305\233cie ch\305\202odz\304\205ce", 0, QApplication::UnicodeUTF8));
+        label_21->setText(QApplication::translate("MainWindow", "Wyj\305\233cie podgrzewaj\304\205ce", 0, QApplication::UnicodeUTF8));
         b_tempGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
         b_tempSetSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia ", 0, QApplication::UnicodeUTF8));
         b_discoverSensors->setText(QApplication::translate("MainWindow", "Wykryj czujniki", 0, QApplication::UnicodeUTF8));
@@ -1004,6 +1119,8 @@ public:
         b_timersvGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
         b_timersvSetSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_9), QApplication::translate("MainWindow", "Interwa\305\202owe", 0, QApplication::UnicodeUTF8));
+        b_timerssecGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
+        b_timerssecSetSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_11), QApplication::translate("MainWindow", "Sekundowe", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Timery", 0, QApplication::UnicodeUTF8));
         b_getEvents->setText(QApplication::translate("MainWindow", "Pobierz histori\304\231 zdarze\305\204", 0, QApplication::UnicodeUTF8));

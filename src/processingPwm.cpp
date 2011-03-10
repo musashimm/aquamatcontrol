@@ -57,3 +57,32 @@ void MainWindow::pwmSendSettings() {
 		cp.toQueue(c);
 	}
 }
+
+PwmSettings* MainWindow::getPwmSetting(int id) {
+        return pPwmSettings[id];
+}
+
+void MainWindow::pwmSaveSettings(QSettings* s) {
+    s->beginWriteArray("Pwms");
+	for (int i = 0; i < PWM_NUM; i++) {
+     	s->setArrayIndex(i);
+     	s->setValue("pwm", pPwmSettings[i]->getPwm());
+     	s->setValue("blocked", pPwmSettings[i]->isBlocked());
+     	s->setValue("name", pPwmSettings[i]->getName());
+ 	}
+ 	s->endArray();
+}
+
+void MainWindow::pwmLoadSettings(QSettings* s) {
+    int flags;
+    s->beginReadArray("Pwms");
+	for (int i = 0; i < PWM_NUM; i++) {
+     	s->setArrayIndex(i);
+     	flags = 0;
+     	if (s->value("blocked").toBool()) {
+     	    flags |= _BV(PWM_FLAG_BLOCKED);
+     	}
+     	pPwmSettings[i]->newSettings(s->value("pwm").toInt(),flags,s->value("name","?????").toString());
+ 	}
+ 	s->endArray();
+}

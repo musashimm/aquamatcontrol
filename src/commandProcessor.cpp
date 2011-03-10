@@ -198,6 +198,23 @@ void CommandProcessor::processCommand (Command* c) {
 					break;
 			}
 			break;
+        	//=======================================================================================
+            case GUI_PWM_COMMAND:
+			switch(c->getSubCommand()) {
+				case GUI_SUBCOMMAND_GET_STATUS_RESPONSE:
+					c->resetIndex();
+					for (int i=0;i<PWM_NUM;i++) {
+						parent->getPwmSetting(i)->newSettings(c->next(),c->next(),NULL);
+					}
+					break;
+				case GUI_SUBCOMMAND_GET_SETTINGS_RESPONSE:
+					c->resetIndex();
+					for (int i=0;i<PWM_NUM;i++) {
+					    parent->getPwmSetting(i)->newSettings(c->next(),c->next(),c->next(5));
+					}
+					break;
+			}
+			break;
 		//========================================================================================
 		case GUI_TOP_OFF_COMMAND:
 			parent->setUiTopOff(c);

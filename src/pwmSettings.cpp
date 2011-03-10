@@ -52,16 +52,16 @@ void PwmSettings::stateChanged() {
 }
 
 void PwmSettings::newSettings(int pwm,int flags,QString name) {
-		if (name != NULL) {
-			ui.edit_name->setText(name);
-		}
-		ui.dial->setValue(pwm);
-		dialChanged(pwm);
-		if (flags) {
-			ui.checkBox_blocked->setChecked(true);
-		} else {
-			ui.checkBox_blocked->setChecked(false);
-		}
+    if (name != NULL) {
+		ui.edit_name->setText(name);
+	}
+	ui.dial->setValue(pwm);
+	dialChanged(pwm);
+	if (flags & _BV(PWM_FLAG_BLOCKED)) {
+		ui.checkBox_blocked->setChecked(true);
+	} else {
+		ui.checkBox_blocked->setChecked(false);
+	}
 }
 
 QByteArray PwmSettings::getSettingsArray() {
@@ -81,4 +81,20 @@ QByteArray PwmSettings::getSettingsArray() {
 	a.append(s);
 
 	return a;
+}
+
+QString PwmSettings::getName() {
+ 	return ui.edit_name->text();
+}
+
+bool PwmSettings::isBlocked() {
+    if(ui.checkBox_blocked->isChecked()) {
+		return true;
+	} else {
+        return false;
+	}
+}
+
+int PwmSettings::getPwm() {
+    return ui.dial->value();
 }

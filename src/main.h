@@ -34,8 +34,8 @@ $Id$
 
 #define PROJECT_NAME "AquamatControl"
 #define PROJECT_VERSION_MAIN 1
-#define PROJECT_VERSION_MAJOR 3
-#define PROJECT_VERSION_MINOR 11
+#define PROJECT_VERSION_MAJOR 5
+#define PROJECT_VERSION_MINOR 0
 #define PROJECT_LOGO ":/resources/logocontrol.png"
 #define PROJECT_AUTHOR "Copyright (C) 2009 Wojciech Todryk"
 

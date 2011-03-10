@@ -355,6 +355,8 @@ void MainWindow::loadSettings(QSettings* settings)
  	}
  	settings->endArray();
 
+ 	pwmLoadSettings(settings);
+
  	settings->beginReadArray("Timers");
 	for (int i = 0; i < TIMERS_NUM; i++) {
      	settings->setArrayIndex(i);
@@ -432,6 +434,8 @@ void MainWindow::saveSettings(QSettings* settings)
      	settings->setValue("block", pOutSettings[i]->isBlocked());
  	}
  	settings->endArray();
+
+ 	pwmSaveSettings(settings);
 
  	settings->beginWriteArray("Timers");
 	for (int i = 0; i < TIMERS_NUM; i++) {
