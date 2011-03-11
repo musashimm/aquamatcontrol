@@ -204,13 +204,16 @@ void CommandProcessor::processCommand (Command* c) {
 				case GUI_SUBCOMMAND_GET_STATUS_RESPONSE:
 					c->resetIndex();
 					for (int i=0;i<PWM_NUM;i++) {
-						parent->getPwmSetting(i)->newSettings(c->next(),c->next(),NULL);
+						parent->getPwmSetting(i)->setPwm(c->next());
+						parent->getPwmSetting(i)->setFlags(c->next());
 					}
 					break;
 				case GUI_SUBCOMMAND_GET_SETTINGS_RESPONSE:
 					c->resetIndex();
 					for (int i=0;i<PWM_NUM;i++) {
-					    parent->getPwmSetting(i)->newSettings(c->next(),c->next(),c->next(5));
+						parent->getPwmSetting(i)->setPwm(c->next());
+						parent->getPwmSetting(i)->setFlags(c->next());
+					    parent->getPwmSetting(i)->setName(c->next(5));
 					}
 					break;
 			}

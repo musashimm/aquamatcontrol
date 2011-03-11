@@ -33,14 +33,25 @@ PwmSettings::PwmSettings(int id,QString name, QWidget *parent)
   	this->id=id;
 	ui.edit_name->setText(name);
 	ui.groupBox->setTitle(QString(tr("Wyjście PWM %1")).arg(id+1));
-	dialChanged(ui.dial->value());
+	pwmChanged(ui.dial->value());
 	connect(ui.checkBox_blocked, SIGNAL(clicked()), this, SLOT(stateChanged()));
-	connect(ui.dial,SIGNAL(sliderReleased()), this, SLOT(stateChanged()));
-	connect(ui.dial,SIGNAL(valueChanged(int)), this, SLOT(dialChanged(int)));
+	//connect(ui.dial,SIGNAL(sliderReleased()), this, SLOT(stateChanged()));
+	connect(ui.dial,SIGNAL(valueChanged(int)), this, SLOT(pwmChanged(int)));
+
+	timer = new QTimer(this);
+	connect(timer, SIGNAL(timeout()), this, SLOT(checkPwmChange()));
+	timer->start(1000);
 }
 
-void PwmSettings::dialChanged(int value) {
+void PwmSettings::pwmChanged(int value) {
 	ui.dial_label->setText(QString(tr("%1%").arg(value)));
+}
+
+void PwmSettings::checkPwmChange() {
+	if (oldpwm != ui.dial->value()) {
+		oldpwm = ui.dial->value();
+		stateChanged();
+	}
 }
 
 void PwmSettings::stateChanged() {
@@ -53,15 +64,10 @@ void PwmSettings::stateChanged() {
 
 void PwmSettings::newSettings(int pwm,int flags,QString name) {
     if (name != NULL) {
-		ui.edit_name->setText(name);
+		setName(name);
 	}
-	ui.dial->setValue(pwm);
-	dialChanged(pwm);
-	if (flags & _BV(PWM_FLAG_BLOCKED)) {
-		ui.checkBox_blocked->setChecked(true);
-	} else {
-		ui.checkBox_blocked->setChecked(false);
-	}
+	setPwm(pwm);
+	setFlags(flags);
 }
 
 QByteArray PwmSettings::getSettingsArray() {
@@ -87,6 +93,10 @@ QString PwmSettings::getName() {
  	return ui.edit_name->text();
 }
 
+void PwmSettings::setName(QString name) {
+	ui.edit_name->setText(name);
+}
+
 bool PwmSettings::isBlocked() {
     if(ui.checkBox_blocked->isChecked()) {
 		return true;
@@ -95,6 +105,20 @@ bool PwmSettings::isBlocked() {
 	}
 }
 
+void PwmSettings::setFlags(int flags) {
+	if (flags & _BV(PWM_FLAG_BLOCKED)) {
+		ui.checkBox_blocked->setChecked(true);
+	} else {
+		ui.checkBox_blocked->setChecked(false);
+	}
+}
+
 int PwmSettings::getPwm() {
     return ui.dial->value();
+}
+
+void PwmSettings::setPwm(int pwm) {
+	oldpwm=pwm;
+	ui.dial->setValue(pwm);
+	pwmChanged(pwm);
 }

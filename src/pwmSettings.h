@@ -29,6 +29,7 @@ $Id$
 #include <QLabel>
 #include <QString>
 #include <QByteArray>
+#include <QTimer>
 #include "ui_pwmSettings.h"
 
 class PwmSettings : public QWidget {
@@ -41,6 +42,9 @@ class PwmSettings : public QWidget {
 		QString getName();
 		int getPwm();
 		bool isBlocked();
+		void setName(QString);
+		void setPwm(int);
+		void setFlags(int);
 
 	public slots:
 		void newSettings(int,int,QString);
@@ -50,11 +54,14 @@ class PwmSettings : public QWidget {
 
 	private slots:
 		void stateChanged();
-		void dialChanged(int);
+		void pwmChanged(int);
+		void checkPwmChange();
 
 	private:
 		Ui::PwmSettings ui;
 		int id;
+		QTimer *timer;
+		int oldpwm;
 };
 
 #endif
