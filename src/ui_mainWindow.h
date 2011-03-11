@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainWindow.ui'
 **
-** Created: Thu Mar 10 22:57:02 2011
+** Created: Fri Mar 11 20:42:37 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -169,7 +169,7 @@ public:
     QPushButton *b_timersvSetSettings;
     QWidget *tab_11;
     QWidget *gridLayoutWidget_9;
-    QGridLayout *timerssecSettingsLayout;
+    QGridLayout *timersSecSettingsLayout;
     QWidget *horizontalLayoutWidget_13;
     QHBoxLayout *horizontalLayout_10;
     QPushButton *b_timerssecGetSettings;
@@ -227,14 +227,14 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->setWindowModality(Qt::NonModal);
-        MainWindow->resize(810, 620);
+        MainWindow->resize(900, 620);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
-        MainWindow->setMinimumSize(QSize(810, 620));
-        MainWindow->setMaximumSize(QSize(810, 620));
+        MainWindow->setMinimumSize(QSize(900, 620));
+        MainWindow->setMaximumSize(QSize(900, 620));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/resources/app_icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -375,7 +375,7 @@ public:
         topOff_block_min_ro->setChecked(true);
         verticalLayoutWidget_2 = new QWidget(topOffGroupBox);
         verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(588, 16, 169, 131));
+        verticalLayoutWidget_2->setGeometry(QRect(588, 16, 187, 131));
         topOffButtons = new QVBoxLayout(verticalLayoutWidget_2);
         topOffButtons->setObjectName(QString::fromUtf8("topOffButtons"));
         topOffButtons->setContentsMargins(0, 0, 0, 0);
@@ -411,7 +411,7 @@ public:
         groupBox_4->setGeometry(QRect(8, 8, 193, 141));
         verticalLayoutWidget_5 = new QWidget(groupBox_4);
         verticalLayoutWidget_5->setObjectName(QString::fromUtf8("verticalLayoutWidget_5"));
-        verticalLayoutWidget_5->setGeometry(QRect(14, 22, 163, 109));
+        verticalLayoutWidget_5->setGeometry(QRect(14, 22, 178, 109));
         verticalLayout_4 = new QVBoxLayout(verticalLayoutWidget_5);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -496,31 +496,26 @@ public:
         temperature->setObjectName(QString::fromUtf8("temperature"));
         horizontalLayoutWidget_6 = new QWidget(temperature);
         horizontalLayoutWidget_6->setObjectName(QString::fromUtf8("horizontalLayoutWidget_6"));
-        horizontalLayoutWidget_6->setGeometry(QRect(2, 4, 779, 445));
+        horizontalLayoutWidget_6->setGeometry(QRect(2, 4, 869, 447));
         tempSettingsLayout = new QHBoxLayout(horizontalLayoutWidget_6);
         tempSettingsLayout->setObjectName(QString::fromUtf8("tempSettingsLayout"));
         tempSettingsLayout->setContentsMargins(0, 0, 0, 0);
         groupBox_7 = new QGroupBox(horizontalLayoutWidget_6);
         groupBox_7->setObjectName(QString::fromUtf8("groupBox_7"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(groupBox_7->sizePolicy().hasHeightForWidth());
-        groupBox_7->setSizePolicy(sizePolicy2);
-        groupBox_7->setFlat(false);
+        sizePolicy.setHeightForWidth(groupBox_7->sizePolicy().hasHeightForWidth());
+        groupBox_7->setSizePolicy(sizePolicy);
+        groupBox_7->setFlat(true);
         verticalLayoutWidget_4 = new QWidget(groupBox_7);
         verticalLayoutWidget_4->setObjectName(QString::fromUtf8("verticalLayoutWidget_4"));
-        verticalLayoutWidget_4->setGeometry(QRect(0, 0, 159, 443));
+        verticalLayoutWidget_4->setGeometry(QRect(4, 22, 164, 361));
         verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget_4);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_3->setSizeConstraint(QLayout::SetDefaultConstraint);
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
         label_20 = new QLabel(verticalLayoutWidget_4);
         label_20->setObjectName(QString::fromUtf8("label_20"));
-        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(label_20->sizePolicy().hasHeightForWidth());
-        label_20->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_20->sizePolicy().hasHeightForWidth());
+        label_20->setSizePolicy(sizePolicy);
         label_20->setMaximumSize(QSize(16777215, 30));
         label_20->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -528,8 +523,8 @@ public:
 
         label_12 = new QLabel(verticalLayoutWidget_4);
         label_12->setObjectName(QString::fromUtf8("label_12"));
-        sizePolicy3.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
-        label_12->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
+        label_12->setSizePolicy(sizePolicy);
         label_12->setMaximumSize(QSize(16777215, 30));
         label_12->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -537,8 +532,8 @@ public:
 
         label_26 = new QLabel(verticalLayoutWidget_4);
         label_26->setObjectName(QString::fromUtf8("label_26"));
-        sizePolicy3.setHeightForWidth(label_26->sizePolicy().hasHeightForWidth());
-        label_26->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_26->sizePolicy().hasHeightForWidth());
+        label_26->setSizePolicy(sizePolicy);
         label_26->setMaximumSize(QSize(16777215, 30));
         label_26->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -546,11 +541,8 @@ public:
 
         label_30 = new QLabel(verticalLayoutWidget_4);
         label_30->setObjectName(QString::fromUtf8("label_30"));
-        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Maximum);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(label_30->sizePolicy().hasHeightForWidth());
-        label_30->setSizePolicy(sizePolicy4);
+        sizePolicy.setHeightForWidth(label_30->sizePolicy().hasHeightForWidth());
+        label_30->setSizePolicy(sizePolicy);
         label_30->setMaximumSize(QSize(16777215, 30));
         label_30->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -558,8 +550,8 @@ public:
 
         label_25 = new QLabel(verticalLayoutWidget_4);
         label_25->setObjectName(QString::fromUtf8("label_25"));
-        sizePolicy3.setHeightForWidth(label_25->sizePolicy().hasHeightForWidth());
-        label_25->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_25->sizePolicy().hasHeightForWidth());
+        label_25->setSizePolicy(sizePolicy);
         label_25->setMaximumSize(QSize(16777215, 30));
         label_25->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -567,8 +559,8 @@ public:
 
         label_23 = new QLabel(verticalLayoutWidget_4);
         label_23->setObjectName(QString::fromUtf8("label_23"));
-        sizePolicy3.setHeightForWidth(label_23->sizePolicy().hasHeightForWidth());
-        label_23->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_23->sizePolicy().hasHeightForWidth());
+        label_23->setSizePolicy(sizePolicy);
         label_23->setMaximumSize(QSize(16777215, 30));
         label_23->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -576,8 +568,8 @@ public:
 
         label_24 = new QLabel(verticalLayoutWidget_4);
         label_24->setObjectName(QString::fromUtf8("label_24"));
-        sizePolicy3.setHeightForWidth(label_24->sizePolicy().hasHeightForWidth());
-        label_24->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_24->sizePolicy().hasHeightForWidth());
+        label_24->setSizePolicy(sizePolicy);
         label_24->setMaximumSize(QSize(16777215, 30));
         label_24->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -585,8 +577,8 @@ public:
 
         label_27 = new QLabel(verticalLayoutWidget_4);
         label_27->setObjectName(QString::fromUtf8("label_27"));
-        sizePolicy3.setHeightForWidth(label_27->sizePolicy().hasHeightForWidth());
-        label_27->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_27->sizePolicy().hasHeightForWidth());
+        label_27->setSizePolicy(sizePolicy);
         label_27->setMaximumSize(QSize(16777215, 30));
         label_27->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -594,8 +586,8 @@ public:
 
         label_28 = new QLabel(verticalLayoutWidget_4);
         label_28->setObjectName(QString::fromUtf8("label_28"));
-        sizePolicy3.setHeightForWidth(label_28->sizePolicy().hasHeightForWidth());
-        label_28->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_28->sizePolicy().hasHeightForWidth());
+        label_28->setSizePolicy(sizePolicy);
         label_28->setMaximumSize(QSize(16777215, 30));
         label_28->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -603,8 +595,8 @@ public:
 
         label_29 = new QLabel(verticalLayoutWidget_4);
         label_29->setObjectName(QString::fromUtf8("label_29"));
-        sizePolicy3.setHeightForWidth(label_29->sizePolicy().hasHeightForWidth());
-        label_29->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_29->sizePolicy().hasHeightForWidth());
+        label_29->setSizePolicy(sizePolicy);
         label_29->setMaximumSize(QSize(16777215, 30));
         label_29->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -612,8 +604,8 @@ public:
 
         label_22 = new QLabel(verticalLayoutWidget_4);
         label_22->setObjectName(QString::fromUtf8("label_22"));
-        sizePolicy3.setHeightForWidth(label_22->sizePolicy().hasHeightForWidth());
-        label_22->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_22->sizePolicy().hasHeightForWidth());
+        label_22->setSizePolicy(sizePolicy);
         label_22->setMaximumSize(QSize(16777215, 30));
         label_22->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -621,8 +613,8 @@ public:
 
         label_21 = new QLabel(verticalLayoutWidget_4);
         label_21->setObjectName(QString::fromUtf8("label_21"));
-        sizePolicy3.setHeightForWidth(label_21->sizePolicy().hasHeightForWidth());
-        label_21->setSizePolicy(sizePolicy3);
+        sizePolicy.setHeightForWidth(label_21->sizePolicy().hasHeightForWidth());
+        label_21->setSizePolicy(sizePolicy);
         label_21->setMaximumSize(QSize(16777215, 30));
         label_21->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -633,7 +625,7 @@ public:
 
         horizontalLayoutWidget_8 = new QWidget(temperature);
         horizontalLayoutWidget_8->setObjectName(QString::fromUtf8("horizontalLayoutWidget_8"));
-        horizontalLayoutWidget_8->setGeometry(QRect(4, 456, 362, 29));
+        horizontalLayoutWidget_8->setGeometry(QRect(4, 456, 389, 30));
         horizontalLayout_6 = new QHBoxLayout(horizontalLayoutWidget_8);
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -657,7 +649,7 @@ public:
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
         tabWidget_3 = new QTabWidget(tab_2);
         tabWidget_3->setObjectName(QString::fromUtf8("tabWidget_3"));
-        tabWidget_3->setGeometry(QRect(4, 4, 777, 487));
+        tabWidget_3->setGeometry(QRect(4, 4, 869, 487));
         tab_4 = new QWidget();
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
         gridLayoutWidget_4 = new QWidget(tab_4);
@@ -668,7 +660,7 @@ public:
         outSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_11 = new QWidget(tab_4);
         horizontalLayoutWidget_11->setObjectName(QString::fromUtf8("horizontalLayoutWidget_11"));
-        horizontalLayoutWidget_11->setGeometry(QRect(2, 430, 767, 28));
+        horizontalLayoutWidget_11->setGeometry(QRect(2, 430, 767, 30));
         horizontalLayout_8 = new QHBoxLayout(horizontalLayoutWidget_11);
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
         horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
@@ -702,14 +694,14 @@ public:
         tab_8->setObjectName(QString::fromUtf8("tab_8"));
         gridLayoutWidget = new QWidget(tab_8);
         gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(4, 2, 765, 423));
+        gridLayoutWidget->setGeometry(QRect(4, 4, 857, 419));
         pwmSettingsLayout = new QGridLayout(gridLayoutWidget);
         pwmSettingsLayout->setObjectName(QString::fromUtf8("pwmSettingsLayout"));
         pwmSettingsLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
         pwmSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_12 = new QWidget(tab_8);
         horizontalLayoutWidget_12->setObjectName(QString::fromUtf8("horizontalLayoutWidget_12"));
-        horizontalLayoutWidget_12->setGeometry(QRect(2, 430, 769, 28));
+        horizontalLayoutWidget_12->setGeometry(QRect(4, 428, 857, 30));
         horizontalLayout_9 = new QHBoxLayout(horizontalLayoutWidget_12);
         horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
         horizontalLayout_9->setContentsMargins(0, 0, 0, 0);
@@ -739,7 +731,7 @@ public:
         timersLayout->setContentsMargins(0, 0, 0, 0);
         tabWidget_2 = new QTabWidget(tab_3);
         tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
-        tabWidget_2->setGeometry(QRect(4, 4, 775, 487));
+        tabWidget_2->setGeometry(QRect(4, 4, 871, 487));
         tab_6 = new QWidget();
         tab_6->setObjectName(QString::fromUtf8("tab_6"));
         gridLayoutWidget_7 = new QWidget(tab_6);
@@ -750,7 +742,7 @@ public:
         timersSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_7 = new QWidget(tab_6);
         horizontalLayoutWidget_7->setObjectName(QString::fromUtf8("horizontalLayoutWidget_7"));
-        horizontalLayoutWidget_7->setGeometry(QRect(2, 430, 252, 29));
+        horizontalLayoutWidget_7->setGeometry(QRect(2, 430, 271, 30));
         horizontalLayout_5 = new QHBoxLayout(horizontalLayoutWidget_7);
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -775,7 +767,7 @@ public:
         timersvSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_5 = new QWidget(tab_9);
         horizontalLayoutWidget_5->setObjectName(QString::fromUtf8("horizontalLayoutWidget_5"));
-        horizontalLayoutWidget_5->setGeometry(QRect(2, 430, 252, 29));
+        horizontalLayoutWidget_5->setGeometry(QRect(2, 430, 271, 30));
         horizontalLayout_4 = new QHBoxLayout(horizontalLayoutWidget_5);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -794,13 +786,13 @@ public:
         tab_11->setObjectName(QString::fromUtf8("tab_11"));
         gridLayoutWidget_9 = new QWidget(tab_11);
         gridLayoutWidget_9->setObjectName(QString::fromUtf8("gridLayoutWidget_9"));
-        gridLayoutWidget_9->setGeometry(QRect(2, 2, 767, 425));
-        timerssecSettingsLayout = new QGridLayout(gridLayoutWidget_9);
-        timerssecSettingsLayout->setObjectName(QString::fromUtf8("timerssecSettingsLayout"));
-        timerssecSettingsLayout->setContentsMargins(0, 0, 0, 0);
+        gridLayoutWidget_9->setGeometry(QRect(6, 2, 855, 419));
+        timersSecSettingsLayout = new QGridLayout(gridLayoutWidget_9);
+        timersSecSettingsLayout->setObjectName(QString::fromUtf8("timersSecSettingsLayout"));
+        timersSecSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_13 = new QWidget(tab_11);
         horizontalLayoutWidget_13->setObjectName(QString::fromUtf8("horizontalLayoutWidget_13"));
-        horizontalLayoutWidget_13->setGeometry(QRect(2, 430, 252, 29));
+        horizontalLayoutWidget_13->setGeometry(QRect(6, 426, 271, 30));
         horizontalLayout_10 = new QHBoxLayout(horizontalLayoutWidget_13);
         horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
         horizontalLayout_10->setContentsMargins(0, 0, 0, 0);
@@ -823,7 +815,7 @@ public:
         eventViewer->setGeometry(QRect(4, 4, 777, 451));
         horizontalLayoutWidget_9 = new QWidget(tab);
         horizontalLayoutWidget_9->setObjectName(QString::fromUtf8("horizontalLayoutWidget_9"));
-        horizontalLayoutWidget_9->setGeometry(QRect(6, 460, 561, 29));
+        horizontalLayoutWidget_9->setGeometry(QRect(6, 460, 561, 30));
         horizontalLayout_7 = new QHBoxLayout(horizontalLayoutWidget_9);
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
@@ -880,7 +872,7 @@ public:
         groupBox_6->setGeometry(QRect(4, 2, 775, 115));
         formLayoutWidget = new QWidget(groupBox_6);
         formLayoutWidget->setObjectName(QString::fromUtf8("formLayoutWidget"));
-        formLayoutWidget->setGeometry(QRect(8, 18, 273, 79));
+        formLayoutWidget->setGeometry(QRect(8, 18, 273, 85));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setLabelAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
@@ -917,7 +909,7 @@ public:
 
         horizontalLayoutWidget_2 = new QWidget(groupBox_6);
         horizontalLayoutWidget_2->setObjectName(QString::fromUtf8("horizontalLayoutWidget_2"));
-        horizontalLayoutWidget_2->setGeometry(QRect(292, 18, 338, 58));
+        horizontalLayoutWidget_2->setGeometry(QRect(292, 18, 370, 62));
         gridLayout_4 = new QGridLayout(horizontalLayoutWidget_2);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         gridLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -959,7 +951,7 @@ public:
 
         horizontalLayoutWidget = new QWidget(groupBox_6);
         horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(292, 80, 475, 28));
+        horizontalLayoutWidget->setGeometry(QRect(292, 80, 475, 30));
         horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -1014,7 +1006,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 810, 23));
+        menubar->setGeometry(QRect(0, 0, 900, 25));
         menuPlik = new QMenu(menubar);
         menuPlik->setObjectName(QString::fromUtf8("menuPlik"));
         menuInfo = new QMenu(menubar);
@@ -1039,9 +1031,9 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(m_quit, SIGNAL(activated()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(2);
-        tabWidget_3->setCurrentIndex(0);
-        tabWidget_2->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(3);
+        tabWidget_3->setCurrentIndex(1);
+        tabWidget_2->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1086,7 +1078,7 @@ public:
         b_getTimeDay->setText(QApplication::translate("MainWindow", "Pobierz por\304\231 dnia", 0, QApplication::UnicodeUTF8));
         b_setTimeDay->setText(QApplication::translate("MainWindow", "Ustaw por\304\231 dnia", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_5), QApplication::translate("MainWindow", "Podstawowe / AD", 0, QApplication::UnicodeUTF8));
-        groupBox_7->setTitle(QApplication::translate("MainWindow", "adass", 0, QApplication::UnicodeUTF8));
+        groupBox_7->setTitle(QString());
         label_20->setText(QApplication::translate("MainWindow", "Status", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("MainWindow", "Numer seryjny", 0, QApplication::UnicodeUTF8));
         label_26->setText(QApplication::translate("MainWindow", "Flagi / B\305\202\304\231dne odczyty", 0, QApplication::UnicodeUTF8));

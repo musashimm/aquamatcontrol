@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'pwmSettings.ui'
 **
-** Created: Thu Mar 10 22:41:12 2011
+** Created: Fri Mar 11 20:42:37 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -46,13 +46,13 @@ public:
     {
         if (PwmSettings->objectName().isEmpty())
             PwmSettings->setObjectName(QString::fromUtf8("PwmSettings"));
-        PwmSettings->resize(179, 214);
+        PwmSettings->resize(192, 214);
         groupBox = new QGroupBox(PwmSettings);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(4, 0, 169, 209));
+        groupBox->setGeometry(QRect(4, 0, 183, 209));
         verticalLayoutWidget = new QWidget(groupBox);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(8, 16, 153, 185));
+        verticalLayoutWidget->setGeometry(QRect(8, 16, 167, 185));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);

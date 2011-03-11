@@ -50,6 +50,7 @@ $Id$
 #include "tempSettings.h"
 #include "timersSettings.h"
 #include "timersvSettings.h"
+#include "timersSecSettings.h"
 #include "comboBoxWeekDay.h"
 #include "comboBoxOuts.h"
 #include "main.h"
@@ -164,6 +165,11 @@ public slots:
 	void setTimers();
 	TimersSettings* getPTimers(int id);
 
+    void timersSecInit();
+	//void getTimers();
+	//void setTimers();
+	//TimersSettings* getPTimers(int id);
+
 	void timersvInit();
 	void getTimersv();
 	void setTimersv();
@@ -199,6 +205,7 @@ private:
 	TempSettings* pTempSettings[TEMP_SENSORS_NUM];
 	TimersSettings* pTimersSettings[TIMERS_NUM];
 	TimersvSettings* pTimersvSettings[TIMERSV_NUM];
+	TimersSecSettings* pTimersSecSettings[TIMERSSEC_NUM];
 	Indicator* pIndicators[ALARMS_TYPES_NUM];
 	ComboBoxOuts *topOffOut;
 

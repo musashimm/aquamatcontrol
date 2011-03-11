@@ -36,7 +36,7 @@ PwmSettings::PwmSettings(int id,QString name, QWidget *parent)
 	dialChanged(ui.dial->value());
 	connect(ui.checkBox_blocked, SIGNAL(clicked()), this, SLOT(stateChanged()));
 	connect(ui.dial,SIGNAL(sliderReleased()), this, SLOT(stateChanged()));
-	connect(ui.dial,SIGNAL(sliderMoved(int)), this, SLOT(dialChanged(int)));
+	connect(ui.dial,SIGNAL(valueChanged(int)), this, SLOT(dialChanged(int)));
 }
 
 void PwmSettings::dialChanged(int value) {

@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>810</width>
+    <width>900</width>
     <height>620</height>
    </rect>
   </property>
@@ -21,13 +21,13 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>810</width>
+    <width>900</width>
     <height>620</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>810</width>
+    <width>900</width>
     <height>620</height>
    </size>
   </property>
@@ -45,7 +45,7 @@
       <item>
        <widget class="QTabWidget" name="tabWidget">
         <property name="currentIndex">
-         <number>2</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="status">
          <attribute name="title">
@@ -304,7 +304,7 @@
             <rect>
              <x>588</x>
              <y>16</y>
-             <width>169</width>
+             <width>187</width>
              <height>131</height>
             </rect>
            </property>
@@ -372,7 +372,7 @@
             <rect>
              <x>14</x>
              <y>22</y>
-             <width>163</width>
+             <width>178</width>
              <height>109</height>
             </rect>
            </property>
@@ -501,39 +501,42 @@
            <rect>
             <x>2</x>
             <y>4</y>
-            <width>779</width>
-            <height>445</height>
+            <width>869</width>
+            <height>447</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="tempSettingsLayout">
            <item>
             <widget class="QGroupBox" name="groupBox_7">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
              <property name="title">
-              <string>adass</string>
+              <string/>
              </property>
              <property name="flat">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <widget class="QWidget" name="verticalLayoutWidget_4">
               <property name="geometry">
                <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>159</width>
-                <height>443</height>
+                <x>4</x>
+                <y>22</y>
+                <width>164</width>
+                <height>361</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_3">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetDefaultConstraint</enum>
+               </property>
                <item>
                 <widget class="QLabel" name="label_20">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -555,7 +558,7 @@
                <item>
                 <widget class="QLabel" name="label_12">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -577,7 +580,7 @@
                <item>
                 <widget class="QLabel" name="label_26">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -599,7 +602,7 @@
                <item>
                 <widget class="QLabel" name="label_30">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -621,7 +624,7 @@
                <item>
                 <widget class="QLabel" name="label_25">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -643,7 +646,7 @@
                <item>
                 <widget class="QLabel" name="label_23">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -665,7 +668,7 @@
                <item>
                 <widget class="QLabel" name="label_24">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -687,7 +690,7 @@
                <item>
                 <widget class="QLabel" name="label_27">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -709,7 +712,7 @@
                <item>
                 <widget class="QLabel" name="label_28">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -731,7 +734,7 @@
                <item>
                 <widget class="QLabel" name="label_29">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -753,7 +756,7 @@
                <item>
                 <widget class="QLabel" name="label_22">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -775,7 +778,7 @@
                <item>
                 <widget class="QLabel" name="label_21">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -805,8 +808,8 @@
            <rect>
             <x>4</x>
             <y>456</y>
-            <width>362</width>
-            <height>29</height>
+            <width>389</width>
+            <height>30</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -843,12 +846,12 @@
            <rect>
             <x>4</x>
             <y>4</y>
-            <width>777</width>
+            <width>869</width>
             <height>487</height>
            </rect>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="tab_4">
            <attribute name="title">
@@ -871,7 +874,7 @@
               <x>2</x>
               <y>430</y>
               <width>767</width>
-              <height>28</height>
+              <height>30</height>
              </rect>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -921,9 +924,9 @@
             <property name="geometry">
              <rect>
               <x>4</x>
-              <y>2</y>
-              <width>765</width>
-              <height>423</height>
+              <y>4</y>
+              <width>857</width>
+              <height>419</height>
              </rect>
             </property>
             <layout class="QGridLayout" name="pwmSettingsLayout" columnstretch="0">
@@ -935,10 +938,10 @@
            <widget class="QWidget" name="horizontalLayoutWidget_12">
             <property name="geometry">
              <rect>
-              <x>2</x>
-              <y>430</y>
-              <width>769</width>
-              <height>28</height>
+              <x>4</x>
+              <y>428</y>
+              <width>857</width>
+              <height>30</height>
              </rect>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_9">
@@ -994,12 +997,12 @@
            <rect>
             <x>4</x>
             <y>4</y>
-            <width>775</width>
+            <width>871</width>
             <height>487</height>
            </rect>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="tab_6">
            <attribute name="title">
@@ -1021,8 +1024,8 @@
              <rect>
               <x>2</x>
               <y>430</y>
-              <width>252</width>
-              <height>29</height>
+              <width>271</width>
+              <height>30</height>
              </rect>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -1063,8 +1066,8 @@
              <rect>
               <x>2</x>
               <y>430</y>
-              <width>252</width>
-              <height>29</height>
+              <width>271</width>
+              <height>30</height>
              </rect>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -1092,21 +1095,21 @@
            <widget class="QWidget" name="gridLayoutWidget_9">
             <property name="geometry">
              <rect>
-              <x>2</x>
+              <x>6</x>
               <y>2</y>
-              <width>767</width>
-              <height>425</height>
+              <width>855</width>
+              <height>419</height>
              </rect>
             </property>
-            <layout class="QGridLayout" name="timerssecSettingsLayout"/>
+            <layout class="QGridLayout" name="timersSecSettingsLayout"/>
            </widget>
            <widget class="QWidget" name="horizontalLayoutWidget_13">
             <property name="geometry">
              <rect>
-              <x>2</x>
-              <y>430</y>
-              <width>252</width>
-              <height>29</height>
+              <x>6</x>
+              <y>426</y>
+              <width>271</width>
+              <height>30</height>
              </rect>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_10">
@@ -1149,7 +1152,7 @@
             <x>6</x>
             <y>460</y>
             <width>561</width>
-            <height>29</height>
+            <height>30</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1280,7 +1283,7 @@
              <x>8</x>
              <y>18</y>
              <width>273</width>
-             <height>79</height>
+             <height>85</height>
             </rect>
            </property>
            <layout class="QFormLayout" name="formLayout">
@@ -1328,8 +1331,8 @@
             <rect>
              <x>292</x>
              <y>18</y>
-             <width>338</width>
-             <height>58</height>
+             <width>370</width>
+             <height>62</height>
             </rect>
            </property>
            <layout class="QGridLayout" name="gridLayout_4">
@@ -1395,7 +1398,7 @@
              <x>292</x>
              <y>80</y>
              <width>475</width>
-             <height>28</height>
+             <height>30</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -1467,8 +1470,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>810</width>
-     <height>23</height>
+     <width>900</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuPlik">

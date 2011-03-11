@@ -32,6 +32,7 @@ $Id$
 #include "processingTopOff.cpp"
 #include "processingTimers.cpp"
 #include "processingTimersv.cpp"
+#include "processingTimersSec.cpp"
 #include "processingEvents.cpp"
 
 //#include <QtDebug>
@@ -58,6 +59,7 @@ MainWindow::MainWindow(QWidget *parent)
 	tempInit();
 	timersInit();
 	timersvInit();
+	timersSecInit();
 	topOffInit();
 	alarmInit();
 	eventsInit();

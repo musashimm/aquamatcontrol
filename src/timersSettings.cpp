@@ -148,8 +148,3 @@ void TimersSettings::set(int fromh, int fromm, int toh, int tom,int out, int fla
 	setFlags(flags);
 }
 
-/** @file timersSettings.cpp
-@brief Implementacja timerów godzinowych.
-
-*/
-
