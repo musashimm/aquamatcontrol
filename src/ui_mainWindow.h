@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainWindow.ui'
 **
-** Created: Fri Mar 11 20:42:37 2011
+** Created: Mon Mar 14 22:14:42 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -87,24 +87,24 @@ public:
     QWidget *horizontalLayoutWidget_10;
     QHBoxLayout *topOffIndicatorsLayout;
     QCheckBox *topOff_block;
+    QWidget *gridLayoutWidget_8;
+    QGridLayout *gridLayout_3;
     QGroupBox *groupBox_4;
-    QWidget *verticalLayoutWidget_5;
-    QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *verticalLayout_7;
     QPushButton *b_getAlarm;
     QPushButton *b_clearAlarm;
     QPushButton *b_blockAlarm;
     QGroupBox *groupBox_5;
-    QWidget *gridLayoutWidget_8;
-    QGridLayout *gridLayout_3;
+    QGridLayout *gridLayout_5;
     QDateTimeEdit *e_dateTime;
-    QPushButton *b_getDateTime;
-    QPushButton *b_setDateTime;
     QHBoxLayout *horizontalLayout;
     QLabel *label_8;
     QTimeEdit *e_timeDayFrom;
     QLabel *label_9;
     QTimeEdit *e_timeDayTo;
+    QPushButton *b_getDateTime;
     QPushButton *b_getTimeDay;
+    QPushButton *b_setDateTime;
     QPushButton *b_setTimeDay;
     QWidget *temperature;
     QWidget *horizontalLayoutWidget_6;
@@ -142,13 +142,16 @@ public:
     QPushButton *b_outAllBlock;
     QPushButton *b_outAllUnblock;
     QWidget *tab_8;
-    QWidget *gridLayoutWidget;
-    QGridLayout *pwmSettingsLayout;
     QWidget *horizontalLayoutWidget_12;
     QHBoxLayout *horizontalLayout_9;
     QPushButton *b_pwmGetConfig;
     QPushButton *b_pwmSendConfig;
     QSpacerItem *horizontalSpacer;
+    QWidget *verticalLayoutWidget_8;
+    QVBoxLayout *verticalLayout_5;
+    QGridLayout *pwmSettingsLayout;
+    QHBoxLayout *horizontalLayout_11;
+    QSpacerItem *verticalSpacer;
     QWidget *tab_3;
     QWidget *gridLayoutWidget_5;
     QGridLayout *timersLayout;
@@ -168,12 +171,15 @@ public:
     QPushButton *b_timersvGetSettings;
     QPushButton *b_timersvSetSettings;
     QWidget *tab_11;
-    QWidget *gridLayoutWidget_9;
-    QGridLayout *timersSecSettingsLayout;
     QWidget *horizontalLayoutWidget_13;
     QHBoxLayout *horizontalLayout_10;
     QPushButton *b_timerssecGetSettings;
     QPushButton *b_timerssecSetSettings;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout_4;
+    QGridLayout *timersSecSettingsLayout;
+    QHBoxLayout *horizontalLayout_13;
+    QSpacerItem *verticalSpacer_2;
     QWidget *tab;
     QListWidget *eventViewer;
     QWidget *horizontalLayoutWidget_9;
@@ -181,15 +187,16 @@ public:
     QPushButton *b_getEvents;
     QPushButton *b_clearEvents;
     QPushButton *b_saveEvents;
+    QSpacerItem *horizontalSpacer_2;
     QWidget *settings;
     QListWidget *logViewer;
     QGroupBox *groupBox_3;
-    QPushButton *b_codeUpdate;
+    QGridLayout *gridLayout_2;
     QPushButton *b_chooseUpdateFile;
-    QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout_2;
     QLabel *l_updateFileName;
     QLabel *l_updateFileInfo;
+    QPushButton *b_codeUpdate;
     QGroupBox *groupBox_6;
     QWidget *formLayoutWidget;
     QFormLayout *formLayout;
@@ -262,13 +269,13 @@ public:
         status->setObjectName(QString::fromUtf8("status"));
         gridLayoutWidget_3 = new QWidget(status);
         gridLayoutWidget_3->setObjectName(QString::fromUtf8("gridLayoutWidget_3"));
-        gridLayoutWidget_3->setGeometry(QRect(240, 100, 541, 261));
+        gridLayoutWidget_3->setGeometry(QRect(240, 100, 631, 261));
         outLayout = new QGridLayout(gridLayoutWidget_3);
         outLayout->setObjectName(QString::fromUtf8("outLayout"));
         outLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_3 = new QWidget(status);
         horizontalLayoutWidget_3->setObjectName(QString::fromUtf8("horizontalLayoutWidget_3"));
-        horizontalLayoutWidget_3->setGeometry(QRect(0, 370, 781, 121));
+        horizontalLayoutWidget_3->setGeometry(QRect(0, 370, 871, 121));
         tempLayout = new QHBoxLayout(horizontalLayoutWidget_3);
         tempLayout->setObjectName(QString::fromUtf8("tempLayout"));
         tempLayout->setContentsMargins(0, 0, 0, 0);
@@ -283,14 +290,14 @@ public:
         alarmLayout->setContentsMargins(0, 0, 0, 0);
         label_13 = new QLabel(status);
         label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setGeometry(QRect(416, 12, 365, 81));
+        label_13->setGeometry(QRect(504, 12, 365, 81));
         label_13->setPixmap(QPixmap(QString::fromUtf8(":/resources/logocontrol2.png")));
         groupBox_2 = new QGroupBox(status);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(242, 6, 163, 83));
+        groupBox_2->setGeometry(QRect(242, 6, 255, 83));
         verticalLayoutWidget_7 = new QWidget(groupBox_2);
         verticalLayoutWidget_7->setObjectName(QString::fromUtf8("verticalLayoutWidget_7"));
-        verticalLayoutWidget_7->setGeometry(QRect(10, 16, 145, 65));
+        verticalLayoutWidget_7->setGeometry(QRect(10, 16, 235, 65));
         verticalLayout_6 = new QVBoxLayout(verticalLayoutWidget_7);
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         verticalLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -329,10 +336,10 @@ public:
         tab_5->setObjectName(QString::fromUtf8("tab_5"));
         topOffGroupBox = new QGroupBox(tab_5);
         topOffGroupBox->setObjectName(QString::fromUtf8("topOffGroupBox"));
-        topOffGroupBox->setGeometry(QRect(8, 152, 769, 333));
+        topOffGroupBox->setGeometry(QRect(8, 152, 863, 333));
         label_14 = new QLabel(topOffGroupBox);
         label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setGeometry(QRect(164, 12, 421, 269));
+        label_14->setGeometry(QRect(186, 10, 421, 269));
         label_14->setPixmap(QPixmap(QString::fromUtf8(":/resources/top_off.png")));
         horizontalLayoutWidget_4 = new QWidget(topOffGroupBox);
         horizontalLayoutWidget_4->setObjectName(QString::fromUtf8("horizontalLayoutWidget_4"));
@@ -371,11 +378,11 @@ public:
 
         topOff_block_min_ro = new QCheckBox(topOffGroupBox);
         topOff_block_min_ro->setObjectName(QString::fromUtf8("topOff_block_min_ro"));
-        topOff_block_min_ro->setGeometry(QRect(610, 180, 129, 22));
+        topOff_block_min_ro->setGeometry(QRect(616, 186, 129, 22));
         topOff_block_min_ro->setChecked(true);
         verticalLayoutWidget_2 = new QWidget(topOffGroupBox);
         verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(588, 16, 187, 131));
+        verticalLayoutWidget_2->setGeometry(QRect(668, 16, 187, 119));
         topOffButtons = new QVBoxLayout(verticalLayoutWidget_2);
         topOffButtons->setObjectName(QString::fromUtf8("topOffButtons"));
         topOffButtons->setContentsMargins(0, 0, 0, 0);
@@ -396,7 +403,7 @@ public:
 
         horizontalLayoutWidget_10 = new QWidget(topOffGroupBox);
         horizontalLayoutWidget_10->setObjectName(QString::fromUtf8("horizontalLayoutWidget_10"));
-        horizontalLayoutWidget_10->setGeometry(QRect(12, 24, 307, 41));
+        horizontalLayoutWidget_10->setGeometry(QRect(14, 38, 307, 41));
         topOffIndicatorsLayout = new QHBoxLayout(horizontalLayoutWidget_10);
         topOffIndicatorsLayout->setObjectName(QString::fromUtf8("topOffIndicatorsLayout"));
         topOffIndicatorsLayout->setContentsMargins(0, 0, 0, 0);
@@ -406,90 +413,88 @@ public:
 
         topOffIndicatorsLayout->addWidget(topOff_block);
 
-        groupBox_4 = new QGroupBox(tab_5);
-        groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
-        groupBox_4->setGeometry(QRect(8, 8, 193, 141));
-        verticalLayoutWidget_5 = new QWidget(groupBox_4);
-        verticalLayoutWidget_5->setObjectName(QString::fromUtf8("verticalLayoutWidget_5"));
-        verticalLayoutWidget_5->setGeometry(QRect(14, 22, 178, 109));
-        verticalLayout_4 = new QVBoxLayout(verticalLayoutWidget_5);
-        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
-        verticalLayout_4->setContentsMargins(0, 0, 0, 0);
-        b_getAlarm = new QPushButton(verticalLayoutWidget_5);
-        b_getAlarm->setObjectName(QString::fromUtf8("b_getAlarm"));
-
-        verticalLayout_4->addWidget(b_getAlarm);
-
-        b_clearAlarm = new QPushButton(verticalLayoutWidget_5);
-        b_clearAlarm->setObjectName(QString::fromUtf8("b_clearAlarm"));
-
-        verticalLayout_4->addWidget(b_clearAlarm);
-
-        b_blockAlarm = new QPushButton(verticalLayoutWidget_5);
-        b_blockAlarm->setObjectName(QString::fromUtf8("b_blockAlarm"));
-
-        verticalLayout_4->addWidget(b_blockAlarm);
-
-        groupBox_5 = new QGroupBox(tab_5);
-        groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
-        groupBox_5->setGeometry(QRect(214, 8, 563, 140));
-        gridLayoutWidget_8 = new QWidget(groupBox_5);
+        gridLayoutWidget_8 = new QWidget(topOffGroupBox);
         gridLayoutWidget_8->setObjectName(QString::fromUtf8("gridLayoutWidget_8"));
-        gridLayoutWidget_8->setGeometry(QRect(8, 22, 545, 109));
+        gridLayoutWidget_8->setGeometry(QRect(38, 130, 641, 109));
         gridLayout_3 = new QGridLayout(gridLayoutWidget_8);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         gridLayout_3->setContentsMargins(0, 0, 0, 0);
-        e_dateTime = new QDateTimeEdit(gridLayoutWidget_8);
+        groupBox_4 = new QGroupBox(tab_5);
+        groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
+        groupBox_4->setGeometry(QRect(10, 8, 193, 139));
+        verticalLayout_7 = new QVBoxLayout(groupBox_4);
+        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
+        b_getAlarm = new QPushButton(groupBox_4);
+        b_getAlarm->setObjectName(QString::fromUtf8("b_getAlarm"));
+
+        verticalLayout_7->addWidget(b_getAlarm);
+
+        b_clearAlarm = new QPushButton(groupBox_4);
+        b_clearAlarm->setObjectName(QString::fromUtf8("b_clearAlarm"));
+
+        verticalLayout_7->addWidget(b_clearAlarm);
+
+        b_blockAlarm = new QPushButton(groupBox_4);
+        b_blockAlarm->setObjectName(QString::fromUtf8("b_blockAlarm"));
+
+        verticalLayout_7->addWidget(b_blockAlarm);
+
+        groupBox_5 = new QGroupBox(tab_5);
+        groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
+        groupBox_5->setGeometry(QRect(214, 8, 657, 139));
+        gridLayout_5 = new QGridLayout(groupBox_5);
+        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
+        e_dateTime = new QDateTimeEdit(groupBox_5);
         e_dateTime->setObjectName(QString::fromUtf8("e_dateTime"));
         e_dateTime->setCurrentSection(QDateTimeEdit::YearSection);
         e_dateTime->setCalendarPopup(false);
 
-        gridLayout_3->addWidget(e_dateTime, 0, 0, 1, 1);
-
-        b_getDateTime = new QPushButton(gridLayoutWidget_8);
-        b_getDateTime->setObjectName(QString::fromUtf8("b_getDateTime"));
-
-        gridLayout_3->addWidget(b_getDateTime, 0, 1, 1, 1);
-
-        b_setDateTime = new QPushButton(gridLayoutWidget_8);
-        b_setDateTime->setObjectName(QString::fromUtf8("b_setDateTime"));
-
-        gridLayout_3->addWidget(b_setDateTime, 0, 2, 1, 1);
+        gridLayout_5->addWidget(e_dateTime, 0, 0, 1, 1);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label_8 = new QLabel(gridLayoutWidget_8);
+        label_8 = new QLabel(groupBox_5);
         label_8->setObjectName(QString::fromUtf8("label_8"));
 
         horizontalLayout->addWidget(label_8);
 
-        e_timeDayFrom = new QTimeEdit(gridLayoutWidget_8);
+        e_timeDayFrom = new QTimeEdit(groupBox_5);
         e_timeDayFrom->setObjectName(QString::fromUtf8("e_timeDayFrom"));
 
         horizontalLayout->addWidget(e_timeDayFrom);
 
-        label_9 = new QLabel(gridLayoutWidget_8);
+        label_9 = new QLabel(groupBox_5);
         label_9->setObjectName(QString::fromUtf8("label_9"));
 
         horizontalLayout->addWidget(label_9);
 
-        e_timeDayTo = new QTimeEdit(gridLayoutWidget_8);
+        e_timeDayTo = new QTimeEdit(groupBox_5);
         e_timeDayTo->setObjectName(QString::fromUtf8("e_timeDayTo"));
 
         horizontalLayout->addWidget(e_timeDayTo);
 
 
-        gridLayout_3->addLayout(horizontalLayout, 1, 0, 1, 1);
+        gridLayout_5->addLayout(horizontalLayout, 1, 0, 1, 1);
 
-        b_getTimeDay = new QPushButton(gridLayoutWidget_8);
+        b_getDateTime = new QPushButton(groupBox_5);
+        b_getDateTime->setObjectName(QString::fromUtf8("b_getDateTime"));
+
+        gridLayout_5->addWidget(b_getDateTime, 0, 1, 1, 1);
+
+        b_getTimeDay = new QPushButton(groupBox_5);
         b_getTimeDay->setObjectName(QString::fromUtf8("b_getTimeDay"));
 
-        gridLayout_3->addWidget(b_getTimeDay, 1, 1, 1, 1);
+        gridLayout_5->addWidget(b_getTimeDay, 1, 1, 1, 1);
 
-        b_setTimeDay = new QPushButton(gridLayoutWidget_8);
+        b_setDateTime = new QPushButton(groupBox_5);
+        b_setDateTime->setObjectName(QString::fromUtf8("b_setDateTime"));
+
+        gridLayout_5->addWidget(b_setDateTime, 0, 2, 1, 1);
+
+        b_setTimeDay = new QPushButton(groupBox_5);
         b_setTimeDay->setObjectName(QString::fromUtf8("b_setTimeDay"));
 
-        gridLayout_3->addWidget(b_setTimeDay, 1, 2, 1, 1);
+        gridLayout_5->addWidget(b_setTimeDay, 1, 2, 1, 1);
 
         tabWidget->addTab(tab_5, QString());
         temperature = new QWidget();
@@ -654,8 +659,9 @@ public:
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
         gridLayoutWidget_4 = new QWidget(tab_4);
         gridLayoutWidget_4->setObjectName(QString::fromUtf8("gridLayoutWidget_4"));
-        gridLayoutWidget_4->setGeometry(QRect(4, 2, 765, 423));
+        gridLayoutWidget_4->setGeometry(QRect(4, 2, 857, 423));
         outSettingsLayout = new QGridLayout(gridLayoutWidget_4);
+        outSettingsLayout->setSpacing(3);
         outSettingsLayout->setObjectName(QString::fromUtf8("outSettingsLayout"));
         outSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_11 = new QWidget(tab_4);
@@ -692,16 +698,9 @@ public:
         tabWidget_3->addTab(tab_4, QString());
         tab_8 = new QWidget();
         tab_8->setObjectName(QString::fromUtf8("tab_8"));
-        gridLayoutWidget = new QWidget(tab_8);
-        gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(4, 4, 857, 419));
-        pwmSettingsLayout = new QGridLayout(gridLayoutWidget);
-        pwmSettingsLayout->setObjectName(QString::fromUtf8("pwmSettingsLayout"));
-        pwmSettingsLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
-        pwmSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_12 = new QWidget(tab_8);
         horizontalLayoutWidget_12->setObjectName(QString::fromUtf8("horizontalLayoutWidget_12"));
-        horizontalLayoutWidget_12->setGeometry(QRect(4, 428, 857, 30));
+        horizontalLayoutWidget_12->setGeometry(QRect(2, 430, 857, 30));
         horizontalLayout_9 = new QHBoxLayout(horizontalLayoutWidget_12);
         horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
         horizontalLayout_9->setContentsMargins(0, 0, 0, 0);
@@ -719,6 +718,28 @@ public:
 
         horizontalLayout_9->addItem(horizontalSpacer);
 
+        verticalLayoutWidget_8 = new QWidget(tab_8);
+        verticalLayoutWidget_8->setObjectName(QString::fromUtf8("verticalLayoutWidget_8"));
+        verticalLayoutWidget_8->setGeometry(QRect(3, 1, 859, 425));
+        verticalLayout_5 = new QVBoxLayout(verticalLayoutWidget_8);
+        verticalLayout_5->setSpacing(3);
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        verticalLayout_5->setContentsMargins(0, 0, 0, 0);
+        pwmSettingsLayout = new QGridLayout();
+        pwmSettingsLayout->setObjectName(QString::fromUtf8("pwmSettingsLayout"));
+        pwmSettingsLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
+
+        verticalLayout_5->addLayout(pwmSettingsLayout);
+
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        horizontalLayout_11->addItem(verticalSpacer);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_11);
+
         tabWidget_3->addTab(tab_8, QString());
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
@@ -731,12 +752,12 @@ public:
         timersLayout->setContentsMargins(0, 0, 0, 0);
         tabWidget_2 = new QTabWidget(tab_3);
         tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
-        tabWidget_2->setGeometry(QRect(4, 4, 871, 487));
+        tabWidget_2->setGeometry(QRect(4, 4, 869, 487));
         tab_6 = new QWidget();
         tab_6->setObjectName(QString::fromUtf8("tab_6"));
         gridLayoutWidget_7 = new QWidget(tab_6);
         gridLayoutWidget_7->setObjectName(QString::fromUtf8("gridLayoutWidget_7"));
-        gridLayoutWidget_7->setGeometry(QRect(2, 2, 767, 425));
+        gridLayoutWidget_7->setGeometry(QRect(2, 2, 861, 425));
         timersSettingsLayout = new QGridLayout(gridLayoutWidget_7);
         timersSettingsLayout->setObjectName(QString::fromUtf8("timersSettingsLayout"));
         timersSettingsLayout->setContentsMargins(0, 0, 0, 0);
@@ -761,7 +782,7 @@ public:
         tab_9->setObjectName(QString::fromUtf8("tab_9"));
         gridLayoutWidget_6 = new QWidget(tab_9);
         gridLayoutWidget_6->setObjectName(QString::fromUtf8("gridLayoutWidget_6"));
-        gridLayoutWidget_6->setGeometry(QRect(2, 2, 767, 425));
+        gridLayoutWidget_6->setGeometry(QRect(2, 2, 861, 425));
         timersvSettingsLayout = new QGridLayout(gridLayoutWidget_6);
         timersvSettingsLayout->setObjectName(QString::fromUtf8("timersvSettingsLayout"));
         timersvSettingsLayout->setContentsMargins(0, 0, 0, 0);
@@ -784,15 +805,9 @@ public:
         tabWidget_2->addTab(tab_9, QString());
         tab_11 = new QWidget();
         tab_11->setObjectName(QString::fromUtf8("tab_11"));
-        gridLayoutWidget_9 = new QWidget(tab_11);
-        gridLayoutWidget_9->setObjectName(QString::fromUtf8("gridLayoutWidget_9"));
-        gridLayoutWidget_9->setGeometry(QRect(6, 2, 855, 419));
-        timersSecSettingsLayout = new QGridLayout(gridLayoutWidget_9);
-        timersSecSettingsLayout->setObjectName(QString::fromUtf8("timersSecSettingsLayout"));
-        timersSecSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_13 = new QWidget(tab_11);
         horizontalLayoutWidget_13->setObjectName(QString::fromUtf8("horizontalLayoutWidget_13"));
-        horizontalLayoutWidget_13->setGeometry(QRect(6, 426, 271, 30));
+        horizontalLayoutWidget_13->setGeometry(QRect(2, 430, 271, 30));
         horizontalLayout_10 = new QHBoxLayout(horizontalLayoutWidget_13);
         horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
         horizontalLayout_10->setContentsMargins(0, 0, 0, 0);
@@ -806,16 +821,44 @@ public:
 
         horizontalLayout_10->addWidget(b_timerssecSetSettings);
 
+        verticalLayoutWidget = new QWidget(tab_11);
+        verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(2, 2, 861, 425));
+        verticalLayout_4 = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout_4->setSpacing(3);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        verticalLayout_4->setContentsMargins(0, 0, 0, 0);
+        timersSecSettingsLayout = new QGridLayout();
+        timersSecSettingsLayout->setSpacing(3);
+        timersSecSettingsLayout->setObjectName(QString::fromUtf8("timersSecSettingsLayout"));
+
+        verticalLayout_4->addLayout(timersSecSettingsLayout);
+
+        horizontalLayout_13 = new QHBoxLayout();
+        horizontalLayout_13->setSpacing(3);
+        horizontalLayout_13->setObjectName(QString::fromUtf8("horizontalLayout_13"));
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        horizontalLayout_13->addItem(verticalSpacer_2);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_13);
+
         tabWidget_2->addTab(tab_11, QString());
         tabWidget->addTab(tab_3, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         eventViewer = new QListWidget(tab);
         eventViewer->setObjectName(QString::fromUtf8("eventViewer"));
-        eventViewer->setGeometry(QRect(4, 4, 777, 451));
+        eventViewer->setGeometry(QRect(4, 4, 869, 451));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(eventViewer->sizePolicy().hasHeightForWidth());
+        eventViewer->setSizePolicy(sizePolicy2);
         horizontalLayoutWidget_9 = new QWidget(tab);
         horizontalLayoutWidget_9->setObjectName(QString::fromUtf8("horizontalLayoutWidget_9"));
-        horizontalLayoutWidget_9->setGeometry(QRect(6, 460, 561, 30));
+        horizontalLayoutWidget_9->setGeometry(QRect(6, 460, 867, 30));
         horizontalLayout_7 = new QHBoxLayout(horizontalLayoutWidget_9);
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
@@ -834,45 +877,62 @@ public:
 
         horizontalLayout_7->addWidget(b_saveEvents);
 
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_2);
+
         tabWidget->addTab(tab, QString());
         settings = new QWidget();
         settings->setObjectName(QString::fromUtf8("settings"));
         logViewer = new QListWidget(settings);
         logViewer->setObjectName(QString::fromUtf8("logViewer"));
-        logViewer->setGeometry(QRect(6, 206, 771, 297));
+        logViewer->setGeometry(QRect(4, 206, 869, 289));
+        logViewer->setWordWrap(true);
         logViewer->setSortingEnabled(false);
         groupBox_3 = new QGroupBox(settings);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
-        groupBox_3->setGeometry(QRect(4, 124, 775, 75));
-        b_codeUpdate = new QPushButton(groupBox_3);
-        b_codeUpdate->setObjectName(QString::fromUtf8("b_codeUpdate"));
-        b_codeUpdate->setEnabled(true);
-        b_codeUpdate->setGeometry(QRect(630, 16, 137, 51));
+        groupBox_3->setGeometry(QRect(4, 122, 869, 77));
+        gridLayout_2 = new QGridLayout(groupBox_3);
+        gridLayout_2->setSpacing(3);
+        gridLayout_2->setContentsMargins(3, 3, 3, 3);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout_2->setSizeConstraint(QLayout::SetNoConstraint);
         b_chooseUpdateFile = new QPushButton(groupBox_3);
         b_chooseUpdateFile->setObjectName(QString::fromUtf8("b_chooseUpdateFile"));
-        b_chooseUpdateFile->setGeometry(QRect(8, 18, 153, 49));
-        verticalLayoutWidget = new QWidget(groupBox_3);
-        verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(168, 18, 455, 49));
-        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget);
+        b_chooseUpdateFile->setMinimumSize(QSize(100, 45));
+
+        gridLayout_2->addWidget(b_chooseUpdateFile, 0, 0, 1, 1);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(3);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        l_updateFileName = new QLabel(verticalLayoutWidget);
+        l_updateFileName = new QLabel(groupBox_3);
         l_updateFileName->setObjectName(QString::fromUtf8("l_updateFileName"));
 
         verticalLayout_2->addWidget(l_updateFileName);
 
-        l_updateFileInfo = new QLabel(verticalLayoutWidget);
+        l_updateFileInfo = new QLabel(groupBox_3);
         l_updateFileInfo->setObjectName(QString::fromUtf8("l_updateFileInfo"));
 
         verticalLayout_2->addWidget(l_updateFileInfo);
 
+
+        gridLayout_2->addLayout(verticalLayout_2, 0, 1, 1, 1);
+
+        b_codeUpdate = new QPushButton(groupBox_3);
+        b_codeUpdate->setObjectName(QString::fromUtf8("b_codeUpdate"));
+        b_codeUpdate->setEnabled(true);
+        b_codeUpdate->setMinimumSize(QSize(200, 45));
+
+        gridLayout_2->addWidget(b_codeUpdate, 0, 2, 1, 1);
+
+        gridLayout_2->setColumnStretch(1, 2);
         groupBox_6 = new QGroupBox(settings);
         groupBox_6->setObjectName(QString::fromUtf8("groupBox_6"));
-        groupBox_6->setGeometry(QRect(4, 2, 775, 115));
+        groupBox_6->setGeometry(QRect(4, 2, 869, 115));
         formLayoutWidget = new QWidget(groupBox_6);
         formLayoutWidget->setObjectName(QString::fromUtf8("formLayoutWidget"));
-        formLayoutWidget->setGeometry(QRect(8, 18, 273, 85));
+        formLayoutWidget->setGeometry(QRect(8, 18, 273, 91));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setLabelAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
@@ -987,6 +1047,7 @@ public:
         progressStatus = new QProgressBar(centralwidget);
         progressStatus->setObjectName(QString::fromUtf8("progressStatus"));
         progressStatus->setValue(0);
+        progressStatus->setTextVisible(true);
 
         horizontalLayout_3->addWidget(progressStatus);
 
@@ -1006,7 +1067,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 900, 25));
+        menubar->setGeometry(QRect(0, 0, 900, 23));
         menuPlik = new QMenu(menubar);
         menuPlik->setObjectName(QString::fromUtf8("menuPlik"));
         menuInfo = new QMenu(menubar);
@@ -1031,8 +1092,8 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(m_quit, SIGNAL(activated()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(3);
-        tabWidget_3->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
+        tabWidget_3->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(2);
 
 
@@ -1071,11 +1132,11 @@ public:
         b_blockAlarm->setText(QApplication::translate("MainWindow", "Zablokuj powiadomienia", 0, QApplication::UnicodeUTF8));
         groupBox_5->setTitle(QApplication::translate("MainWindow", "Czas", 0, QApplication::UnicodeUTF8));
         e_dateTime->setDisplayFormat(QApplication::translate("MainWindow", "yy-MM-dd HH:mm", 0, QApplication::UnicodeUTF8));
-        b_getDateTime->setText(QApplication::translate("MainWindow", "Pobierz", 0, QApplication::UnicodeUTF8));
-        b_setDateTime->setText(QApplication::translate("MainWindow", "Ustaw", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("MainWindow", "Od", 0, QApplication::UnicodeUTF8));
         label_9->setText(QApplication::translate("MainWindow", "Do", 0, QApplication::UnicodeUTF8));
+        b_getDateTime->setText(QApplication::translate("MainWindow", "Pobierz", 0, QApplication::UnicodeUTF8));
         b_getTimeDay->setText(QApplication::translate("MainWindow", "Pobierz por\304\231 dnia", 0, QApplication::UnicodeUTF8));
+        b_setDateTime->setText(QApplication::translate("MainWindow", "Ustaw", 0, QApplication::UnicodeUTF8));
         b_setTimeDay->setText(QApplication::translate("MainWindow", "Ustaw por\304\231 dnia", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_5), QApplication::translate("MainWindow", "Podstawowe / AD", 0, QApplication::UnicodeUTF8));
         groupBox_7->setTitle(QString());
@@ -1120,10 +1181,10 @@ public:
         b_saveEvents->setText(QApplication::translate("MainWindow", "Zapisz histori\304\231 do pliku", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Historia zdarze\305\204", 0, QApplication::UnicodeUTF8));
         groupBox_3->setTitle(QApplication::translate("MainWindow", "Aktualizacja oprogramowania", 0, QApplication::UnicodeUTF8));
-        b_codeUpdate->setText(QApplication::translate("MainWindow", "Programuj", 0, QApplication::UnicodeUTF8));
         b_chooseUpdateFile->setText(QApplication::translate("MainWindow", "Wybierz plik", 0, QApplication::UnicodeUTF8));
         l_updateFileName->setText(QApplication::translate("MainWindow", "Nie wybranu \305\274adnego pliku", 0, QApplication::UnicodeUTF8));
         l_updateFileInfo->setText(QApplication::translate("MainWindow", "Brak informacji o pliku \305\272r\303\263d\305\202owym", 0, QApplication::UnicodeUTF8));
+        b_codeUpdate->setText(QApplication::translate("MainWindow", "Programuj", 0, QApplication::UnicodeUTF8));
         groupBox_6->setTitle(QApplication::translate("MainWindow", "Komunikacja", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindow", "Port szeregowy", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MainWindow", "Szybko\305\233\304\207 transmisji", 0, QApplication::UnicodeUTF8));

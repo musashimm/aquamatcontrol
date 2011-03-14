@@ -199,21 +199,16 @@ void CommandProcessor::processCommand (Command* c) {
 			}
 			break;
         	//=======================================================================================
-            case GUI_PWM_COMMAND:
-			switch(c->getSubCommand()) {
-				case GUI_SUBCOMMAND_GET_STATUS_RESPONSE:
+            case GUI_PWM:
+			switch(c->getSub()) {
+				case GUI_GET:
 					c->resetIndex();
 					for (int i=0;i<PWM_NUM;i++) {
 						parent->getPwmSetting(i)->setPwm(c->next());
 						parent->getPwmSetting(i)->setFlags(c->next());
-					}
-					break;
-				case GUI_SUBCOMMAND_GET_SETTINGS_RESPONSE:
-					c->resetIndex();
-					for (int i=0;i<PWM_NUM;i++) {
-						parent->getPwmSetting(i)->setPwm(c->next());
-						parent->getPwmSetting(i)->setFlags(c->next());
-					    parent->getPwmSetting(i)->setName(c->next(5));
+						if (c->hasExtra()) {
+							parent->getPwmSetting(i)->setName(c->next(5));
+						}
 					}
 					break;
 			}

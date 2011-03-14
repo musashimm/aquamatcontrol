@@ -24,6 +24,21 @@ $Id$
 
 	@section protocol Protokół komunikacyjny
 
+	@verbatim
+	<MODULE_CODE><TYPE_OF_OPERATION><PARAMS><CRC><END_OF_COMMAND>
+
+	<TYPE_OF_OPERATION>
+
+	7654|3210
+	XXXX      - typ operacji
+		 X    - GUI_EXTRA_FLAG
+		 0    - brak dodatkowych informacji (np. dodatkowe ustawienia oprócz statusu),
+		 1    - dodatkowe informacje
+		    X - GUI_RESPONSE_FLAG
+		    0 - komenda
+		    1 - odpowiedź
+	@endverbatim
+
 	@subsection statusmgmt Wiadomości statusowe
 	@verbatim
 	1. <GUI_STATUS_COMMAND> <GUI_BUFFER_FULL> <CRC> <CRC> <GUI_END_OF_COMMAND> - przepełniony bufor odbiorczy sterownika
@@ -163,7 +178,8 @@ $Id$
 		Odp: brak.
 	@endverbatim
 */
-
+#define GUI_END_OF_COMMAND 0xFE
+#define GUI_START_OF_COMMAND 0xFD
 
 #define GUI_BUFFER_FULL	0x81
 #define GUI_UNKONWN_COMMAND	0x82
@@ -187,7 +203,13 @@ $Id$
 #define GUI_TOP_OFF_COMMAND 0x89
 #define GUI_LOG_COMMAND 0x90
 #define GUI_DEBUG_COMMAND 0x91
-#define GUI_PWM_COMMAND 0x92
+#define GUI_PWM 0x92
+
+#define GUI_SUB_MASK 0xF0
+#define GUI_GET 0xC0
+#define GUI_SET 0xD0
+#define GUI_EXTRA_FLAG 3
+#define GUI_RESPONSE_FLAG 0
 
 #define GUI_SUBCOMMAND_GET_STATUS 0x81
 #define GUI_SUBCOMMAND_GET_STATUS_RESPONSE 0xA1
@@ -203,5 +225,4 @@ $Id$
 #define GUI_SUBCOMMAND_DISCOVER 0x8A
 #define GUI_SUBCOMMAND_DISCOVER_RESPONSE 0xAA
 
-#define GUI_END_OF_COMMAND 0xFE
-#define GUI_START_OF_COMMAND 0xFD
+

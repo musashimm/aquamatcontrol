@@ -35,7 +35,7 @@ void MainWindow::pwmInit() {
 }
 
 void MainWindow::pwmStateChanged(int id,int pwm,int flags) {
-	Command c(GUI_PWM_COMMAND,GUI_SUBCOMMAND_SET_STATE);
+	Command c(GUI_PWM,GUI_SET);
 	c.append((uchar)id);
 	c.append((uchar)pwm);
 	c.append((uchar)flags);
@@ -44,14 +44,14 @@ void MainWindow::pwmStateChanged(int id,int pwm,int flags) {
 }
 
 void MainWindow::pwmGetSettings() {
-	Command c(GUI_PWM_COMMAND,GUI_SUBCOMMAND_GET_SETTINGS);
+	Command c(GUI_PWM,GUI_GET|_BV(GUI_EXTRA_FLAG));
 	c.end();
     cp.toQueue(c);
 }
 
 void MainWindow::pwmSendSettings() {
 	for(int i=0;i<PWM_NUM;i++) {
-		Command c(GUI_PWM_COMMAND,GUI_SUBCOMMAND_SET);
+		Command c(GUI_PWM,GUI_SET|_BV(GUI_EXTRA_FLAG));
 		c.append(pPwmSettings[i]->getSettingsArray());
 		c.end();
 		cp.toQueue(c);

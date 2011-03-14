@@ -56,7 +56,11 @@ QString Command::getSDesc(uchar id) {
 	if (subcommandsDesc.contains(id)) {
 		return subcommandsDesc[id];
 	} else {
-		return QString("Brak/%1").arg(id, 0, 16);
+		if (subcommandsDesc.contains(id & GUI_SUB_MASK) ) {
+			return subcommandsDesc[id & GUI_SUB_MASK];
+		} else {
+			return QString("Brak/%1").arg(id, 0, 16);
+		}
 	}
 }
 
@@ -81,8 +85,10 @@ void Command::prepareCommon() {
 	commandsDesc[GUI_TIMERSV_COMMAND]="TimersV";
 	commandsDesc[GUI_TOP_OFF_COMMAND]="TopOff";
 	commandsDesc[GUI_LOG_COMMAND]="Log";
-	commandsDesc[GUI_PWM_COMMAND]="Pwm";
+	commandsDesc[GUI_PWM]="Pwm";
 
+	subcommandsDesc[GUI_GET]="Get";
+	subcommandsDesc[GUI_SET]="Set";
 	subcommandsDesc[GUI_SUBCOMMAND_GET_STATUS]="GetStatus";
 	subcommandsDesc[GUI_SUBCOMMAND_GET_STATUS_RESPONSE]="GetStatusRes";
 	subcommandsDesc[GUI_SUBCOMMAND_SET]="Set";
@@ -174,6 +180,18 @@ uchar Command::getSubCommand() {
 	return QByteArray::operator[](1);
 }
 
+uchar Command::getSub() {
+	return QByteArray::operator[](1) & GUI_SUB_MASK;
+}
+
+bool Command::hasExtra() {
+	if (QByteArray::operator[](1) & _BV(GUI_EXTRA_FLAG)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 uchar Command::getReceivedCrc() {
     if ( size() >= 4 ) {
         return at(size()-2);
@@ -216,19 +234,28 @@ QString Command::toString() {
 	} else {
 		s.append(QString("(%1) ").arg(getSDesc(at(1))));
 	}
+	s.append("-[");
+	if (hasExtra()) {
+		s.append("E");
+	}
+	s.append("]-");
 	for (int i=2;i<count()-2;i++) {
 		s.append(QString("%1").arg((uchar)at(i)));
 		s.append((QString("(%1)-").arg((uchar)at(i),2,16,QLatin1Char('0'))).toUpper());
 	}
-	s.append((QString("CRC(%1)-").arg((uchar)at(count()-2),2,16,QLatin1Char('0'))).toUpper());
+	if (isValid()) {
+		s.append((QString("CRC_OK(%1)-").arg((uchar)at(count()-2),2,16,QLatin1Char('0'))).toUpper());
+	} else {
+		s.append((QString("CRC_NOK(%1/%2)").arg(getReceivedCrc(),2,16,QLatin1Char('0')).arg(getCalculatedCrc(),2,16,QLatin1Char('0'))).toUpper());
+	}
 	s.append("END ");
 	s.append(QString(QObject::tr("%1 bajt(y/ów) ")).arg(count()));
-	if (isValid()) {
-		s.append("CRC: Ok ");
-	} else {
-		s.append("CRC: NotOk ");
-        s.append((QString(" (%1/%2)").arg(getReceivedCrc(),2,16,QLatin1Char('0')).arg(getCalculatedCrc(),2,16,QLatin1Char('0'))).toUpper());
-	}
+//	if (isValid()) {
+//		s.append("CRC: Ok ");
+//	} else {
+//		s.append("CRC: NotOk ");
+//        s.append((QString(" (%1/%2)").arg(getReceivedCrc(),2,16,QLatin1Char('0')).arg(getCalculatedCrc(),2,16,QLatin1Char('0'))).toUpper());
+//	}
 	return s;
 }
 

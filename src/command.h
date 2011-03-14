@@ -31,7 +31,7 @@ $Id$
 #include <QHash>
 
 class Command : public QByteArray {
-	
+
 	public:
 		Command();
         Command(QString);
@@ -45,11 +45,15 @@ class Command : public QByteArray {
 		void resetIndex();
 		uchar getCommand();
 		uchar getSubCommand();
+
+		uchar getSub();
+		bool hasExtra();
+
 		QString toString();
 		int getIindex();
 		void end();
 		int isNext();
-		uchar getReceivedCrc();	
+		uchar getReceivedCrc();
 		uchar getCalculatedCrc();
         void calculateCrc();
 		bool isValid();
