@@ -19,8 +19,7 @@ In project I used source code from others projects:
 
 Building and installation
 -------------------------
-    qmake;
-    make;
+    qmake; make clean; make
 
 Executing
 ---------
