@@ -18,8 +18,7 @@ W projekcie zostały wykorzystane zewnętrzne kody źródłowe:
 Instalacja
 ----------
 
-    qmake;
-    make;
+    qmake; make clean; make
 
 Uruchamianie
 ------------
