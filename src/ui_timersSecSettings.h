@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'timersSecSettings.ui'
 **
-** Created: Mon Mar 14 22:11:01 2011
+** Created: Sat Mar 19 14:08:22 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -44,7 +44,7 @@ public:
     {
         if (TimersSecSettings->objectName().isEmpty())
             TimersSecSettings->setObjectName(QString::fromUtf8("TimersSecSettings"));
-        TimersSecSettings->resize(193, 180);
+        TimersSecSettings->resize(234, 191);
         gridLayout_2 = new QGridLayout(TimersSecSettings);
         gridLayout_2->setSpacing(3);
         gridLayout_2->setContentsMargins(3, 3, 3, 3);

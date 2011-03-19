@@ -37,32 +37,32 @@ class TimersSecSettings : public QWidget {
 
 	public:
 		TimersSecSettings(int id,OutSettings* pouts[],QWidget *parent = 0);
-//		void changeOutLabel(int,QString);
-//		void disable();
-//		void enable();
-//		QTime getTimeFrom();
-//		QTime getTimeTo();
-//		void setTimeFrom(QTime);
-//		void setTimeFrom(int,int);
-//		void setTimeTo(QTime);
-//		void setTimeTo(int,int);
-//		int getOut();
-//		void setOut(int);
-//		int getWday();
-//		void setWday(int);
-//		void setActive();
-//		void setInActive();
-//		int getFlags();
-//		void setFlags(int);
-//		void set(int,int,int,int,int,int);
-//		bool isActive();
-//
-//	signals:
-//		void enabled();
-//		void disabled();
-//
-//	private slots:
-//		void changeState(int);
+		void changeOutLabel(int,QString);
+		void disable();
+		void enable();
+		QTime getTimeFrom();
+		int getDuration();
+		void setTimeFrom(QTime);
+		void setTimeFrom(int,int);
+		void setDuration(int);
+		int getOut();
+		void setOut(int);
+		int getWday();
+		void setWday(int);
+		void setActive();
+		void setInActive();
+		int getFlags();
+		void setFlags(int);
+		void newSettings(int,int,int,int,int);
+		bool isActive();
+		QByteArray getSettingsArray();
+
+	signals:
+		void enabled();
+		void disabled();
+
+	private slots:
+		void changeState(int);
 
 	private:
 		int id;

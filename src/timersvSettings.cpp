@@ -31,9 +31,9 @@ TimersvSettings::TimersvSettings(int id,OutSettings* pouts[],QWidget *parent)
 {
   ui.setupUi(this);
 	this->id=id;
-	ui.groupBox->setTitle(QString(tr("Timersv %1")).arg(id+1));
+	ui.groupBox->setTitle(QString(tr("Timer interwałowy %1")).arg(id+1));
 	out = new ComboBoxOuts(pouts,this);
-	ui.layout->addWidget(out,3,1);
+	ui.gridLayout->addWidget(out,3,1);
 	connect(ui.c_active, SIGNAL(stateChanged(int)), this, SLOT(changeState(int)));
 	disable();
 }

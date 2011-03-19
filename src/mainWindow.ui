@@ -1021,7 +1021,7 @@
            </rect>
           </property>
           <property name="currentIndex">
-           <number>2</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_6">
            <attribute name="title">
@@ -1122,14 +1122,14 @@
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_10">
              <item>
-              <widget class="QPushButton" name="b_timerssecGetSettings">
+              <widget class="QPushButton" name="b_timersSecGetSettings">
                <property name="text">
                 <string>Pobierz ustawienia</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="b_timerssecSetSettings">
+              <widget class="QPushButton" name="b_timersSecSetSettings">
                <property name="text">
                 <string>Wyślij ustawienia</string>
                </property>
@@ -1259,7 +1259,7 @@
             <x>4</x>
             <y>206</y>
             <width>869</width>
-            <height>289</height>
+            <height>283</height>
            </rect>
           </property>
           <property name="wordWrap">
@@ -1552,7 +1552,7 @@
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>23</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuPlik">

@@ -204,6 +204,7 @@ $Id$
 #define GUI_LOG_COMMAND 0x90
 #define GUI_DEBUG_COMMAND 0x91
 #define GUI_PWM 0x92
+#define GUI_TIMSEC 0x93
 
 #define GUI_SUB_MASK 0xF0
 #define GUI_GET 0xC0

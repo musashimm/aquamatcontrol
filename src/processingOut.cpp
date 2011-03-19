@@ -72,7 +72,7 @@ void MainWindow::setUiOutLabel(int outId,QString label) {
 	for (int i=0;i<s.size();i++) {
 		if (!(isprint(s[i].toAscii()))) {
 			s.replace(i,1,QChar('?'));
-		} 
+		}
 	}
 	pOutSettings[outId]->setLabel(s);
 }
@@ -95,7 +95,7 @@ void MainWindow::setOutState(int id, int state,int clicked) {
 }
 
 void MainWindow::setOutLabel(int id, QString label) {
-	
+
 	topOffOut->changeLabel(id,label);
 
 	pOutDisplays[id]->setLabel(label);
@@ -103,13 +103,17 @@ void MainWindow::setOutLabel(int id, QString label) {
 	for (int i=0;i<TEMP_SENSORS_NUM;i++) {
 		pTempSettings[i]->changeOutLabel(id,label);
 	}
-	
+
 	for (int i=0;i<TIMERS_NUM;i++) {
 		pTimersSettings[i]->changeOutLabel(id,label);
  	}
-	
+
 	for (int i=0;i<TIMERSV_NUM;i++) {
 		pTimersvSettings[i]->changeOutLabel(id,label);
+ 	}
+
+ 	for (int i=0;i<TIMERSSEC_NUM;i++) {
+		pTimersSecSettings[i]->changeOutLabel(id,label);
  	}
 }
 
@@ -130,7 +134,7 @@ void MainWindow::sendOutSettings(int id, QString label,int qb) {
 }
 
 void MainWindow::setOutBlock(int id, int state, int clicked) {
-	
+
 	if (state) {
 		pOutDisplays[id]->block();
 	}	else {

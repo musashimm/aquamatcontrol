@@ -51,10 +51,12 @@ void MainWindow::pwmGetSettings() {
 
 void MainWindow::pwmSendSettings() {
 	for(int i=0;i<PWM_NUM;i++) {
-		Command c(GUI_PWM,GUI_SET|_BV(GUI_EXTRA_FLAG));
-		c.append(pPwmSettings[i]->getSettingsArray());
-		c.end();
-		cp.toQueue(c);
+	    if (pPwmSettings[i]->isNameChanged()) {
+            Command c(GUI_PWM,GUI_SET|_BV(GUI_EXTRA_FLAG));
+            c.append(pPwmSettings[i]->getSettingsArray());
+            c.end();
+            cp.toQueue(c);
+	    }
 	}
 }
 

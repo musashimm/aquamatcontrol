@@ -31,7 +31,7 @@ TimersSettings::TimersSettings(int id,OutSettings* pouts[],QWidget *parent)
 {
 	ui.setupUi(this);
 	this->id=id;
-	ui.groupBox->setTitle(QString(tr("Timer %1")).arg(id+1));
+	ui.groupBox->setTitle(QString(tr("Timer godzinowy %1")).arg(id+1));
 	wday = new ComboBoxWeekDay(this);
 	ui.gridLayout->addWidget(wday,3,1);
 	out = new ComboBoxOuts(pouts,this);

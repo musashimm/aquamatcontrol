@@ -358,6 +358,7 @@ void MainWindow::loadSettings(QSettings* settings)
  	settings->endArray();
 
  	pwmLoadSettings(settings);
+ 	timersSecLoadSettings(settings);
 
  	settings->beginReadArray("Timers");
 	for (int i = 0; i < TIMERS_NUM; i++) {
@@ -438,6 +439,7 @@ void MainWindow::saveSettings(QSettings* settings)
  	settings->endArray();
 
  	pwmSaveSettings(settings);
+ 	timersSecSaveSettings(settings);
 
  	settings->beginWriteArray("Timers");
 	for (int i = 0; i < TIMERS_NUM; i++) {

@@ -32,10 +32,11 @@ PwmSettings::PwmSettings(int id,QString name, QWidget *parent)
   	ui.setupUi(this);
   	this->id=id;
 	ui.edit_name->setText(name);
+	nameChangedFlag = false;
 	ui.groupBox->setTitle(QString(tr("Wyjście PWM %1")).arg(id+1));
 	pwmChanged(ui.dial->value());
 	connect(ui.checkBox_blocked, SIGNAL(clicked()), this, SLOT(stateChanged()));
-	//connect(ui.dial,SIGNAL(sliderReleased()), this, SLOT(stateChanged()));
+	connect(ui.edit_name,SIGNAL(editingFinished()), this, SLOT(nameChanged()));
 	connect(ui.dial,SIGNAL(valueChanged(int)), this, SLOT(pwmChanged(int)));
 
 	timer = new QTimer(this);
@@ -45,6 +46,14 @@ PwmSettings::PwmSettings(int id,QString name, QWidget *parent)
 
 void PwmSettings::pwmChanged(int value) {
 	ui.dial_label->setText(QString(tr("%1%").arg(value)));
+}
+
+void PwmSettings::nameChanged() {
+    nameChangedFlag = true;
+}
+
+bool PwmSettings::isNameChanged() {
+    return nameChangedFlag;
 }
 
 void PwmSettings::checkPwmChange() {
@@ -80,6 +89,7 @@ QByteArray PwmSettings::getSettingsArray() {
 	}
 
 	s.replace(0,ui.edit_name->text().size(),ui.edit_name->text());
+	nameChangedFlag = false;
 
 	a.append(uchar(id));
 	a.append(uchar(ui.dial->value()));

@@ -21,6 +21,9 @@
 
 /** @file processingTimersSec.cpp
 @brief Funkcje związane z zarządzaniem timerami sekundowymi.
+
+    Pushbuttons
+
 */
 
 void MainWindow::timersSecInit() {
@@ -29,32 +32,53 @@ void MainWindow::timersSecInit() {
 		ui.timersSecSettingsLayout->addWidget(timersSecSettings,0,i);
 		pTimersSecSettings[i]=timersSecSettings;
     }
-//	}
-//	connect(ui.b_timersGetSettings, SIGNAL(clicked()), this, SLOT(getTimers()));
-//	connect(ui.b_timersSetSettings, SIGNAL(clicked()), this, SLOT(setTimers()));
+	connect(ui.b_timersSecGetSettings, SIGNAL(clicked()), this, SLOT(timersSecGetSettings()));
+	connect(ui.b_timersSecSetSettings, SIGNAL(clicked()), this, SLOT(timersSecSendSettings()));
 }
-//
-//void MainWindow::getTimers() {
-//	Command c(GUI_TIMERS_COMMAND,GUI_SUBCOMMAND_GET_SETTINGS);
-//	c.end();
-//    cp.toQueue(c);
-//}
-//
-//void MainWindow::setTimers() {
-//		for (int i=0;i<TIMERS_NUM;i++) {
-//		Command c(GUI_TIMERS_COMMAND,GUI_SUBCOMMAND_SET);
-//		c.add(i);
-//		c.add(pTimersSettings[i]->getTimeFrom().hour());
-//		c.add(pTimersSettings[i]->getTimeFrom().minute());
-//		c.add(pTimersSettings[i]->getTimeTo().hour());
-//		c.add(pTimersSettings[i]->getTimeTo().minute());
-//		c.add(pTimersSettings[i]->getOut());
-//		c.add(pTimersSettings[i]->getFlags());
-//		c.end();
-//        cp.toQueue(c);
-//	}
-//}
-//
-//TimersSettings* MainWindow::getPTimers(int id) {
-//	return pTimersSettings[id];
-//}
+
+void MainWindow::timersSecGetSettings() {
+    Command c(GUI_TIMSEC,GUI_GET);
+	c.end();
+    cp.toQueue(c);
+}
+
+void MainWindow::timersSecSendSettings() {
+	for(int i=0;i<TIMERSSEC_NUM;i++) {
+        Command c(GUI_TIMSEC,GUI_SET);
+        c.append(pTimersSecSettings[i]->getSettingsArray());
+        c.end();
+        cp.toQueue(c);
+    }
+}
+
+TimersSecSettings* MainWindow::getTimersSecSetting(int id) {
+        return pTimersSecSettings[id];
+}
+
+void MainWindow::timersSecSaveSettings(QSettings* s) {
+    s->beginWriteArray("TimersSec");
+	for (int i = 0; i < TIMERSSEC_NUM; i++) {
+     	s->setArrayIndex(i);
+     	s->setValue("from", pTimersSecSettings[i]->getTimeFrom().toString("hh:mm"));
+     	s->setValue("duration", pTimersSecSettings[i]->getDuration());
+     	s->setValue("wday", pTimersSecSettings[i]->getWday());
+        s->setValue("out", pTimersSecSettings[i]->getOut());
+     	s->setValue("active", pTimersSecSettings[i]->isActive());
+ 	}
+ 	s->endArray();
+}
+
+void MainWindow::timersSecLoadSettings(QSettings* s) {
+    s->beginReadArray("TimersSec");
+	for (int i = 0; i < TIMERSSEC_NUM; i++) {
+     	s->setArrayIndex(i);
+     	if (s->value("active").toBool()) {
+     	    pTimersSecSettings[i]->enable();
+     	}
+     	pTimersSecSettings[i]->setTimeFrom(QTime::fromString(s->value("from").toString(),"hh:mm"));
+     	pTimersSecSettings[i]->setDuration(s->value("duration").toInt());
+     	pTimersSecSettings[i]->setWday(s->value("wday").toInt());
+     	pTimersSecSettings[i]->setOut(s->value("out").toInt());
+ 	}
+ 	s->endArray();
+}

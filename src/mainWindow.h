@@ -166,9 +166,11 @@ public slots:
 	TimersSettings* getPTimers(int id);
 
     void timersSecInit();
-	//void getTimers();
-	//void setTimers();
-	//TimersSettings* getPTimers(int id);
+    void timersSecGetSettings();
+    void timersSecSendSettings();
+    TimersSecSettings* getTimersSecSetting(int);
+    void timersSecSaveSettings(QSettings*);
+    void timersSecLoadSettings(QSettings*);
 
 	void timersvInit();
 	void getTimersv();

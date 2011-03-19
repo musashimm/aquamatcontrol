@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'pwmSettings.ui'
 **
-** Created: Mon Mar 14 19:49:54 2011
+** Created: Sat Mar 19 14:08:22 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

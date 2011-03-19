@@ -45,6 +45,7 @@ class PwmSettings : public QWidget {
 		void setName(QString);
 		void setPwm(int);
 		void setFlags(int);
+		bool isNameChanged();
 
 	public slots:
 		void newSettings(int,int,QString);
@@ -56,12 +57,14 @@ class PwmSettings : public QWidget {
 		void stateChanged();
 		void pwmChanged(int);
 		void checkPwmChange();
+		void nameChanged();
 
 	private:
 		Ui::PwmSettings ui;
 		int id;
 		QTimer *timer;
 		int oldpwm;
+		bool nameChangedFlag;
 };
 
 #endif

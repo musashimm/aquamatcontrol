@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainWindow.ui'
 **
-** Created: Mon Mar 14 22:14:42 2011
+** Created: Sat Mar 19 14:08:22 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -173,8 +173,8 @@ public:
     QWidget *tab_11;
     QWidget *horizontalLayoutWidget_13;
     QHBoxLayout *horizontalLayout_10;
-    QPushButton *b_timerssecGetSettings;
-    QPushButton *b_timerssecSetSettings;
+    QPushButton *b_timersSecGetSettings;
+    QPushButton *b_timersSecSetSettings;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout_4;
     QGridLayout *timersSecSettingsLayout;
@@ -811,15 +811,15 @@ public:
         horizontalLayout_10 = new QHBoxLayout(horizontalLayoutWidget_13);
         horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
         horizontalLayout_10->setContentsMargins(0, 0, 0, 0);
-        b_timerssecGetSettings = new QPushButton(horizontalLayoutWidget_13);
-        b_timerssecGetSettings->setObjectName(QString::fromUtf8("b_timerssecGetSettings"));
+        b_timersSecGetSettings = new QPushButton(horizontalLayoutWidget_13);
+        b_timersSecGetSettings->setObjectName(QString::fromUtf8("b_timersSecGetSettings"));
 
-        horizontalLayout_10->addWidget(b_timerssecGetSettings);
+        horizontalLayout_10->addWidget(b_timersSecGetSettings);
 
-        b_timerssecSetSettings = new QPushButton(horizontalLayoutWidget_13);
-        b_timerssecSetSettings->setObjectName(QString::fromUtf8("b_timerssecSetSettings"));
+        b_timersSecSetSettings = new QPushButton(horizontalLayoutWidget_13);
+        b_timersSecSetSettings->setObjectName(QString::fromUtf8("b_timersSecSetSettings"));
 
-        horizontalLayout_10->addWidget(b_timerssecSetSettings);
+        horizontalLayout_10->addWidget(b_timersSecSetSettings);
 
         verticalLayoutWidget = new QWidget(tab_11);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
@@ -886,7 +886,7 @@ public:
         settings->setObjectName(QString::fromUtf8("settings"));
         logViewer = new QListWidget(settings);
         logViewer->setObjectName(QString::fromUtf8("logViewer"));
-        logViewer->setGeometry(QRect(4, 206, 869, 289));
+        logViewer->setGeometry(QRect(4, 206, 869, 283));
         logViewer->setWordWrap(true);
         logViewer->setSortingEnabled(false);
         groupBox_3 = new QGroupBox(settings);
@@ -1067,7 +1067,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 900, 23));
+        menubar->setGeometry(QRect(0, 0, 900, 25));
         menuPlik = new QMenu(menubar);
         menuPlik->setObjectName(QString::fromUtf8("menuPlik"));
         menuInfo = new QMenu(menubar);
@@ -1094,7 +1094,7 @@ public:
 
         tabWidget->setCurrentIndex(0);
         tabWidget_3->setCurrentIndex(0);
-        tabWidget_2->setCurrentIndex(2);
+        tabWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1172,8 +1172,8 @@ public:
         b_timersvGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
         b_timersvSetSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_9), QApplication::translate("MainWindow", "Interwa\305\202owe", 0, QApplication::UnicodeUTF8));
-        b_timerssecGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
-        b_timerssecSetSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
+        b_timersSecGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
+        b_timersSecSetSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_11), QApplication::translate("MainWindow", "Sekundowe", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Timery", 0, QApplication::UnicodeUTF8));
         b_getEvents->setText(QApplication::translate("MainWindow", "Pobierz histori\304\231 zdarze\305\204", 0, QApplication::UnicodeUTF8));
