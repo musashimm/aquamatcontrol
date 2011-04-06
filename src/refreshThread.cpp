@@ -25,8 +25,6 @@ $Id$
 
 #include "refreshThread.h"
 
-#include "mainWindow.h"
-
 void RefreshThread::run()
 {
 	emit getDateTime();
@@ -34,7 +32,7 @@ void RefreshThread::run()
 	emit commmandSent();
 	emit progress(20);
 	msleep(500);
-	
+
 	emit getTimeDay();
 	msleep(100);
 	emit commmandSent();

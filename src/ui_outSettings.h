@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'outSettings.ui'
 **
-** Created: Sat Mar 19 14:08:22 2011
+** Created: Wed Apr 6 22:01:34 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -21,8 +21,6 @@
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpacerItem>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
@@ -33,91 +31,73 @@ class Ui_OutSettings
 public:
     QGridLayout *gridLayout;
     QGroupBox *groupBox;
-    QGridLayout *gridLayout_2;
-    QVBoxLayout *outSettingsLayout;
+    QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
-    QCheckBox *checkBox_active;
-    QCheckBox *checkBox_block;
-    QHBoxLayout *horizontalLayout_2;
     QLabel *label;
     QLineEdit *lineEdit_label;
-    QSpacerItem *horizontalSpacer;
-    QHBoxLayout *buttonsLayout;
+    QCheckBox *checkBox_active;
+    QHBoxLayout *nameLayout;
     QLabel *label_2;
-    QPushButton *b_set;
+    QCheckBox *checkBox_block;
 
     void setupUi(QWidget *OutSettings)
     {
         if (OutSettings->objectName().isEmpty())
             OutSettings->setObjectName(QString::fromUtf8("OutSettings"));
-        OutSettings->resize(279, 247);
+        OutSettings->resize(221, 90);
         gridLayout = new QGridLayout(OutSettings);
         gridLayout->setSpacing(3);
         gridLayout->setContentsMargins(3, 3, 3, 3);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         groupBox = new QGroupBox(OutSettings);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        gridLayout_2 = new QGridLayout(groupBox);
-        gridLayout_2->setSpacing(3);
-        gridLayout_2->setContentsMargins(3, 3, 3, 3);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        outSettingsLayout = new QVBoxLayout();
-        outSettingsLayout->setSpacing(3);
-        outSettingsLayout->setObjectName(QString::fromUtf8("outSettingsLayout"));
-        outSettingsLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
+        verticalLayout = new QVBoxLayout(groupBox);
+        verticalLayout->setSpacing(3);
+        verticalLayout->setContentsMargins(3, 3, 3, 3);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(3);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label = new QLabel(groupBox);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        horizontalLayout->addWidget(label);
+
+        lineEdit_label = new QLineEdit(groupBox);
+        lineEdit_label->setObjectName(QString::fromUtf8("lineEdit_label"));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(lineEdit_label->sizePolicy().hasHeightForWidth());
+        lineEdit_label->setSizePolicy(sizePolicy);
+        lineEdit_label->setMaximumSize(QSize(70, 16777215));
+        lineEdit_label->setMaxLength(5);
+
+        horizontalLayout->addWidget(lineEdit_label);
+
         checkBox_active = new QCheckBox(groupBox);
         checkBox_active->setObjectName(QString::fromUtf8("checkBox_active"));
 
         horizontalLayout->addWidget(checkBox_active);
 
-        checkBox_block = new QCheckBox(groupBox);
-        checkBox_block->setObjectName(QString::fromUtf8("checkBox_block"));
 
-        horizontalLayout->addWidget(checkBox_block);
+        verticalLayout->addLayout(horizontalLayout);
 
-
-        outSettingsLayout->addLayout(horizontalLayout);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label = new QLabel(groupBox);
-        label->setObjectName(QString::fromUtf8("label"));
-
-        horizontalLayout_2->addWidget(label);
-
-        lineEdit_label = new QLineEdit(groupBox);
-        lineEdit_label->setObjectName(QString::fromUtf8("lineEdit_label"));
-        lineEdit_label->setMaxLength(5);
-
-        horizontalLayout_2->addWidget(lineEdit_label);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer);
-
-
-        outSettingsLayout->addLayout(horizontalLayout_2);
-
-        buttonsLayout = new QHBoxLayout();
-        buttonsLayout->setSpacing(3);
-        buttonsLayout->setObjectName(QString::fromUtf8("buttonsLayout"));
+        nameLayout = new QHBoxLayout();
+        nameLayout->setSpacing(3);
+        nameLayout->setObjectName(QString::fromUtf8("nameLayout"));
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
-        buttonsLayout->addWidget(label_2);
+        nameLayout->addWidget(label_2);
 
-        b_set = new QPushButton(groupBox);
-        b_set->setObjectName(QString::fromUtf8("b_set"));
+        checkBox_block = new QCheckBox(groupBox);
+        checkBox_block->setObjectName(QString::fromUtf8("checkBox_block"));
 
-        buttonsLayout->addWidget(b_set);
-
-
-        outSettingsLayout->addLayout(buttonsLayout);
+        nameLayout->addWidget(checkBox_block);
 
 
-        gridLayout_2->addLayout(outSettingsLayout, 0, 0, 1, 1);
+        verticalLayout->addLayout(nameLayout);
 
 
         gridLayout->addWidget(groupBox, 0, 0, 1, 1);
@@ -132,12 +112,11 @@ public:
     {
         OutSettings->setWindowTitle(QApplication::translate("OutSettings", "Form", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QApplication::translate("OutSettings", "GroupBox", 0, QApplication::UnicodeUTF8));
-        checkBox_active->setText(QApplication::translate("OutSettings", "Aktywne", 0, QApplication::UnicodeUTF8));
-        checkBox_block->setText(QApplication::translate("OutSettings", "Blokada", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("OutSettings", "Nazwa", 0, QApplication::UnicodeUTF8));
         lineEdit_label->setText(QApplication::translate("OutSettings", "ABCDE", 0, QApplication::UnicodeUTF8));
+        checkBox_active->setText(QApplication::translate("OutSettings", "Aktywne", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("OutSettings", "QB", 0, QApplication::UnicodeUTF8));
-        b_set->setText(QApplication::translate("OutSettings", "Ustaw", 0, QApplication::UnicodeUTF8));
+        checkBox_block->setText(QApplication::translate("OutSettings", "Blokada", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

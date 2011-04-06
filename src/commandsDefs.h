@@ -31,9 +31,19 @@ $Id$
 
 	7654|3210
 	XXXX      - typ operacji
+              - B0H - reconfig
+              - C0H - get
+              - D0H - set
+              - E0H - block
 		 X    - GUI_EXTRA_FLAG
 		 0    - brak dodatkowych informacji (np. dodatkowe ustawienia oprócz statusu),
 		 1    - dodatkowe informacje
+          X   - bit dla wszystkich
+          0   - operacja dla pojedynczego elementu
+          1   - operacja dla wszystkich
+           X  - operacja usuwania
+           0  - nie
+           1  - tak
 		    X - GUI_RESPONSE_FLAG
 		    0 - komenda
 		    1 - odpowiedź
@@ -207,10 +217,16 @@ $Id$
 #define GUI_TIMSEC 0x93
 
 #define GUI_SUB_MASK 0xF0
+
 #define GUI_GET 0xC0
 #define GUI_SET 0xD0
-#define GUI_EXTRA_FLAG 3
+#define GUI_BLOCK 0xE0
+#define GUI_RECONFIG 0xB0
+
 #define GUI_RESPONSE_FLAG 0
+#define GUI_CLEAR_FLAG 1
+#define GUI_FOR_ALL_FLAG 2
+#define GUI_EXTRA_FLAG 3
 
 #define GUI_SUBCOMMAND_GET_STATUS 0x81
 #define GUI_SUBCOMMAND_GET_STATUS_RESPONSE 0xA1

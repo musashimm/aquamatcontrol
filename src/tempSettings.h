@@ -23,6 +23,9 @@
 @brief Plik nagłówkowy - Konfiguracja kontroli temperatury.
 */
 
+#ifndef CLASSTEMPSETTINGS_H
+#define CLASSTEMPSETTINGS_H
+
 #include "temperature.h"
 #include "ui_tempSettings.h"
 #include "comboBoxOuts.h"
@@ -75,3 +78,5 @@ class TempSettings : public QWidget {
 		ComboBoxOuts *outCooling;
 		ComboBoxOuts *outHeating;
 };
+
+#endif

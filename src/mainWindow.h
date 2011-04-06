@@ -23,6 +23,9 @@ $Id$
 @brief Plik nagłówkowy - Główne okno
 */
 
+#ifndef CLASSMAINWINDOW_H
+#define CLASSMAINWINDOW_H
+
 #include <QMessageBox>
 #include <QMainWindow>
 #include <QSettings>
@@ -227,3 +230,6 @@ private:
 	IndicatorL *topOff_min_ro;
 	IndicatorL *topOff_max_run_indicator;
 };
+
+#endif
+

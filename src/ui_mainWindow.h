@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainWindow.ui'
 **
-** Created: Sat Mar 19 14:08:22 2011
+** Created: Wed Apr 6 22:01:34 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -87,8 +87,6 @@ public:
     QWidget *horizontalLayoutWidget_10;
     QHBoxLayout *topOffIndicatorsLayout;
     QCheckBox *topOff_block;
-    QWidget *gridLayoutWidget_8;
-    QGridLayout *gridLayout_3;
     QGroupBox *groupBox_4;
     QVBoxLayout *verticalLayout_7;
     QPushButton *b_getAlarm;
@@ -109,9 +107,10 @@ public:
     QWidget *temperature;
     QWidget *horizontalLayoutWidget_6;
     QHBoxLayout *tempSettingsLayout;
-    QGroupBox *groupBox_7;
-    QWidget *verticalLayoutWidget_4;
-    QVBoxLayout *verticalLayout_3;
+    QWidget *widget_2;
+    QVBoxLayout *verticalLayout_10;
+    QGroupBox *groupBox_9;
+    QVBoxLayout *verticalLayout_11;
     QLabel *label_20;
     QLabel *label_12;
     QLabel *label_26;
@@ -137,6 +136,7 @@ public:
     QWidget *horizontalLayoutWidget_11;
     QHBoxLayout *horizontalLayout_8;
     QPushButton *b_getOutSettings;
+    QPushButton *b_setOutSettings;
     QPushButton *b_outAllActive;
     QPushButton *b_outAllInactive;
     QPushButton *b_outAllBlock;
@@ -180,6 +180,7 @@ public:
     QGridLayout *timersSecSettingsLayout;
     QHBoxLayout *horizontalLayout_13;
     QSpacerItem *verticalSpacer_2;
+    QWidget *tab_7;
     QWidget *tab;
     QListWidget *eventViewer;
     QWidget *horizontalLayoutWidget_9;
@@ -413,15 +414,9 @@ public:
 
         topOffIndicatorsLayout->addWidget(topOff_block);
 
-        gridLayoutWidget_8 = new QWidget(topOffGroupBox);
-        gridLayoutWidget_8->setObjectName(QString::fromUtf8("gridLayoutWidget_8"));
-        gridLayoutWidget_8->setGeometry(QRect(38, 130, 641, 109));
-        gridLayout_3 = new QGridLayout(gridLayoutWidget_8);
-        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        gridLayout_3->setContentsMargins(0, 0, 0, 0);
         groupBox_4 = new QGroupBox(tab_5);
         groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
-        groupBox_4->setGeometry(QRect(10, 8, 193, 139));
+        groupBox_4->setGeometry(QRect(10, 8, 203, 139));
         verticalLayout_7 = new QVBoxLayout(groupBox_4);
         verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
         b_getAlarm = new QPushButton(groupBox_4);
@@ -441,7 +436,7 @@ public:
 
         groupBox_5 = new QGroupBox(tab_5);
         groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
-        groupBox_5->setGeometry(QRect(214, 8, 657, 139));
+        groupBox_5->setGeometry(QRect(220, 8, 651, 139));
         gridLayout_5 = new QGridLayout(groupBox_5);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
         e_dateTime = new QDateTimeEdit(groupBox_5);
@@ -501,132 +496,150 @@ public:
         temperature->setObjectName(QString::fromUtf8("temperature"));
         horizontalLayoutWidget_6 = new QWidget(temperature);
         horizontalLayoutWidget_6->setObjectName(QString::fromUtf8("horizontalLayoutWidget_6"));
-        horizontalLayoutWidget_6->setGeometry(QRect(2, 4, 869, 447));
+        horizontalLayoutWidget_6->setGeometry(QRect(4, 4, 867, 445));
         tempSettingsLayout = new QHBoxLayout(horizontalLayoutWidget_6);
+        tempSettingsLayout->setSpacing(3);
         tempSettingsLayout->setObjectName(QString::fromUtf8("tempSettingsLayout"));
         tempSettingsLayout->setContentsMargins(0, 0, 0, 0);
-        groupBox_7 = new QGroupBox(horizontalLayoutWidget_6);
-        groupBox_7->setObjectName(QString::fromUtf8("groupBox_7"));
-        sizePolicy.setHeightForWidth(groupBox_7->sizePolicy().hasHeightForWidth());
-        groupBox_7->setSizePolicy(sizePolicy);
-        groupBox_7->setFlat(true);
-        verticalLayoutWidget_4 = new QWidget(groupBox_7);
-        verticalLayoutWidget_4->setObjectName(QString::fromUtf8("verticalLayoutWidget_4"));
-        verticalLayoutWidget_4->setGeometry(QRect(4, 22, 164, 361));
-        verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget_4);
-        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalLayout_3->setSizeConstraint(QLayout::SetDefaultConstraint);
-        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
-        label_20 = new QLabel(verticalLayoutWidget_4);
+        widget_2 = new QWidget(horizontalLayoutWidget_6);
+        widget_2->setObjectName(QString::fromUtf8("widget_2"));
+        verticalLayout_10 = new QVBoxLayout(widget_2);
+        verticalLayout_10->setSpacing(3);
+        verticalLayout_10->setContentsMargins(3, 3, 3, 3);
+        verticalLayout_10->setObjectName(QString::fromUtf8("verticalLayout_10"));
+        groupBox_9 = new QGroupBox(widget_2);
+        groupBox_9->setObjectName(QString::fromUtf8("groupBox_9"));
+        groupBox_9->setFlat(false);
+        verticalLayout_11 = new QVBoxLayout(groupBox_9);
+        verticalLayout_11->setSpacing(3);
+        verticalLayout_11->setContentsMargins(3, 3, 3, 3);
+        verticalLayout_11->setObjectName(QString::fromUtf8("verticalLayout_11"));
+        label_20 = new QLabel(groupBox_9);
         label_20->setObjectName(QString::fromUtf8("label_20"));
         sizePolicy.setHeightForWidth(label_20->sizePolicy().hasHeightForWidth());
         label_20->setSizePolicy(sizePolicy);
-        label_20->setMaximumSize(QSize(16777215, 30));
+        label_20->setMinimumSize(QSize(0, 28));
+        label_20->setMaximumSize(QSize(16777215, 28));
         label_20->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_20);
+        verticalLayout_11->addWidget(label_20);
 
-        label_12 = new QLabel(verticalLayoutWidget_4);
+        label_12 = new QLabel(groupBox_9);
         label_12->setObjectName(QString::fromUtf8("label_12"));
         sizePolicy.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
         label_12->setSizePolicy(sizePolicy);
-        label_12->setMaximumSize(QSize(16777215, 30));
+        label_12->setMinimumSize(QSize(0, 28));
+        label_12->setMaximumSize(QSize(16777215, 28));
         label_12->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_12);
+        verticalLayout_11->addWidget(label_12);
 
-        label_26 = new QLabel(verticalLayoutWidget_4);
+        label_26 = new QLabel(groupBox_9);
         label_26->setObjectName(QString::fromUtf8("label_26"));
         sizePolicy.setHeightForWidth(label_26->sizePolicy().hasHeightForWidth());
         label_26->setSizePolicy(sizePolicy);
-        label_26->setMaximumSize(QSize(16777215, 30));
+        label_26->setMinimumSize(QSize(0, 28));
+        label_26->setMaximumSize(QSize(16777215, 28));
         label_26->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_26);
+        verticalLayout_11->addWidget(label_26);
 
-        label_30 = new QLabel(verticalLayoutWidget_4);
+        label_30 = new QLabel(groupBox_9);
         label_30->setObjectName(QString::fromUtf8("label_30"));
         sizePolicy.setHeightForWidth(label_30->sizePolicy().hasHeightForWidth());
         label_30->setSizePolicy(sizePolicy);
-        label_30->setMaximumSize(QSize(16777215, 30));
+        label_30->setMinimumSize(QSize(0, 28));
+        label_30->setMaximumSize(QSize(16777215, 28));
         label_30->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_30);
+        verticalLayout_11->addWidget(label_30);
 
-        label_25 = new QLabel(verticalLayoutWidget_4);
+        label_25 = new QLabel(groupBox_9);
         label_25->setObjectName(QString::fromUtf8("label_25"));
         sizePolicy.setHeightForWidth(label_25->sizePolicy().hasHeightForWidth());
         label_25->setSizePolicy(sizePolicy);
-        label_25->setMaximumSize(QSize(16777215, 30));
+        label_25->setMinimumSize(QSize(0, 28));
+        label_25->setMaximumSize(QSize(16777215, 28));
         label_25->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_25);
+        verticalLayout_11->addWidget(label_25);
 
-        label_23 = new QLabel(verticalLayoutWidget_4);
+        label_23 = new QLabel(groupBox_9);
         label_23->setObjectName(QString::fromUtf8("label_23"));
         sizePolicy.setHeightForWidth(label_23->sizePolicy().hasHeightForWidth());
         label_23->setSizePolicy(sizePolicy);
-        label_23->setMaximumSize(QSize(16777215, 30));
+        label_23->setMinimumSize(QSize(0, 28));
+        label_23->setMaximumSize(QSize(16777215, 28));
         label_23->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_23);
+        verticalLayout_11->addWidget(label_23);
 
-        label_24 = new QLabel(verticalLayoutWidget_4);
+        label_24 = new QLabel(groupBox_9);
         label_24->setObjectName(QString::fromUtf8("label_24"));
         sizePolicy.setHeightForWidth(label_24->sizePolicy().hasHeightForWidth());
         label_24->setSizePolicy(sizePolicy);
-        label_24->setMaximumSize(QSize(16777215, 30));
+        label_24->setMinimumSize(QSize(0, 28));
+        label_24->setMaximumSize(QSize(16777215, 28));
+        label_24->setLineWidth(1);
         label_24->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_24);
+        verticalLayout_11->addWidget(label_24);
 
-        label_27 = new QLabel(verticalLayoutWidget_4);
+        label_27 = new QLabel(groupBox_9);
         label_27->setObjectName(QString::fromUtf8("label_27"));
         sizePolicy.setHeightForWidth(label_27->sizePolicy().hasHeightForWidth());
         label_27->setSizePolicy(sizePolicy);
-        label_27->setMaximumSize(QSize(16777215, 30));
+        label_27->setMinimumSize(QSize(0, 28));
+        label_27->setMaximumSize(QSize(16777215, 28));
         label_27->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_27);
+        verticalLayout_11->addWidget(label_27);
 
-        label_28 = new QLabel(verticalLayoutWidget_4);
+        label_28 = new QLabel(groupBox_9);
         label_28->setObjectName(QString::fromUtf8("label_28"));
         sizePolicy.setHeightForWidth(label_28->sizePolicy().hasHeightForWidth());
         label_28->setSizePolicy(sizePolicy);
-        label_28->setMaximumSize(QSize(16777215, 30));
+        label_28->setMinimumSize(QSize(0, 28));
+        label_28->setMaximumSize(QSize(16777215, 28));
         label_28->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_28);
+        verticalLayout_11->addWidget(label_28);
 
-        label_29 = new QLabel(verticalLayoutWidget_4);
+        label_29 = new QLabel(groupBox_9);
         label_29->setObjectName(QString::fromUtf8("label_29"));
         sizePolicy.setHeightForWidth(label_29->sizePolicy().hasHeightForWidth());
         label_29->setSizePolicy(sizePolicy);
-        label_29->setMaximumSize(QSize(16777215, 30));
+        label_29->setMinimumSize(QSize(0, 28));
+        label_29->setMaximumSize(QSize(16777215, 28));
         label_29->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_29);
+        verticalLayout_11->addWidget(label_29);
 
-        label_22 = new QLabel(verticalLayoutWidget_4);
+        label_22 = new QLabel(groupBox_9);
         label_22->setObjectName(QString::fromUtf8("label_22"));
         sizePolicy.setHeightForWidth(label_22->sizePolicy().hasHeightForWidth());
         label_22->setSizePolicy(sizePolicy);
-        label_22->setMaximumSize(QSize(16777215, 30));
+        label_22->setMinimumSize(QSize(0, 28));
+        label_22->setMaximumSize(QSize(16777215, 28));
         label_22->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_22);
+        verticalLayout_11->addWidget(label_22);
 
-        label_21 = new QLabel(verticalLayoutWidget_4);
+        label_21 = new QLabel(groupBox_9);
         label_21->setObjectName(QString::fromUtf8("label_21"));
         sizePolicy.setHeightForWidth(label_21->sizePolicy().hasHeightForWidth());
         label_21->setSizePolicy(sizePolicy);
-        label_21->setMaximumSize(QSize(16777215, 30));
+        label_21->setMinimumSize(QSize(0, 28));
+        label_21->setMaximumSize(QSize(16777215, 28));
         label_21->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(label_21);
+        verticalLayout_11->addWidget(label_21);
 
 
-        tempSettingsLayout->addWidget(groupBox_7);
+        verticalLayout_10->addWidget(groupBox_9);
+
+
+        tempSettingsLayout->addWidget(widget_2);
 
         horizontalLayoutWidget_8 = new QWidget(temperature);
         horizontalLayoutWidget_8->setObjectName(QString::fromUtf8("horizontalLayoutWidget_8"));
@@ -666,7 +679,7 @@ public:
         outSettingsLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_11 = new QWidget(tab_4);
         horizontalLayoutWidget_11->setObjectName(QString::fromUtf8("horizontalLayoutWidget_11"));
-        horizontalLayoutWidget_11->setGeometry(QRect(2, 430, 767, 30));
+        horizontalLayoutWidget_11->setGeometry(QRect(2, 430, 841, 30));
         horizontalLayout_8 = new QHBoxLayout(horizontalLayoutWidget_11);
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
         horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
@@ -674,6 +687,11 @@ public:
         b_getOutSettings->setObjectName(QString::fromUtf8("b_getOutSettings"));
 
         horizontalLayout_8->addWidget(b_getOutSettings);
+
+        b_setOutSettings = new QPushButton(horizontalLayoutWidget_11);
+        b_setOutSettings->setObjectName(QString::fromUtf8("b_setOutSettings"));
+
+        horizontalLayout_8->addWidget(b_setOutSettings);
 
         b_outAllActive = new QPushButton(horizontalLayoutWidget_11);
         b_outAllActive->setObjectName(QString::fromUtf8("b_outAllActive"));
@@ -845,6 +863,9 @@ public:
         verticalLayout_4->addLayout(horizontalLayout_13);
 
         tabWidget_2->addTab(tab_11, QString());
+        tab_7 = new QWidget();
+        tab_7->setObjectName(QString::fromUtf8("tab_7"));
+        tabWidget_2->addTab(tab_7, QString());
         tabWidget->addTab(tab_3, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
@@ -1092,7 +1113,7 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(m_quit, SIGNAL(activated()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(4);
         tabWidget_3->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(0);
 
@@ -1139,7 +1160,7 @@ public:
         b_setDateTime->setText(QApplication::translate("MainWindow", "Ustaw", 0, QApplication::UnicodeUTF8));
         b_setTimeDay->setText(QApplication::translate("MainWindow", "Ustaw por\304\231 dnia", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_5), QApplication::translate("MainWindow", "Podstawowe / AD", 0, QApplication::UnicodeUTF8));
-        groupBox_7->setTitle(QString());
+        groupBox_9->setTitle(QApplication::translate("MainWindow", "Parametry", 0, QApplication::UnicodeUTF8));
         label_20->setText(QApplication::translate("MainWindow", "Status", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("MainWindow", "Numer seryjny", 0, QApplication::UnicodeUTF8));
         label_26->setText(QApplication::translate("MainWindow", "Flagi / B\305\202\304\231dne odczyty", 0, QApplication::UnicodeUTF8));
@@ -1157,6 +1178,7 @@ public:
         b_discoverSensors->setText(QApplication::translate("MainWindow", "Wykryj czujniki", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(temperature), QApplication::translate("MainWindow", "Temperatura", 0, QApplication::UnicodeUTF8));
         b_getOutSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
+        b_setOutSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
         b_outAllActive->setText(QApplication::translate("MainWindow", "Wszystkie w\305\202\304\205cz", 0, QApplication::UnicodeUTF8));
         b_outAllInactive->setText(QApplication::translate("MainWindow", "Wszystkie wy\305\202\304\205cz", 0, QApplication::UnicodeUTF8));
         b_outAllBlock->setText(QApplication::translate("MainWindow", "Wszystkie zablokuj", 0, QApplication::UnicodeUTF8));
@@ -1175,7 +1197,8 @@ public:
         b_timersSecGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
         b_timersSecSetSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_11), QApplication::translate("MainWindow", "Sekundowe", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Timery", 0, QApplication::UnicodeUTF8));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_7), QApplication::translate("MainWindow", "Wsch\303\263d / Zach\303\263d", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Timery i scenariusze", 0, QApplication::UnicodeUTF8));
         b_getEvents->setText(QApplication::translate("MainWindow", "Pobierz histori\304\231 zdarze\305\204", 0, QApplication::UnicodeUTF8));
         b_clearEvents->setText(QApplication::translate("MainWindow", "Wyszczy\305\233\304\207 histori\304\231 zdarze\305\204", 0, QApplication::UnicodeUTF8));
         b_saveEvents->setText(QApplication::translate("MainWindow", "Zapisz histori\304\231 do pliku", 0, QApplication::UnicodeUTF8));

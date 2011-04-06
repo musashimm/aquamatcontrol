@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'tempSettings.ui'
 **
-** Created: Sat Mar 19 14:08:22 2011
+** Created: Wed Apr 6 22:01:34 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -16,6 +16,7 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QCheckBox>
 #include <QtGui/QDoubleSpinBox>
+#include <QtGui/QGridLayout>
 #include <QtGui/QGroupBox>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
@@ -27,8 +28,8 @@ QT_BEGIN_NAMESPACE
 class Ui_TempSettings
 {
 public:
+    QGridLayout *gridLayout_2;
     QGroupBox *groupBox;
-    QWidget *layoutWidget;
     QVBoxLayout *layout;
     QCheckBox *check_tempActive;
     QLabel *l_romSerial;
@@ -45,97 +46,103 @@ public:
     {
         if (TempSettings->objectName().isEmpty())
             TempSettings->setObjectName(QString::fromUtf8("TempSettings"));
-        TempSettings->resize(173, 400);
+        TempSettings->resize(184, 391);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(TempSettings->sizePolicy().hasHeightForWidth());
         TempSettings->setSizePolicy(sizePolicy);
+        gridLayout_2 = new QGridLayout(TempSettings);
+        gridLayout_2->setSpacing(3);
+        gridLayout_2->setContentsMargins(3, 3, 3, 3);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         groupBox = new QGroupBox(TempSettings);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(2, 4, 165, 385));
         groupBox->setTitle(QString::fromUtf8("title"));
         groupBox->setFlat(false);
-        layoutWidget = new QWidget(groupBox);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 18, 146, 359));
-        layout = new QVBoxLayout(layoutWidget);
+        layout = new QVBoxLayout(groupBox);
+        layout->setSpacing(3);
+        layout->setContentsMargins(3, 3, 3, 3);
         layout->setObjectName(QString::fromUtf8("layout"));
-        layout->setSizeConstraint(QLayout::SetFixedSize);
-        layout->setContentsMargins(0, 0, 0, 0);
-        check_tempActive = new QCheckBox(layoutWidget);
+        check_tempActive = new QCheckBox(groupBox);
         check_tempActive->setObjectName(QString::fromUtf8("check_tempActive"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(check_tempActive->sizePolicy().hasHeightForWidth());
-        check_tempActive->setSizePolicy(sizePolicy1);
-        check_tempActive->setMaximumSize(QSize(16777215, 30));
+        sizePolicy.setHeightForWidth(check_tempActive->sizePolicy().hasHeightForWidth());
+        check_tempActive->setSizePolicy(sizePolicy);
+        check_tempActive->setMinimumSize(QSize(0, 28));
+        check_tempActive->setMaximumSize(QSize(16777215, 28));
         check_tempActive->setCheckable(true);
         check_tempActive->setChecked(false);
 
         layout->addWidget(check_tempActive);
 
-        l_romSerial = new QLabel(layoutWidget);
+        l_romSerial = new QLabel(groupBox);
         l_romSerial->setObjectName(QString::fromUtf8("l_romSerial"));
         sizePolicy.setHeightForWidth(l_romSerial->sizePolicy().hasHeightForWidth());
         l_romSerial->setSizePolicy(sizePolicy);
-        l_romSerial->setMaximumSize(QSize(16777215, 30));
-        l_romSerial->setAlignment(Qt::AlignCenter);
+        l_romSerial->setMinimumSize(QSize(0, 28));
+        l_romSerial->setMaximumSize(QSize(16777215, 28));
+        l_romSerial->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        l_romSerial->setMargin(0);
 
         layout->addWidget(l_romSerial);
 
-        l_flags = new QLabel(layoutWidget);
+        l_flags = new QLabel(groupBox);
         l_flags->setObjectName(QString::fromUtf8("l_flags"));
         sizePolicy.setHeightForWidth(l_flags->sizePolicy().hasHeightForWidth());
         l_flags->setSizePolicy(sizePolicy);
-        l_flags->setMaximumSize(QSize(16777215, 30));
+        l_flags->setMinimumSize(QSize(0, 28));
+        l_flags->setMaximumSize(QSize(16777215, 28));
 
         layout->addWidget(l_flags);
 
-        l_tempAlarms = new QLabel(layoutWidget);
+        l_tempAlarms = new QLabel(groupBox);
         l_tempAlarms->setObjectName(QString::fromUtf8("l_tempAlarms"));
         sizePolicy.setHeightForWidth(l_tempAlarms->sizePolicy().hasHeightForWidth());
         l_tempAlarms->setSizePolicy(sizePolicy);
-        l_tempAlarms->setMaximumSize(QSize(16777215, 30));
+        l_tempAlarms->setMinimumSize(QSize(0, 28));
+        l_tempAlarms->setMaximumSize(QSize(16777215, 28));
 
         layout->addWidget(l_tempAlarms);
 
-        l_currentTemp = new QLabel(layoutWidget);
+        l_currentTemp = new QLabel(groupBox);
         l_currentTemp->setObjectName(QString::fromUtf8("l_currentTemp"));
         sizePolicy.setHeightForWidth(l_currentTemp->sizePolicy().hasHeightForWidth());
         l_currentTemp->setSizePolicy(sizePolicy);
-        l_currentTemp->setMaximumSize(QSize(16777215, 30));
+        l_currentTemp->setMinimumSize(QSize(0, 28));
+        l_currentTemp->setMaximumSize(QSize(16777215, 28));
 
         layout->addWidget(l_currentTemp);
 
-        spin_targetTemp = new QDoubleSpinBox(layoutWidget);
+        spin_targetTemp = new QDoubleSpinBox(groupBox);
         spin_targetTemp->setObjectName(QString::fromUtf8("spin_targetTemp"));
-        sizePolicy1.setHeightForWidth(spin_targetTemp->sizePolicy().hasHeightForWidth());
-        spin_targetTemp->setSizePolicy(sizePolicy1);
-        spin_targetTemp->setMaximumSize(QSize(16777215, 30));
+        sizePolicy.setHeightForWidth(spin_targetTemp->sizePolicy().hasHeightForWidth());
+        spin_targetTemp->setSizePolicy(sizePolicy);
+        spin_targetTemp->setMinimumSize(QSize(0, 28));
+        spin_targetTemp->setMaximumSize(QSize(16777215, 28));
         spin_targetTemp->setDecimals(1);
         spin_targetTemp->setSingleStep(0.1);
         spin_targetTemp->setValue(20);
 
         layout->addWidget(spin_targetTemp);
 
-        spin_targetNightTemp = new QDoubleSpinBox(layoutWidget);
+        spin_targetNightTemp = new QDoubleSpinBox(groupBox);
         spin_targetNightTemp->setObjectName(QString::fromUtf8("spin_targetNightTemp"));
-        sizePolicy1.setHeightForWidth(spin_targetNightTemp->sizePolicy().hasHeightForWidth());
-        spin_targetNightTemp->setSizePolicy(sizePolicy1);
-        spin_targetNightTemp->setMaximumSize(QSize(16777215, 30));
+        sizePolicy.setHeightForWidth(spin_targetNightTemp->sizePolicy().hasHeightForWidth());
+        spin_targetNightTemp->setSizePolicy(sizePolicy);
+        spin_targetNightTemp->setMinimumSize(QSize(0, 28));
+        spin_targetNightTemp->setMaximumSize(QSize(16777215, 28));
         spin_targetNightTemp->setDecimals(1);
         spin_targetNightTemp->setSingleStep(0.1);
         spin_targetNightTemp->setValue(20);
 
         layout->addWidget(spin_targetNightTemp);
 
-        spin_minTemp = new QDoubleSpinBox(layoutWidget);
+        spin_minTemp = new QDoubleSpinBox(groupBox);
         spin_minTemp->setObjectName(QString::fromUtf8("spin_minTemp"));
-        sizePolicy1.setHeightForWidth(spin_minTemp->sizePolicy().hasHeightForWidth());
-        spin_minTemp->setSizePolicy(sizePolicy1);
-        spin_minTemp->setMaximumSize(QSize(16777215, 30));
+        sizePolicy.setHeightForWidth(spin_minTemp->sizePolicy().hasHeightForWidth());
+        spin_minTemp->setSizePolicy(sizePolicy);
+        spin_minTemp->setMinimumSize(QSize(0, 28));
+        spin_minTemp->setMaximumSize(QSize(16777215, 28));
         spin_minTemp->setDecimals(1);
         spin_minTemp->setMaximum(100);
         spin_minTemp->setSingleStep(0.1);
@@ -143,22 +150,24 @@ public:
 
         layout->addWidget(spin_minTemp);
 
-        spin_maxTemp = new QDoubleSpinBox(layoutWidget);
+        spin_maxTemp = new QDoubleSpinBox(groupBox);
         spin_maxTemp->setObjectName(QString::fromUtf8("spin_maxTemp"));
-        sizePolicy1.setHeightForWidth(spin_maxTemp->sizePolicy().hasHeightForWidth());
-        spin_maxTemp->setSizePolicy(sizePolicy1);
-        spin_maxTemp->setMaximumSize(QSize(16777215, 30));
+        sizePolicy.setHeightForWidth(spin_maxTemp->sizePolicy().hasHeightForWidth());
+        spin_maxTemp->setSizePolicy(sizePolicy);
+        spin_maxTemp->setMinimumSize(QSize(0, 28));
+        spin_maxTemp->setMaximumSize(QSize(16777215, 28));
         spin_maxTemp->setDecimals(1);
         spin_maxTemp->setSingleStep(0.1);
         spin_maxTemp->setValue(30);
 
         layout->addWidget(spin_maxTemp);
 
-        spin_histeresis = new QDoubleSpinBox(layoutWidget);
+        spin_histeresis = new QDoubleSpinBox(groupBox);
         spin_histeresis->setObjectName(QString::fromUtf8("spin_histeresis"));
-        sizePolicy1.setHeightForWidth(spin_histeresis->sizePolicy().hasHeightForWidth());
-        spin_histeresis->setSizePolicy(sizePolicy1);
-        spin_histeresis->setMaximumSize(QSize(16777215, 30));
+        sizePolicy.setHeightForWidth(spin_histeresis->sizePolicy().hasHeightForWidth());
+        spin_histeresis->setSizePolicy(sizePolicy);
+        spin_histeresis->setMinimumSize(QSize(0, 28));
+        spin_histeresis->setMaximumSize(QSize(16777215, 28));
         spin_histeresis->setDecimals(1);
         spin_histeresis->setMinimum(0.1);
         spin_histeresis->setMaximum(1);
@@ -166,6 +175,9 @@ public:
         spin_histeresis->setValue(0.5);
 
         layout->addWidget(spin_histeresis);
+
+
+        gridLayout_2->addWidget(groupBox, 0, 0, 1, 1);
 
 
         retranslateUi(TempSettings);

@@ -34,7 +34,7 @@ OutSettings::OutSettings(int id,QString label, QWidget *parent)
 	connect(ui.checkBox_block, SIGNAL(clicked(bool)), this, SLOT(blockedSlot(bool)));
 	connect(ui.checkBox_active, SIGNAL(stateChanged(int)), this, SLOT(activatedSlot(int)));
 	connect(ui.checkBox_block, SIGNAL(stateChanged(int)), this, SLOT(blockedSlot(int)));
-	connect(ui.b_set, SIGNAL(clicked()), this, SLOT(setSlot()));
+	//connect(ui.b_set, SIGNAL(clicked()), this, SLOT(setSlot()));
 	this->id=id;
 	this->override=false;
 	this->cancel=false;
@@ -42,7 +42,7 @@ OutSettings::OutSettings(int id,QString label, QWidget *parent)
 	ui.groupBox->setTitle(QString(tr("Wyj. %1 [%2]")).arg(id+1).arg(label));
 	ui.lineEdit_label->setText(label);
 	qbutton = new ComboBoxQButtons();
-	ui.buttonsLayout->insertWidget(1,qbutton);
+	ui.nameLayout->insertWidget(1,qbutton);
 }
 
 void OutSettings::active() {
