@@ -34,6 +34,7 @@ $Id$
 #include "processingTimersv.cpp"
 #include "processingTimersSec.cpp"
 #include "processingEvents.cpp"
+#include "processingSun.cpp"
 
 //#include <QtDebug>
 
@@ -63,6 +64,7 @@ MainWindow::MainWindow(QWidget *parent)
 	topOffInit();
 	alarmInit();
 	eventsInit();
+	sunInit();
 
     QList<QextPortInfo> ports = QextSerialEnumerator::getPorts();
     for (int i=0;i<ports.size();i++) {

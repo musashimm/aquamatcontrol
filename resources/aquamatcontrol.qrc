@@ -1,6 +1,7 @@
 <RCC>
-  <qresource prefix="resources" >
+  <qresource prefix="resources">
     <file>app_icon.ico</file>
+    <file>sunScenario.png</file>
     <file>logocontrol2.png</file>
     <file>logocontrol.png</file>
     <file>top_off.png</file>

@@ -58,6 +58,7 @@ HEADERS += src/aboutDialog.h \
     src/timersvSettings.h \
     src/comboBoxQButtons.h \
     src/pwmSettings.h \
+    src/sunScenario.h \
     src/timersSecSettings.h
 FORMS += src/aboutDialog.ui \
     src/mainWindow.ui \
@@ -67,7 +68,8 @@ FORMS += src/aboutDialog.ui \
     src/timersvSettings.ui \
     src/codeUpdateDialog.ui \
     src/pwmSettings.ui \
-    src/timersSecSettings.ui
+    src/timersSecSettings.ui \
+    src/sunScenario.ui
 SOURCES += src/aboutDialog.cpp \
     src/codeUpdateThread.cpp \
     src/CodeUpdateDialog.cpp \
@@ -92,6 +94,7 @@ SOURCES += src/aboutDialog.cpp \
     src/processingTimers.cpp \
     src/processingTimersv.cpp \
     src/processingTopOff.cpp \
+    src/processingSun.cpp \
     src/refreshThread.cpp \
     src/tempDisplay.cpp \
     src/temperature.cpp \
@@ -100,7 +103,8 @@ SOURCES += src/aboutDialog.cpp \
     src/timersvSettings.cpp \
     src/comboBoxQButtons.cpp \
     src/timersSecSettings.cpp \
-    src/processingTimersSec.cpp
+    src/processingTimersSec.cpp \
+    src/sunScenario.cpp
 RESOURCES += resources/aquamatcontrol.qrc
 OTHER_FILES += Makefile \
     Makefile.Release \

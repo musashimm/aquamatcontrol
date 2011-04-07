@@ -63,6 +63,7 @@ $Id$
 #include "codeUpdate.h"
 #include "codeUpdateDialog.h"
 #include "codeUpdateThread.h"
+#include "sunScenario.h"
 
 #include <qextserialenumerator.h>
 #include <qextserialport.h>
@@ -192,6 +193,8 @@ public slots:
 	void enableClearEvents();
     void saveEventsToFile();
 
+    void sunInit();
+
 private slots:
 	void makeActions();
 	void loadSettings(QSettings*);
@@ -207,6 +210,7 @@ private:
 	OutDisplay* pOutDisplays[OUTPUTS_DEVICES_NUM*OUTPUTS_NUM_PER_DEVICE];
 	OutSettings* pOutSettings[OUTPUTS_DEVICES_NUM*OUTPUTS_NUM_PER_DEVICE];
 	PwmSettings* pPwmSettings[PWM_NUM];
+	SunScenario* pSunScenario[SUN_NUM];
 	TempSettings* pTempSettings[TEMP_SENSORS_NUM];
 	TimersSettings* pTimersSettings[TIMERS_NUM];
 	TimersvSettings* pTimersvSettings[TIMERSV_NUM];

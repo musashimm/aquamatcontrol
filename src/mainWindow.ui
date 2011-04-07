@@ -45,7 +45,7 @@
       <item>
        <widget class="QTabWidget" name="tabWidget">
         <property name="currentIndex">
-         <number>4</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="status">
          <attribute name="title">
@@ -1094,7 +1094,7 @@
            </rect>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>3</number>
           </property>
           <widget class="QWidget" name="tab_6">
            <attribute name="title">
@@ -1255,8 +1255,49 @@
           </widget>
           <widget class="QWidget" name="tab_7">
            <attribute name="title">
-            <string>Wschód / Zachód</string>
+            <string>Słońce (Wschód / Zachód)</string>
            </attribute>
+           <widget class="QWidget" name="gridLayoutWidget_8">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>2</y>
+              <width>861</width>
+              <height>425</height>
+             </rect>
+            </property>
+            <layout class="QGridLayout" name="sunScenarioLayout">
+             <property name="spacing">
+              <number>6</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="horizontalLayoutWidget_14">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>430</y>
+              <width>271</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <item>
+              <widget class="QPushButton" name="b_sunScenarioGetSettings_2">
+               <property name="text">
+                <string>Pobierz ustawienia</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="b_sunScenarioSetSettings_2">
+               <property name="text">
+                <string>Wyślij ustawienia</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </widget>
          </widget>
         </widget>
@@ -1630,7 +1671,7 @@
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>25</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuPlik">
