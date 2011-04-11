@@ -19,35 +19,35 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 $Id$
 */
 
-/** @file comboBoxOuts.cpp
-@brief Implementacja klasy ComboBoxOuts
+/** @file comboBoxPwms.cpp
+@brief Implementacja klasy ComboBoxPwms
 */
 
-#include "comboBoxOuts.h"
+#include "comboBoxPwms.h"
 
-ComboBoxOuts::ComboBoxOuts(OutSettings* pouts[], QWidget *parent) {
+ComboBoxPwms::ComboBoxPwms(PwmSettings* ppwms[], QWidget *parent) {
 	this->parent=parent;
 	addItem(QString("Brak"),QVariant(UINT8_T_DISABLED));
-	for (int i=0;i<OUTPUTS_NUM;i++) {
-		addItem(QString("%1: %2").arg(i+1).arg(pouts[i]->getLabel()),QVariant(i));
+	for (int i=0;i<PWM_NUM;i++) {
+		addItem(QString("%1: %2").arg(i+1).arg(ppwms[i]->getName()),QVariant(i));
 	}
 	setCurrentIndex(0);
 }
 
-void ComboBoxOuts::changeLabel(int atId,QString label) {
+void ComboBoxPwms::changeName(int atId,QString newName) {
 	int current = currentIndex();
 	int index = findData(atId);
 	removeItem(index);
-	insertItem(index,QString("%1: %2").arg(atId+1).arg(label),QVariant(atId));
+	insertItem(index,QString("%1: %2").arg(atId+1).arg(newName),QVariant(atId));
 	setCurrentIndex(current);
 }
 
-int ComboBoxOuts::get() {
+int ComboBoxPwms::get() {
 	return itemData(currentIndex()).toInt();
 }
 
-void ComboBoxOuts::set(int atId) {
-	if (atId >= OUTPUTS_NUM) {
+void ComboBoxPwms::set(int atId) {
+	if (atId >= PWM_NUM) {
 		atId = UINT8_T_DISABLED;
 	}
 	setCurrentIndex(findData(atId));

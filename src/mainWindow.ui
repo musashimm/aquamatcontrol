@@ -45,7 +45,7 @@
       <item>
        <widget class="QTabWidget" name="tabWidget">
         <property name="currentIndex">
-         <number>1</number>
+         <number>4</number>
         </property>
         <widget class="QWidget" name="status">
          <attribute name="title">
@@ -1257,21 +1257,6 @@
            <attribute name="title">
             <string>Słońce (Wschód / Zachód)</string>
            </attribute>
-           <widget class="QWidget" name="gridLayoutWidget_8">
-            <property name="geometry">
-             <rect>
-              <x>2</x>
-              <y>2</y>
-              <width>861</width>
-              <height>425</height>
-             </rect>
-            </property>
-            <layout class="QGridLayout" name="sunScenarioLayout">
-             <property name="spacing">
-              <number>6</number>
-             </property>
-            </layout>
-           </widget>
            <widget class="QWidget" name="horizontalLayoutWidget_14">
             <property name="geometry">
              <rect>
@@ -1297,6 +1282,17 @@
               </widget>
              </item>
             </layout>
+           </widget>
+           <widget class="QWidget" name="horizontalLayoutWidget_15">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>2</y>
+              <width>861</width>
+              <height>425</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="sunScenarioLayout"/>
            </widget>
           </widget>
          </widget>

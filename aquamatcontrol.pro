@@ -6,7 +6,7 @@ TARGET = aquamatcontrol
 DESTDIR = dist
 DEPENDPATH += . \
     src
-CONFIG += release
+CONFIG += release silent
 CONFIG -= debug_and_release \
     debug
 win32 {
@@ -59,7 +59,9 @@ HEADERS += src/aboutDialog.h \
     src/comboBoxQButtons.h \
     src/pwmSettings.h \
     src/sunScenario.h \
-    src/timersSecSettings.h
+    src/timersSecSettings.h \
+    src/controlComponent.h \
+    src/ComboBoxPwms.h
 FORMS += src/aboutDialog.ui \
     src/mainWindow.ui \
     src/outSettings.ui \
@@ -104,7 +106,9 @@ SOURCES += src/aboutDialog.cpp \
     src/comboBoxQButtons.cpp \
     src/timersSecSettings.cpp \
     src/processingTimersSec.cpp \
-    src/sunScenario.cpp
+    src/sunScenario.cpp \
+    src/ControlComponent.cpp \
+    src/ComboBoxPwms.cpp
 RESOURCES += resources/aquamatcontrol.qrc
 OTHER_FILES += Makefile \
     Makefile.Release \

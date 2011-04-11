@@ -21,12 +21,14 @@
 
 /** @file timersSecSettings.cpp
 @brief Implementacja konfiguracji timerów sekundowych.
-    Komponenty obiektu timersSecSettings
-    c_active    - checkbox
-    e_from      - edit time
-    s_duration  - czas trwania
-    wday        - dzień tygodnia
-    out         - przyspisane wyjście
+
+Komponenty obiektu timersSecSettings:
+
+- c_active    - checkbox
+- e_from      - edit time
+- s_duration  - czas trwania
+- wday        - dzień tygodnia
+- out         - przyspisane wyjście
 */
 
 #include <QTime>

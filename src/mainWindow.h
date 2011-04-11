@@ -141,6 +141,7 @@ public slots:
 	PwmSettings* getPwmSetting(int);
 	void pwmSaveSettings(QSettings*);
 	void pwmLoadSettings(QSettings*);
+	void pwmPropagateName(int,QString);
 
 	void outInit();
 	void getOut();

@@ -21,31 +21,87 @@ $Id$
 
 /** @file sunScenario.h
 @brief Plik nagłówkowy - Scenariusz Słońce.
+
+@image html sunScenario.png
+
+@section sunScenario_components Komponenty GUI
+
+- QTimeEdit/sunriseTime (srt)- godzina, o której zaczyna się wschód słońca
+- QTimeEdit/sunsetTime (sst) - godzina, o której zaczyna się zachód słońca
+- QSpinBox/minPower (mnp) - minimalna moc
+- QSpinBox/maxPower (mxp)- maksymalna moc
+- QCheckBox/keepPower (kp)- czy przy maksymalnej mocy, wyłączyć wyjście(czyli obsługujemy sam wschód i zachód)
+- QSpinBox/numberOfSteps (nos) - liczba kroków przejścia
+- QSpinBox/stepDuration (sd) - czas jednego kroku
+
+@verbatim
+
+	FLAGS
+
+	7654|3210
+    	    X - keepPower
+    	    0 - nie
+    	    1 - tak
+	@endverbatim
+
+Czas trwania wschodu/zachodu = numberOfSteps * stepDuration.
+
+keepPower - przełącznik służy do wyłączenia wyjścia, kiedy już osiągnięto maxPower. W wiekszości przypadków wtedy już pracują inne źródła światła o wiele mocniejsze i nie ma sensu trzymać włączone np. diody LED.
+
+@section sunScenario_gui Komendy
+
+- pobranie konfiguracji
+
+@verbatim
+
+Komenda: <GUI_SUN><GUI_GET><CRC><GUI_EOC>
+    Odp: <GUI_SUN><GUI_GET(RESPONSE_FLAG)><SRT_H><SRT_M><SST_H><SST_M><MNP><MXP><NOS><SD><FLAGS><CRC><GUI_EOC>
+
+@endverbatim
+
+- wysłanie konfiguracji
+
+@verbatim
+
+Komenda: <GUI_SUN><GUI_SET><SRT_H><SRT_M><SST_H><SST_M><MNP><MXP><NOS><SD><FLAGS><GUI_EOC>
+    Odp: <GUI_SUN><GUI_SET(RESPONSE_FLAG)><GUI_EOC>
+
+@endverbatim
+
+
 */
 
 #ifndef CLASSSUNSCENARIO_H
 #define CLASSSUNSCENARIO_H
 
-//#include <QLabel>
-//#include <QString>
-//#include <QByteArray>
-//#include <QTimer>
-#include "ui_sunScenario.h"
 
-class SunScenario : public QWidget {
+#include "controlComponent.h"
+#include "ui_sunScenario.h"
+#include "comboBoxPwms.h"
+
+#define GUI_SUN 0x94
+#define KEEP_POWER_FLAG 0
+
+class SunScenario :public ControlComponent {
 
 	Q_OBJECT
 
 	public:
-		SunScenario(int,QString,QWidget *parent = 0);
+		SunScenario(int,QString,PwmSettings* ppwms[],QWidget *parent = 0);
 //		QByteArray getSettingsArray();
 //		QString getName();
 //		int getPwm();
 //		bool isBlocked();
 //		void setName(QString);
 //		void setPwm(int);
-//		void setFlags(int);
+        int getFlags();
+		void setFlags(int);
 //		bool isNameChanged();
+        bool isActive();
+        bool isBlocked();
+        QByteArray getAsArray();
+        void setAsArray(QByteArray);
+        void changePwmName(int,QString);
 
 //	public slots:
 //		void newSettings(int,int,QString);
@@ -61,7 +117,8 @@ class SunScenario : public QWidget {
 
 	private:
 		Ui::SunScenario ui;
-		int id;
+		ComboBoxPwms *pwm;
+		//int id;
 //		QTimer *timer;
 //		int oldpwm;
 //		bool nameChangedFlag;

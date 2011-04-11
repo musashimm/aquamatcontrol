@@ -105,6 +105,7 @@ QString PwmSettings::getName() {
 
 void PwmSettings::setName(QString name) {
 	ui.edit_name->setText(name);
+	emit nameChangedSignal(id,name);
 }
 
 bool PwmSettings::isBlocked() {

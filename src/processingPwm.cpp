@@ -29,9 +29,16 @@ void MainWindow::pwmInit() {
 		pPwmSettings[i]=pwmSettings;
 		ui.pwmSettingsLayout->addWidget(pwmSettings,0,i);
 		connect(pPwmSettings[i],SIGNAL(stateChanged(int,int,int)),this,SLOT(pwmStateChanged(int,int,int)));
+		connect(pPwmSettings[i],SIGNAL(nameChangedSignal(int,QString)),this,SLOT(pwmPropagateName(int,QString)));
 	}
 	connect(ui.b_pwmGetConfig,SIGNAL(clicked()),this,SLOT(pwmGetSettings()));
 	connect(ui.b_pwmSendConfig,SIGNAL(clicked()),this,SLOT(pwmSendSettings()));
+}
+
+void MainWindow::pwmPropagateName(int id,QString name) {
+	for (int i=0;i<SUN_NUM;i++) {
+		pSunScenario[i]->changePwmName(id,name);
+	}
 }
 
 void MainWindow::pwmStateChanged(int id,int pwm,int flags) {

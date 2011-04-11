@@ -69,8 +69,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1117268"
-     inkscape:cx="372.04724"
-     inkscape:cy="288.62623"
+     inkscape:cx="373.84624"
+     inkscape:cy="252.64617"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -87,7 +87,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -97,289 +97,178 @@
      id="layer1"
      transform="translate(0,-152.36218)">
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.68994009px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
-       d="m 38.896343,380.03008 444.724157,0"
+       style="fill:none;stroke:#000000;stroke-width:0.77498698px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 39.695687,420.33499 461.683403,0"
        id="path4979"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.68994009px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
-       d="m 51.586329,495.64261 0,-288.82578"
+       style="fill:none;stroke:#000000;stroke-width:0.67607081px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 52.869597,476.958 0,-267.14313"
        id="path5504"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="469.48492"
-       y="393.185"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="526.61578"
+       y="403.31412"
        id="text6027"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6029"
-         x="469.48492"
-         y="393.185">Czas</tspan></text>
+         x="526.61578"
+         y="403.31412">Czas</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="25.133757"
-       y="186.52449"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="19.395052"
+       y="185.30241"
        id="text6031"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6033"
-         x="25.133757"
-         y="186.52449">Natężenie światła</tspan></text>
+         x="19.395052"
+         y="185.30241">Natężenie światła</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="18.307144"
-       y="318.0921"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="19.822628"
+       y="318.96475"
        id="text6043"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6045"
-         x="18.307144"
-         y="318.0921">50%</tspan></text>
+         x="19.822628"
+         y="318.96475">50%</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="28.857372"
-       y="382.63477"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="31.673351"
+       y="391.46338"
        id="text6047"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6049"
-         x="28.857372"
-         y="382.63477">0</tspan></text>
+         x="31.673351"
+         y="391.46338">0</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="18.307146"
-       y="246.7229"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="19.82263"
+       y="238.79807"
        id="text6051"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6053"
-         x="18.307146"
-         y="246.7229">100%</tspan></text>
+         x="19.82263"
+         y="238.79807">100%</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.68994009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.7597603, 2.7597603;stroke-dashoffset:0;marker-end:none"
-       d="m 42.307928,316.54392 444.724162,0"
+       style="fill:none;stroke:#000000;stroke-width:0.77498698;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.09994784, 3.09994784;stroke-dashoffset:0;marker-end:none"
+       d="m 43.237371,343.17511 461.683409,0"
        id="path6079"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.68994009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.7597603, 2.7597603;stroke-dashoffset:0;marker-end:none"
-       d="m 43.256792,244.01122 444.724168,0"
+       style="fill:none;stroke:#000000;stroke-width:0.77498698;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.09994784, 3.09994784;stroke-dashoffset:0;marker-end:none"
+       d="m 44.222419,255.02023 461.683411,0"
        id="path6602"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#f00000;stroke-width:1.15197647;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 471.85002,358.11419 -60.72405,0.43321 -42.75468,-94.43933 -184.03105,0 -41.51542,93.57291 -86.129012,0"
+       style="fill:none;stroke:#f00000;stroke-width:1.29397726;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 489.15975,393.69883 -63.03972,0.52652 -44.3851,-114.77979 -191.04894,0 -43.09859,113.72676 -89.413477,0"
        id="path6604"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.60576743;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.21153477, 1.21153477;stroke-dashoffset:0"
-       d="m 142.82482,229.00391 0,185.38714"
+       style="fill:none;stroke:#000000;stroke-width:0.68043858;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.3608771, 1.3608771;stroke-dashoffset:0"
+       d="m 147.5874,236.78063 0,225.31604"
        id="path6606"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.60576743;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.21153477, 1.21153477;stroke-dashoffset:0"
-       d="m 183.72061,228.38233 0,185.38715"
+       style="fill:none;stroke:#000000;stroke-width:0.68043858;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.3608771, 1.3608771;stroke-dashoffset:0"
+       d="m 190.04273,236.02517 0,225.31606"
        id="path6608"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.60576743;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.21153477, 1.21153477;stroke-dashoffset:0"
-       d="m 368.37129,226.51761 0,185.38715"
+       style="fill:none;stroke:#000000;stroke-width:0.68043858;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.3608771, 1.3608771;stroke-dashoffset:0"
+       d="m 381.73493,233.75883 0,225.31605"
        id="path6610"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.60576743;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.21153477, 1.21153477;stroke-dashoffset:0"
-       d="m 411.12598,226.51761 0,185.38715"
+       style="fill:none;stroke:#000000;stroke-width:0.68043858;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.3608771, 1.3608771;stroke-dashoffset:0"
+       d="m 426.12004,233.75883 0,225.31605"
        id="path6612"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="145.53058"
-       y="394.42618"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="162.72852"
+       y="404.70828"
        id="text6614"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6616"
-         x="145.53058"
-         y="394.42618">Wschód</tspan><tspan
+         x="162.72852"
+         y="404.70828">Wschód</tspan><tspan
          sodipodi:role="line"
-         x="145.53058"
-         y="404.77527"
+         x="162.72852"
+         y="416.3331"
          id="tspan6618">słońca</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="373.91217"
-       y="395.04678"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="419.26205"
+       y="405.4054"
        id="text6620"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6622"
-         x="373.91217"
-         y="395.04678">Zachód</tspan><tspan
+         x="419.26205"
+         y="405.4054">Zachód</tspan><tspan
          sodipodi:role="line"
-         x="373.91217"
-         y="405.39587"
+         x="419.26205"
+         y="417.03018"
          id="tspan6624">słońca</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="55.54327"
-       y="371.4639"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="61.648743"
+       y="378.91553"
        id="text6626"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6628"
-         x="55.54327"
-         y="371.4639">00:00</tspan></text>
+         x="61.648743"
+         y="378.91553">00:00</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="466.3819"
-       y="371.46393"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="523.13025"
+       y="378.91556"
        id="text6630"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6632"
-         x="466.3819"
-         y="371.46393">23:59</tspan></text>
+         x="523.13025"
+         y="378.91556">23:59</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="107.05324"
-       y="221.27823"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="119.50819"
+       y="210.2169"
        id="text6634"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6636"
-         x="107.05324"
-         y="221.27823">SUNRISE_START</tspan></text>
+         x="119.50819"
+         y="210.2169">SUNRISE_START</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="334.19366"
-       y="219.4164"
+       style="font-size:9.29984283px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="374.64755"
+       y="208.12556"
        id="text6638"
-       transform="scale(0.99843855,1.0015639)"><tspan
+       transform="scale(0.92276658,1.0836977)"><tspan
          sodipodi:role="line"
          id="tspan6640"
-         x="334.19366"
-         y="219.4164">SUNSET_START</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="57.405079"
-       y="455.24518"
-       id="text6642"
-       transform="scale(0.99843855,1.0015639)"><tspan
-         sodipodi:role="line"
-         id="tspan6644"
-         x="57.405079"
-         y="455.24518">SUNRISE_STOP = LVLNM * LVLTM + SUNRISE_START</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="156.70143"
-       y="205.76317"
-       id="text6646"
-       transform="scale(0.99843855,1.0015639)"><tspan
-         sodipodi:role="line"
-         id="tspan6648"
-         x="156.70143"
-         y="205.76317">SUNRISE_STOP</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="385.08304"
-       y="207.00435"
-       id="text6650"
-       transform="scale(0.99843855,1.0015639)"><tspan
-         sodipodi:role="line"
-         id="tspan6652"
-         x="385.08304"
-         y="207.00435">SUNSET_STOP</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="57.405075"
-       y="423.59448"
-       id="text6654"
-       transform="scale(0.99843855,1.0015639)"><tspan
-         sodipodi:role="line"
-         id="tspan6656"
-         x="57.405075"
-         y="423.59448">Parametry:</tspan><tspan
-         sodipodi:role="line"
-         x="57.405075"
-         y="433.94357"
-         id="tspan6658">LVLNM - liczba poziomów zmiany natężenia światła</tspan><tspan
-         sodipodi:role="line"
-         x="57.405075"
-         y="444.29269"
-         id="tspan6662">LVLTM - czas trwania poziomu</tspan><tspan
-         sodipodi:role="line"
-         x="57.405075"
-         y="454.64178"
-         id="tspan6660" /></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="57.405075"
-       y="465.79544"
-       id="text6664"
-       transform="scale(0.99843855,1.0015639)"><tspan
-         sodipodi:role="line"
-         id="tspan6666"
-         x="57.405075"
-         y="465.79544">SUNSET_STOP = LVLNM * LVLTM + SUNSET_START</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="24.513161"
-       y="372.70514"
-       id="text6668"
-       transform="scale(0.99843855,1.0015639)"><tspan
-         sodipodi:role="line"
-         id="tspan6670"
-         x="24.513161"
-         y="372.70514">(1V)</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="22.651354"
-       y="256.65253"
-       id="text6672"
-       transform="scale(0.99843855,1.0015639)"><tspan
-         sodipodi:role="line"
-         id="tspan6674"
-         x="22.651354"
-         y="256.65253">(10V)</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="18.927734"
-       y="326.78055"
-       id="text6676"
-       transform="scale(0.99843855,1.0015639)"><tspan
-         sodipodi:role="line"
-         id="tspan6678"
-         x="18.927734"
-         y="326.78055">(4,5V)</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8.27928066px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="22.65136"
-       y="198.93654"
-       id="text6680"
-       transform="scale(0.99843855,1.0015639)"><tspan
-         sodipodi:role="line"
-         id="tspan6682"
-         x="22.65136"
-         y="198.93654">(Napięcie na intf.)</tspan></text>
+         x="374.64755"
+         y="208.12556">SUNSET_START</tspan></text>
   </g>
 </svg>

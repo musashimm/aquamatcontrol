@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainWindow.ui'
 **
-** Created: Thu Apr 7 21:45:25 2011
+** Created: Tue Apr 12 00:18:31 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -181,12 +181,12 @@ public:
     QHBoxLayout *horizontalLayout_13;
     QSpacerItem *verticalSpacer_2;
     QWidget *tab_7;
-    QWidget *gridLayoutWidget_8;
-    QGridLayout *sunScenarioLayout;
     QWidget *horizontalLayoutWidget_14;
     QHBoxLayout *horizontalLayout_12;
     QPushButton *b_sunScenarioGetSettings_2;
     QPushButton *b_sunScenarioSetSettings_2;
+    QWidget *horizontalLayoutWidget_15;
+    QHBoxLayout *sunScenarioLayout;
     QWidget *tab;
     QListWidget *eventViewer;
     QWidget *horizontalLayoutWidget_9;
@@ -871,13 +871,6 @@ public:
         tabWidget_2->addTab(tab_11, QString());
         tab_7 = new QWidget();
         tab_7->setObjectName(QString::fromUtf8("tab_7"));
-        gridLayoutWidget_8 = new QWidget(tab_7);
-        gridLayoutWidget_8->setObjectName(QString::fromUtf8("gridLayoutWidget_8"));
-        gridLayoutWidget_8->setGeometry(QRect(2, 2, 861, 425));
-        sunScenarioLayout = new QGridLayout(gridLayoutWidget_8);
-        sunScenarioLayout->setSpacing(6);
-        sunScenarioLayout->setObjectName(QString::fromUtf8("sunScenarioLayout"));
-        sunScenarioLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayoutWidget_14 = new QWidget(tab_7);
         horizontalLayoutWidget_14->setObjectName(QString::fromUtf8("horizontalLayoutWidget_14"));
         horizontalLayoutWidget_14->setGeometry(QRect(2, 430, 271, 30));
@@ -894,6 +887,12 @@ public:
 
         horizontalLayout_12->addWidget(b_sunScenarioSetSettings_2);
 
+        horizontalLayoutWidget_15 = new QWidget(tab_7);
+        horizontalLayoutWidget_15->setObjectName(QString::fromUtf8("horizontalLayoutWidget_15"));
+        horizontalLayoutWidget_15->setGeometry(QRect(2, 2, 861, 425));
+        sunScenarioLayout = new QHBoxLayout(horizontalLayoutWidget_15);
+        sunScenarioLayout->setObjectName(QString::fromUtf8("sunScenarioLayout"));
+        sunScenarioLayout->setContentsMargins(0, 0, 0, 0);
         tabWidget_2->addTab(tab_7, QString());
         tabWidget->addTab(tab_3, QString());
         tab = new QWidget();
@@ -1142,7 +1141,7 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(m_quit, SIGNAL(activated()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(4);
         tabWidget_3->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(3);
 

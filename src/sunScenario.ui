@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>610</width>
-    <height>444</height>
+    <width>660</width>
+    <height>360</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>762</width>
-    <height>542</height>
+    <width>660</width>
+    <height>360</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -28,10 +28,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>54</x>
-     <y>24</y>
-     <width>524</width>
-     <height>372</height>
+     <x>100</x>
+     <y>-36</y>
+     <width>557</width>
+     <height>417</height>
     </rect>
    </property>
    <property name="text">
@@ -44,78 +44,195 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QTimeEdit" name="timeEdit">
+  <widget class="QTimeEdit" name="sunriseTime">
    <property name="geometry">
     <rect>
-     <x>158</x>
-     <y>290</y>
+     <x>226</x>
+     <y>18</y>
      <width>71</width>
      <height>25</height>
     </rect>
    </property>
+   <property name="dateTime">
+    <datetime>
+     <hour>7</hour>
+     <minute>30</minute>
+     <second>0</second>
+     <year>2000</year>
+     <month>1</month>
+     <day>1</day>
+    </datetime>
+   </property>
   </widget>
-  <widget class="QTimeEdit" name="timeEdit_2">
+  <widget class="QTimeEdit" name="sunsetTime">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>294</y>
+     <x>464</x>
+     <y>18</y>
      <width>67</width>
      <height>25</height>
     </rect>
    </property>
+   <property name="dateTime">
+    <datetime>
+     <hour>20</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2000</year>
+     <month>1</month>
+     <day>1</day>
+    </datetime>
+   </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox">
+  <widget class="QCheckBox" name="keepPower">
    <property name="geometry">
     <rect>
-     <x>14</x>
+     <x>332</x>
      <y>120</y>
-     <width>55</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QSpinBox" name="spinBox_2">
-   <property name="geometry">
-    <rect>
-     <x>14</x>
-     <y>212</y>
-     <width>55</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox">
-   <property name="geometry">
-    <rect>
-     <x>282</x>
-     <y>80</y>
-     <width>84</width>
+     <width>147</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>CheckBox</string>
+    <string>Włączone w maksie</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="tristate">
+    <bool>false</bool>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_3">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>350</y>
-     <width>55</width>
-     <height>25</height>
+     <x>230</x>
+     <y>302</y>
+     <width>337</width>
+     <height>29</height>
     </rect>
    </property>
+   <layout class="QHBoxLayout" name="sunScenarioBottomLayout">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Liczba kroków</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="numberOfSteps">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>10</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Czas kroku</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="stepDuration">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>30</number>
+      </property>
+      <property name="value">
+       <number>5</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>min.</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QSpinBox" name="spinBox_4">
+  <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>312</x>
-     <y>350</y>
-     <width>55</width>
-     <height>25</height>
+     <x>12</x>
+     <y>102</y>
+     <width>141</width>
+     <height>33</height>
     </rect>
    </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Max. moc</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="maxPower">
+      <property name="minimum">
+       <number>50</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>100</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>%</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>18</x>
+     <y>210</y>
+     <width>137</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Min. moc</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="minPower">
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>49</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>%</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources>

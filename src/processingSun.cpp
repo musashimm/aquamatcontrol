@@ -25,9 +25,10 @@ $Id$
 
 void MainWindow::sunInit() {
 	for(int i=0;i < SUN_NUM ;i++) {
-		SunScenario *sunScenario = new SunScenario(i,tr("Słońce"));
+		SunScenario *sunScenario = new SunScenario(i,tr("Słońce"),pPwmSettings);
 		pSunScenario[i]=sunScenario;
-		ui.sunScenarioLayout->addWidget(sunScenario,0,i);
+		//ui.sunScenarioLayout->addWidget(sunScenario,0,i);
+		ui.sunScenarioLayout->addWidget(sunScenario);
 		//PwmSettings *pwmSettings = new PwmSettings(i,"abcde");
 		//pPwmSettings[i]=pwmSettings;
 		//ui.sunScenarioLayout->addWidget(pwmSettings,0,i);

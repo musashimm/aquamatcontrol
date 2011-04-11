@@ -19,21 +19,17 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 $Id$
 */
 
-/** @file sunScenario.cpp
-@brief Implementacja scenariusza "Słońce".
-
-Opis funkcjonalności znajduje się w rozdziale \ref sunScenario.h.
-
+/** @file controlComponent.cpp
+@brief Implementacja klasy bazowej dla wszystkich komponentów.
 */
 
-#include "sunScenario.h"
-#include "main.h"
+#include <QWidget>
+#include "controlComponent.h"
 
-SunScenario::SunScenario(int id,QString name,PwmSettings* ppwms[], QWidget *parent):ControlComponent(id,name,parent) {
-  	ui.setupUi(this);
-  	pwm = new ComboBoxPwms(ppwms,this);
-  	ui.sunScenarioBottomLayout->addWidget(pwm);
-  	//this->id=id;
+ControlComponent::ControlComponent(int id,QString name,QWidget *parent):QWidget(parent) {
+  	//ui.setupUi(this);
+  	this->id=id;
+  	this->name=name;
 //	ui.edit_name->setText(name);
 //	nameChangedFlag = false;
 //	ui.groupBox->setTitle(QString(tr("Wyjście PWM %1")).arg(id+1));
@@ -47,51 +43,23 @@ SunScenario::SunScenario(int id,QString name,PwmSettings* ppwms[], QWidget *pare
 //	timer->start(1000);
 }
 
-void SunScenario::changePwmName(int id, QString newName) {
-	pwm->changeName(id,newName);
+int ControlComponent::getId() {
+    return id;
 }
 
-bool SunScenario::isActive() {
-    return true;
+QString ControlComponent::getName() {
+    return name;
 }
 
-bool SunScenario::isBlocked() {
-    return !(isActive());
+bool ControlComponent::wasNameModified() {
+    return wasNameModifiedFlag;
 }
 
-int SunScenario::getFlags() {
-    int flags = 0;
-    if(ui.keepPower->isChecked()) {
-		flags = 1;
-	}
-	return flags;
+bool ControlComponent::wasModified() {
+    return wasModifiedFlag;
 }
 
-void SunScenario::setFlags(int flags) {
-    if (flags & _BV(KEEP_POWER_FLAG)) {
-		ui.keepPower->setChecked(true);
-	} else {
-		ui.keepPower->setChecked(false);
-	}
-}
-
-QByteArray SunScenario::getAsArray() {
-    QByteArray a;
-    a.append(uchar(ui.sunriseTime->time().hour()));
-    a.append(uchar(ui.sunriseTime->time().minute()));
-    a.append(uchar(ui.sunsetTime->time().hour()));
-    a.append(uchar(ui.sunsetTime->time().minute()));
-    a.append(uchar(ui.minPower->value()));
-    a.append(uchar(ui.maxPower->value()));
-    a.append(uchar(ui.numberOfSteps->value()));
-    a.append(uchar(ui.stepDuration->value()));
-    a.append(uchar(getFlags()));
-    return a;
-}
-
-void SunScenario::setAsArray(QByteArray params) {
-
-}
+//
 //void PwmSettings::pwmChanged(int value) {
 //	ui.dial_label->setText(QString(tr("%1%").arg(value)));
 //}

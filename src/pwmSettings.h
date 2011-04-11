@@ -52,6 +52,7 @@ class PwmSettings : public QWidget {
 
     signals:
 		void stateChanged(int,int,int);
+		void nameChangedSignal(int,QString);
 
 	private slots:
 		void stateChanged();

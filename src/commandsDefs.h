@@ -189,7 +189,9 @@ $Id$
 	@endverbatim
 */
 #define GUI_END_OF_COMMAND 0xFE
+#define GUI_EOC 0xFE
 #define GUI_START_OF_COMMAND 0xFD
+#define GUI_SOC 0xFD
 
 #define GUI_BUFFER_FULL	0x81
 #define GUI_UNKONWN_COMMAND	0x82

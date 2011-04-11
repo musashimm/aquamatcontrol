@@ -19,25 +19,25 @@
 	$Id$
 */
 
-/** @file comboBoxOuts.h
-@brief Plik nagłówkowy - ComboBox dla wyjść
+/** @file comboBoxPwms.h
+@brief Plik nagłówkowy - ComboBox dla wyjść PWM
 */
 
-#ifndef CLASSCOMBOBOXOUTS_H
-#define CLASSCOMBOBOXOUTS_H
+#ifndef CLASSCOMBOBOXPWMS_H
+#define CLASSCOMBOBOXPWMS_H
 
 #include <QComboBox>
 #include <QString>
 #include "commonDefs.h"
-#include "outSettings.h"
+#include "pwmSettings.h"
 
-class ComboBoxOuts : public QComboBox
+class ComboBoxPwms : public QComboBox
 {
 	Q_OBJECT
 
 	public:
-		ComboBoxOuts(OutSettings* pouts[],QWidget *parent = 0);
-		void changeLabel(int,QString);
+		ComboBoxPwms(PwmSettings* ppwms[],QWidget *parent = 0);
+		void changeName(int,QString);
 		int get();
 		void set(int);
 
