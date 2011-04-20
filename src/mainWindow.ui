@@ -1268,14 +1268,14 @@
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_12">
              <item>
-              <widget class="QPushButton" name="b_sunScenarioGetSettings_2">
+              <widget class="QPushButton" name="b_sunGet">
                <property name="text">
                 <string>Pobierz ustawienia</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="b_sunScenarioSetSettings_2">
+              <widget class="QPushButton" name="b_sunSet">
                <property name="text">
                 <string>Wyślij ustawienia</string>
                </property>
@@ -1667,7 +1667,7 @@
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>23</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuPlik">

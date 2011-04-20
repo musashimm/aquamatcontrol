@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'sunScenario.ui'
 **
-** Created: Tue Apr 12 00:18:31 2011
+** Created: Wed Apr 20 21:15:42 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -15,11 +15,15 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QCheckBox>
+#include <QtGui/QGridLayout>
+#include <QtGui/QGroupBox>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
+#include <QtGui/QSpacerItem>
 #include <QtGui/QSpinBox>
 #include <QtGui/QTimeEdit>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -38,6 +42,7 @@ public:
     QLabel *label_3;
     QSpinBox *stepDuration;
     QLabel *label_8;
+    QSpacerItem *horizontalSpacer;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *label_6;
@@ -48,18 +53,21 @@ public:
     QLabel *label_7;
     QSpinBox *minPower;
     QLabel *label_4;
+    QGroupBox *groupBox;
+    QGridLayout *gridLayout;
+    QVBoxLayout *outLayout;
 
     void setupUi(QWidget *SunScenario)
     {
         if (SunScenario->objectName().isEmpty())
             SunScenario->setObjectName(QString::fromUtf8("SunScenario"));
-        SunScenario->resize(660, 360);
+        SunScenario->resize(700, 360);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(SunScenario->sizePolicy().hasHeightForWidth());
         SunScenario->setSizePolicy(sizePolicy);
-        SunScenario->setMaximumSize(QSize(660, 360));
+        SunScenario->setMaximumSize(QSize(700, 360));
         label = new QLabel(SunScenario);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(100, -36, 557, 417));
@@ -80,7 +88,7 @@ public:
         keepPower->setTristate(false);
         layoutWidget = new QWidget(SunScenario);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(230, 302, 337, 29));
+        layoutWidget->setGeometry(QRect(192, 302, 391, 29));
         sunScenarioBottomLayout = new QHBoxLayout(layoutWidget);
         sunScenarioBottomLayout->setObjectName(QString::fromUtf8("sunScenarioBottomLayout"));
         sunScenarioBottomLayout->setContentsMargins(0, 0, 0, 0);
@@ -114,9 +122,13 @@ public:
 
         sunScenarioBottomLayout->addWidget(label_8);
 
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        sunScenarioBottomLayout->addItem(horizontalSpacer);
+
         horizontalLayoutWidget = new QWidget(SunScenario);
         horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(12, 102, 141, 33));
+        horizontalLayoutWidget->setGeometry(QRect(12, 102, 151, 33));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -140,7 +152,7 @@ public:
 
         horizontalLayoutWidget_2 = new QWidget(SunScenario);
         horizontalLayoutWidget_2->setObjectName(QString::fromUtf8("horizontalLayoutWidget_2"));
-        horizontalLayoutWidget_2->setGeometry(QRect(18, 210, 137, 31));
+        horizontalLayoutWidget_2->setGeometry(QRect(18, 210, 148, 31));
         horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -161,6 +173,16 @@ public:
 
         horizontalLayout_2->addWidget(label_4);
 
+        groupBox = new QGroupBox(SunScenario);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(10, 262, 141, 77));
+        gridLayout = new QGridLayout(groupBox);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        outLayout = new QVBoxLayout();
+        outLayout->setObjectName(QString::fromUtf8("outLayout"));
+
+        gridLayout->addLayout(outLayout, 0, 0, 1, 1);
+
 
         retranslateUi(SunScenario);
 
@@ -179,6 +201,7 @@ public:
         label_5->setText(QApplication::translate("SunScenario", "%", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("SunScenario", "Min. moc", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("SunScenario", "%", 0, QApplication::UnicodeUTF8));
+        groupBox->setTitle(QApplication::translate("SunScenario", "Wyj\305\233cie PWM", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

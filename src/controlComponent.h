@@ -28,56 +28,36 @@ $Id$
 
 #include <QWidget>
 #include <QString>
-//#include <QByteArray>
-//#include <QTimer>
-//#include "ui_sunScenario.h"
+#include <QSettings>
+#include <QList>
 
 class ControlComponent :public QWidget {
 
     Q_OBJECT
 
 	public:
-		ControlComponent(int id,QString name, QWidget *parent = 0);
-//		QByteArray getSettingsArray();
-//		QString getName();
-//		int getPwm();
-//		bool isBlocked();
-//		void setName(QString);
-//		void setPwm(int);
-//		void setFlags(int);
-//		bool isNameChanged();
+		ControlComponent(int id, QString name, QWidget *parent = 0);
         int getId();
-        QString getName();
         bool wasNameModified();
         bool wasModified();
+        virtual void setName(QString);
+        virtual QString getName();
         virtual bool isActive() = 0;
         virtual bool isBlocked() = 0;
         virtual void setFlags(int) = 0;
         virtual int getFlags() = 0;
         virtual QByteArray getAsArray() = 0;
         virtual void setAsArray(QByteArray) = 0;
+        virtual void save(QSettings*) = 0;
+        virtual void load(QSettings*) = 0;
 
-//	public slots:
-//		void newSettings(int,int,QString);
-//
-//    signals:
-//		void stateChanged(int,int,int);
-//
-//	private slots:
-//		void stateChanged();
-//		void pwmChanged(int);
-//		void checkPwmChange();
-//		void nameChanged();
-
-	private:
-		//Ui::SunScenario ui;
+	protected:
+		static QList<ControlComponent*> controls;
 		int id;
 		QString name;
 		bool wasNameModifiedFlag;
 		bool wasModifiedFlag;
-//		QTimer *timer;
-//		int oldpwm;
-//		bool nameChangedFlag;
+
 };
 
 #endif

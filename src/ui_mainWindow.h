@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainWindow.ui'
 **
-** Created: Tue Apr 12 00:18:31 2011
+** Created: Wed Apr 20 21:15:42 2011
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -183,8 +183,8 @@ public:
     QWidget *tab_7;
     QWidget *horizontalLayoutWidget_14;
     QHBoxLayout *horizontalLayout_12;
-    QPushButton *b_sunScenarioGetSettings_2;
-    QPushButton *b_sunScenarioSetSettings_2;
+    QPushButton *b_sunGet;
+    QPushButton *b_sunSet;
     QWidget *horizontalLayoutWidget_15;
     QHBoxLayout *sunScenarioLayout;
     QWidget *tab;
@@ -877,15 +877,15 @@ public:
         horizontalLayout_12 = new QHBoxLayout(horizontalLayoutWidget_14);
         horizontalLayout_12->setObjectName(QString::fromUtf8("horizontalLayout_12"));
         horizontalLayout_12->setContentsMargins(0, 0, 0, 0);
-        b_sunScenarioGetSettings_2 = new QPushButton(horizontalLayoutWidget_14);
-        b_sunScenarioGetSettings_2->setObjectName(QString::fromUtf8("b_sunScenarioGetSettings_2"));
+        b_sunGet = new QPushButton(horizontalLayoutWidget_14);
+        b_sunGet->setObjectName(QString::fromUtf8("b_sunGet"));
 
-        horizontalLayout_12->addWidget(b_sunScenarioGetSettings_2);
+        horizontalLayout_12->addWidget(b_sunGet);
 
-        b_sunScenarioSetSettings_2 = new QPushButton(horizontalLayoutWidget_14);
-        b_sunScenarioSetSettings_2->setObjectName(QString::fromUtf8("b_sunScenarioSetSettings_2"));
+        b_sunSet = new QPushButton(horizontalLayoutWidget_14);
+        b_sunSet->setObjectName(QString::fromUtf8("b_sunSet"));
 
-        horizontalLayout_12->addWidget(b_sunScenarioSetSettings_2);
+        horizontalLayout_12->addWidget(b_sunSet);
 
         horizontalLayoutWidget_15 = new QWidget(tab_7);
         horizontalLayoutWidget_15->setObjectName(QString::fromUtf8("horizontalLayoutWidget_15"));
@@ -1116,7 +1116,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 900, 23));
+        menubar->setGeometry(QRect(0, 0, 900, 25));
         menuPlik = new QMenu(menubar);
         menuPlik->setObjectName(QString::fromUtf8("menuPlik"));
         menuInfo = new QMenu(menubar);
@@ -1225,8 +1225,8 @@ public:
         b_timersSecGetSettings->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
         b_timersSecSetSettings->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_11), QApplication::translate("MainWindow", "Sekundowe", 0, QApplication::UnicodeUTF8));
-        b_sunScenarioGetSettings_2->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
-        b_sunScenarioSetSettings_2->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
+        b_sunGet->setText(QApplication::translate("MainWindow", "Pobierz ustawienia", 0, QApplication::UnicodeUTF8));
+        b_sunSet->setText(QApplication::translate("MainWindow", "Wy\305\233lij ustawienia", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_7), QApplication::translate("MainWindow", "S\305\202o\305\204ce (Wsch\303\263d / Zach\303\263d)", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Timery i scenariusze", 0, QApplication::UnicodeUTF8));
         b_getEvents->setText(QApplication::translate("MainWindow", "Pobierz histori\304\231 zdarze\305\204", 0, QApplication::UnicodeUTF8));

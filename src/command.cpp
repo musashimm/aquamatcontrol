@@ -26,6 +26,7 @@ $Id$
 #include "command.h"
 #include "commandsDefs.h"
 #include "commonDefs.h"
+#include "sunScenario.h"
 
 Command::Command() {
 	prepareCommon();
@@ -87,6 +88,7 @@ void Command::prepareCommon() {
 	commandsDesc[GUI_LOG_COMMAND]="Log";
 	commandsDesc[GUI_PWM]="Pwm";
 	commandsDesc[GUI_TIMSEC]="TimersSec";
+	commandsDesc[GUI_SUN]="Sun";
 
 	subcommandsDesc[GUI_GET]="Get";
 	subcommandsDesc[GUI_SET]="Set";

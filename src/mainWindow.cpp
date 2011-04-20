@@ -64,7 +64,7 @@ MainWindow::MainWindow(QWidget *parent)
 	topOffInit();
 	alarmInit();
 	eventsInit();
-	sunInit();
+	sunsInit();
 
     QList<QextPortInfo> ports = QextSerialEnumerator::getPorts();
     for (int i=0;i<ports.size();i++) {
@@ -361,6 +361,7 @@ void MainWindow::loadSettings(QSettings* settings)
 
  	pwmLoadSettings(settings);
  	timersSecLoadSettings(settings);
+ 	sunsLoad(settings);
 
  	settings->beginReadArray("Timers");
 	for (int i = 0; i < TIMERS_NUM; i++) {
@@ -442,6 +443,7 @@ void MainWindow::saveSettings(QSettings* settings)
 
  	pwmSaveSettings(settings);
  	timersSecSaveSettings(settings);
+ 	sunsSave(settings);
 
  	settings->beginWriteArray("Timers");
 	for (int i = 0; i < TIMERS_NUM; i++) {

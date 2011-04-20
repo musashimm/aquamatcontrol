@@ -36,9 +36,7 @@ void MainWindow::pwmInit() {
 }
 
 void MainWindow::pwmPropagateName(int id,QString name) {
-	for (int i=0;i<SUN_NUM;i++) {
-		pSunScenario[i]->changePwmName(id,name);
-	}
+	SunScenario::changeOutputNameForAll(id,name);
 }
 
 void MainWindow::pwmStateChanged(int id,int pwm,int flags) {

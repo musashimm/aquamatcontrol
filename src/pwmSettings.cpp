@@ -50,6 +50,7 @@ void PwmSettings::pwmChanged(int value) {
 
 void PwmSettings::nameChanged() {
     nameChangedFlag = true;
+    emit nameChangedSignal(id,getName());
 }
 
 bool PwmSettings::isNameChanged() {

@@ -194,7 +194,11 @@ public slots:
 	void enableClearEvents();
     void saveEventsToFile();
 
-    void sunInit();
+    void sunsInit();
+    void sunsSave(QSettings*);
+    void sunsLoad(QSettings*);
+    void sunGet();
+    void sunSet();
 
 private slots:
 	void makeActions();
@@ -211,7 +215,6 @@ private:
 	OutDisplay* pOutDisplays[OUTPUTS_DEVICES_NUM*OUTPUTS_NUM_PER_DEVICE];
 	OutSettings* pOutSettings[OUTPUTS_DEVICES_NUM*OUTPUTS_NUM_PER_DEVICE];
 	PwmSettings* pPwmSettings[PWM_NUM];
-	SunScenario* pSunScenario[SUN_NUM];
 	TempSettings* pTempSettings[TEMP_SENSORS_NUM];
 	TimersSettings* pTimersSettings[TIMERS_NUM];
 	TimersvSettings* pTimersvSettings[TIMERSV_NUM];

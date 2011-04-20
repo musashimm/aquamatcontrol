@@ -38,7 +38,7 @@ $Id$
 
 	FLAGS
 
-	7654|3210
+    7654|3210
     	    X - keepPower
     	    0 - nie
     	    1 - tak
@@ -80,6 +80,7 @@ Komenda: <GUI_SUN><GUI_SET><SRT_H><SRT_M><SST_H><SST_M><MNP><MXP><NOS><SD><FLAGS
 #include "comboBoxPwms.h"
 
 #define GUI_SUN 0x94
+#define GUI_SUN_DESC Sun
 #define KEEP_POWER_FLAG 0
 
 class SunScenario :public ControlComponent {
@@ -88,40 +89,20 @@ class SunScenario :public ControlComponent {
 
 	public:
 		SunScenario(int,QString,PwmSettings* ppwms[],QWidget *parent = 0);
-//		QByteArray getSettingsArray();
-//		QString getName();
-//		int getPwm();
-//		bool isBlocked();
-//		void setName(QString);
-//		void setPwm(int);
+		static void changeOutputNameForAll(int,QString);
         int getFlags();
 		void setFlags(int);
-//		bool isNameChanged();
         bool isActive();
         bool isBlocked();
         QByteArray getAsArray();
         void setAsArray(QByteArray);
-        void changePwmName(int,QString);
-
-//	public slots:
-//		void newSettings(int,int,QString);
-//
-//    signals:
-//		void stateChanged(int,int,int);
-//
-//	private slots:
-//		void stateChanged();
-//		void pwmChanged(int);
-//		void checkPwmChange();
-//		void nameChanged();
+        void changeOutputName(int,QString);
+        void save(QSettings*);
+        void load(QSettings*);
 
 	private:
 		Ui::SunScenario ui;
 		ComboBoxPwms *pwm;
-		//int id;
-//		QTimer *timer;
-//		int oldpwm;
-//		bool nameChangedFlag;
 };
 
 #endif
