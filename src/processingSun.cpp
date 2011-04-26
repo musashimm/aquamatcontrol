@@ -30,7 +30,6 @@ Klawisze do wysyłania i odbierania konfiguracji w GUI:
 void MainWindow::sunsInit() {
 	for(int i=0;i < SUN_NUM ;i++) {
 		SunScenario *sunScenario = new SunScenario(i,tr("Słońce"),pPwmSettings);
-		pSunScenario[i]=sunScenario;
 		ui.sunScenarioLayout->addWidget(sunScenario);
 	}
 	connect(ui.b_sunGet,SIGNAL(clicked()),this,SLOT(sunGet()));
@@ -38,33 +37,27 @@ void MainWindow::sunsInit() {
 }
 
 void MainWindow::sunGet() {
-	Command c(GUI_SUN,GUI_GET);
+	Command c(SunScenario::getComponentId(),GUI_GET);
 	c.end();
     cp.toQueue(c);
 }
 
 void MainWindow::sunSet() {
-	for(int i=0;i<SUN_NUM;i++) {
-	    Command c(GUI_SUN,GUI_SET);
-        c.append(pSunScenario[i]->getAsArray());
-        c.end();
-        cp.toQueue(c);
-    }
+    Command c(SunScenario::getComponentId(),GUI_SET);
+    c.append(SunScenario::getAllAsArray());
+    c.end();
+    cp.toQueue(c);
 }
 
 void MainWindow::sunsSave(QSettings* s) {
     s->beginWriteArray("Suns");
-	for (int i = 0; i < SUN_NUM; i++) {
-        pSunScenario[i]->save(s);
-	}
+    SunScenario::saveAll(s);
  	s->endArray();
 }
 
 void MainWindow::sunsLoad(QSettings* s) {
     s->beginReadArray("Suns");
-	for (int i = 0; i < SUN_NUM; i++) {
-	    pSunScenario[i]->load(s);
- 	}
+    SunScenario::loadAll(s);
  	s->endArray();
 }
 

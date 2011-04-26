@@ -74,13 +74,12 @@ Komenda: <GUI_SUN><GUI_SET><SRT_H><SRT_M><SST_H><SST_M><MNP><MXP><NOS><SD><FLAGS
 #ifndef CLASSSUNSCENARIO_H
 #define CLASSSUNSCENARIO_H
 
-
 #include "controlComponent.h"
 #include "ui_sunScenario.h"
 #include "comboBoxPwms.h"
 
-#define GUI_SUN 0x94
-#define GUI_SUN_DESC Sun
+#define SUN_COMPONENT_ID 0x94
+#define SUN_COMPONENT_DESC "Sun"
 #define KEEP_POWER_FLAG 0
 
 class SunScenario :public ControlComponent {
@@ -89,6 +88,10 @@ class SunScenario :public ControlComponent {
 
 	public:
 		SunScenario(int,QString,PwmSettings* ppwms[],QWidget *parent = 0);
+
+		static int getComponentId();
+		static QString getComponentDesc();
+
         int getFlags();
 		void setFlags(int);
         bool isActive();

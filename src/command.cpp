@@ -88,7 +88,7 @@ void Command::prepareCommon() {
 	commandsDesc[GUI_LOG_COMMAND]="Log";
 	commandsDesc[GUI_PWM]="Pwm";
 	commandsDesc[GUI_TIMSEC]="TimersSec";
-	commandsDesc[GUI_SUN]="Sun";
+	commandsDesc[SunScenario::getComponentId()]=SunScenario::getComponentDesc();
 
 	subcommandsDesc[GUI_GET]="Get";
 	subcommandsDesc[GUI_SET]="Set";

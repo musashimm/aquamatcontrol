@@ -35,6 +35,14 @@ SunScenario::SunScenario(int id,QString name,PwmSettings* ppwms[], QWidget *pare
   	ui.outLayout->addWidget(pwm);
 }
 
+int SunScenario::getComponentId() {
+    return SUN_COMPONENT_ID;
+}
+
+QString SunScenario::getComponentDesc() {
+    return QString(SUN_COMPONENT_DESC);
+}
+
 void SunScenario::changeOutputName(int id, QString newName) {
 	pwm->changeName(id,newName);
 }
@@ -65,6 +73,7 @@ void SunScenario::setFlags(int flags) {
 
 QByteArray SunScenario::getAsArray() {
     QByteArray a;
+    a.append(uchar(id));
     a.append(uchar(ui.sunriseTime->time().hour()));
     a.append(uchar(ui.sunriseTime->time().minute()));
     a.append(uchar(ui.sunsetTime->time().hour()));
@@ -78,13 +87,13 @@ QByteArray SunScenario::getAsArray() {
 }
 
 void SunScenario::setAsArray(QByteArray params) {
-    ui.sunriseTime->setTime(QTime(params[0],params[1],0));
-    ui.sunsetTime->setTime(QTime(params[2],params[3],0));
-    ui.minPower->setValue(params[4]);
-    ui.maxPower->setValue(params[5]);
-    ui.numberOfSteps->setValue(params[6]);
-    ui.stepDuration->setValue(params[7]);
-    setFlags(params[8]);
+    ui.sunriseTime->setTime(QTime(params[1],params[2],0));
+    ui.sunsetTime->setTime(QTime(params[3],params[4],0));
+    ui.minPower->setValue(params[5]);
+    ui.maxPower->setValue(params[6]);
+    ui.numberOfSteps->setValue(params[7]);
+    ui.stepDuration->setValue(params[8]);
+    setFlags(params[9]);
 }
 
 void SunScenario::save(QSettings* s) {
