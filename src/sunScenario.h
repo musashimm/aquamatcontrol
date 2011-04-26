@@ -89,7 +89,6 @@ class SunScenario :public ControlComponent {
 
 	public:
 		SunScenario(int,QString,PwmSettings* ppwms[],QWidget *parent = 0);
-		static void changeOutputNameForAll(int,QString);
         int getFlags();
 		void setFlags(int);
         bool isActive();

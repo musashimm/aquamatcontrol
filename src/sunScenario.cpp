@@ -35,12 +35,6 @@ SunScenario::SunScenario(int id,QString name,PwmSettings* ppwms[], QWidget *pare
   	ui.outLayout->addWidget(pwm);
 }
 
-SunScenario::changeOutputNameForAll(int id, QString newName) {
-	for (int i = 0; i < controls.size(); ++i) {
-		controls.at(i)->changeOutputName(id,newName);
-	}
-}
-
 void SunScenario::changeOutputName(int id, QString newName) {
 	pwm->changeName(id,newName);
 }

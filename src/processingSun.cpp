@@ -30,6 +30,7 @@ Klawisze do wysyłania i odbierania konfiguracji w GUI:
 void MainWindow::sunsInit() {
 	for(int i=0;i < SUN_NUM ;i++) {
 		SunScenario *sunScenario = new SunScenario(i,tr("Słońce"),pPwmSettings);
+		pSunScenario[i]=sunScenario;
 		ui.sunScenarioLayout->addWidget(sunScenario);
 	}
 	connect(ui.b_sunGet,SIGNAL(clicked()),this,SLOT(sunGet()));

@@ -29,7 +29,9 @@ $Id$
 #include <QWidget>
 #include <QString>
 #include <QSettings>
-#include <QList>
+//#include <QByteArray>
+//#include <QTimer>
+//#include "ui_sunScenario.h"
 
 class ControlComponent :public QWidget {
 
@@ -37,6 +39,14 @@ class ControlComponent :public QWidget {
 
 	public:
 		ControlComponent(int id, QString name, QWidget *parent = 0);
+//		QByteArray getSettingsArray();
+//		QString getName();
+//		int getPwm();
+//		bool isBlocked();
+//		void setName(QString);
+//		void setPwm(int);
+//		void setFlags(int);
+//		bool isNameChanged();
         int getId();
         bool wasNameModified();
         bool wasModified();
@@ -51,13 +61,27 @@ class ControlComponent :public QWidget {
         virtual void save(QSettings*) = 0;
         virtual void load(QSettings*) = 0;
 
+//	public slots:
+//		void newSettings(int,int,QString);
+//
+//    signals:
+//		void stateChanged(int,int,int);
+//
+//	private slots:
+//		void stateChanged();
+//		void pwmChanged(int);
+//		void checkPwmChange();
+//		void nameChanged();
+
 	protected:
-		static QList<ControlComponent*> controls;
+		//Ui::SunScenario ui;
 		int id;
 		QString name;
 		bool wasNameModifiedFlag;
 		bool wasModifiedFlag;
-
+//		QTimer *timer;
+//		int oldpwm;
+//		bool nameChangedFlag;
 };
 
 #endif
