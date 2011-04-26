@@ -36,6 +36,7 @@ SunScenario::SunScenario(int id,QString name,PwmSettings* ppwms[], QWidget *pare
 }
 
 int SunScenario::getComponentId() {
+	qDebug("GET");
     return SUN_COMPONENT_ID;
 }
 
@@ -94,6 +95,10 @@ void SunScenario::setAsArray(QByteArray params) {
     ui.numberOfSteps->setValue(params[7]);
     ui.stepDuration->setValue(params[8]);
     setFlags(params[9]);
+}
+
+void SunScenario::setAllAsArray(QByteArray allParams) {
+	qDebug("XXX: %d",allParams.count());
 }
 
 void SunScenario::save(QSettings* s) {

@@ -39,6 +39,7 @@ class ControlComponent :public QWidget {
 		ControlComponent(int id, QString name, QWidget *parent = 0);
 
 		static QByteArray getAllAsArray();
+		static void setAllAsArray(QByteArray);
 		static void saveAll(QSettings*);
 		static void loadAll(QSettings*);
 		static void changeOutputNameForAll(int,QString);
@@ -68,5 +69,7 @@ class ControlComponent :public QWidget {
 		bool wasModifiedFlag;
 
 };
+
+typedef void (ControlComponent::*commandFunction)(QByteArray);
 
 #endif

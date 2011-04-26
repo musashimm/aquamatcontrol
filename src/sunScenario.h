@@ -91,6 +91,7 @@ class SunScenario :public ControlComponent {
 
 		static int getComponentId();
 		static QString getComponentDesc();
+		static void setAllAsArray(QByteArray);
 
         int getFlags();
 		void setFlags(int);

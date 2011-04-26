@@ -71,6 +71,9 @@ $Id$
 #define WAITING 1
 #define DONE 2
 
+//void (ControlComponent::*processCommand)(QByteArray) = NULL;
+//typedef void (ControlComponent::*processCommand)(QByteArray);
+
 class CommandProcessor;
 
 class MainWindow : public QMainWindow
@@ -206,6 +209,7 @@ private slots:
 	void saveSettings(QSettings*);
 
 private:
+	QHash<int,commandFunction> commandCallback;
     CodeUpdateThread *cut;
     CodeUpdate codeUpdate;
     QextSerialPort* port;

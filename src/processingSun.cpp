@@ -34,6 +34,9 @@ void MainWindow::sunsInit() {
 	}
 	connect(ui.b_sunGet,SIGNAL(clicked()),this,SLOT(sunGet()));
 	connect(ui.b_sunSet,SIGNAL(clicked()),this,SLOT(sunSet()));
+	//commandFunction = &SunScenario::setAllAsArray;
+	commandCallback[SunScenario::getComponentId()]=&SunScenario::setAllAsArray;
+	(*commandCallback[SunScenario::getComponentId()])(new QByteArray());
 }
 
 void MainWindow::sunGet() {

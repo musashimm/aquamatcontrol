@@ -88,6 +88,7 @@ MainWindow::MainWindow(QWidget *parent)
     } else {
         insertLogEntry(tr("Problem z konfiguracją portu szeregowego"));
     }
+
 }
 
 void MainWindow::openSerialPort() {

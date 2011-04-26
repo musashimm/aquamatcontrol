@@ -27,6 +27,9 @@ $Id$
   @brief Przestrzeń nazw związana z komponentami interfejsu użytkownika
 */
 
+#ifndef MAIN_H
+#define MAIN_H
+
 #include "commonDefs.h"
 
 #define STRINGIFY2(x) #x
@@ -175,3 +178,6 @@ Pod Linuksem odpowiedniki powyższych bibliotek muszą być zainstalowane w syst
 
 
 */
+
+#endif
+
